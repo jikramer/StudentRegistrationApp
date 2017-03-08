@@ -1,0 +1,108 @@
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Home.aspx.cs" Inherits="StudentRegistrationApplication.Home" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title></title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="StyleSheets/Styles.css" rel="stylesheet" />
+    <script src="Scripts/jquery-1.9.1.min.js"></script>
+    <script src="Scripts/bootstrap.min.js"></script>
+</head>
+<body>
+    <form id="form1" runat="server" class="form-horizontal">
+       
+           
+          <nav class="navbar navbar-inverse">
+          <div class="container-fluid">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>                        
+              </button>
+            </div>
+            <div class="collapse navbar-collapse" id="myNavbar">
+              <ul class="nav navbar-nav">
+                <li class="active"><asp:HyperLink ID="HomeHyperLink" runat="server"><span class="glyphicon glyphicon-home"></span>Home</asp:HyperLink></li>
+                    <li><asp:HyperLink ID="StudentHyperLink" runat="server" NavigateUrl="~/MultiviewTest.aspx">Student</asp:HyperLink></li>
+                    <li><asp:HyperLink ID="CoursesHyperLink" runat="server" NavigateUrl="~/Courses.aspx">Courses</asp:HyperLink></li>
+                    <li><asp:HyperLink ID="PaymentHyperLink" runat="server" NavigateUrl="~/Payment.aspx">Payment</asp:HyperLink></li>
+              </ul>
+              <ul class="nav navbar-nav navbar-right">
+                <li><asp:HyperLink ID="LoginHyperLink" runat="server" NavigateUrl="~/StudentLogin.aspx"><span class="glyphicon glyphicon-log-in"></span> Login</asp:HyperLink></li>
+              </ul>
+            </div>
+          </div>
+        </nav>
+         <div class="row">
+             <div class="col-sm-12">
+                 <div class="jumbotron">
+                     <div class="text-center">
+                     <h1>STUDENT'S PORTAL</h1> 
+                         <h2>We provide value embedded quality education</h2>
+                         <br/>
+                         <h4>Login to find and enroll engineering and management Courses</h4>
+                         <h5>Don't have an account? 
+                             <asp:HyperLink ID="SignupHyperLink" runat="server" NavigateUrl="~/Signup.aspx" forecolor="Wheat"><h4>Sign up</h4></asp:HyperLink>
+                             to get access to all features
+                         </h5>
+                           
+                     </div>  
+                  </div> 
+             </div>
+         </div>
+         <div class="row">
+             <div class="form-group">
+                 <div class="col-sm-offset-1 col-sm-3">
+                     <div class="card">
+                          <div class="container" style="width:100%">
+                              <div class="form-group">
+                                  <div class="img-responsive"><asp:Image ID="EngineeringImg" runat="server" ImageUrl="~/Images/engineering.jpg" Height="150px" Width="320px" CssClass="col-xs-offset-1"/></div>
+                                  <div class="text-center"><h4><b>Engineering Courses</b></h4></div>
+                               </div>                         
+                              <div class="form-group">
+                                  <label class="text-center">We offer you the best engineering courses. Find here more on what engineering has to offer you</label>                            
+                                  <asp:Button ID="EngInfoBtn" runat="server" Text="Click Here To Know More" class="btn btn-primary"/>  
+                              </div>                         
+                          </div>
+                    </div>
+                 </div>   
+                 <div class="col-sm-4">
+                     <div class="card">
+                          <div class="container" style="width:100%">
+                              <div class="form-group">
+                                  <div class="img-responsive"> <asp:Image ID="MgmtImg" runat="server" ImageUrl="~/Images/management.jpg" Height="150px" Width="320px" CssClass="col-xs-offset-2"/></div>
+                                  <div class="text-center"><h4><b>Management Courses</b></h4></div>
+                              </div>
+                              <div class="form-group">
+                                <label class="text-center"> We offer you the best management courses. Find here more on what management has to offer you</label>                                 
+                                  <asp:Button ID="MgmtInfoBtn" runat="server" Text="Click Here To Know More" class="btn btn-primary"/>                           
+                              </div>
+                        </div>
+                    </div>
+                 </div> 
+                 <div class="col-sm-3">
+                     <div class="card">
+                          <div class="container" style="width:100%">
+                              <div class="form-group">
+                                <div class="img-responsive"><asp:Image ID="NursingImg" runat="server" ImageUrl="~/Images/nursing.jpg" Height="150px" Width="320px"/></div>
+                                  <div class="text-center"><h4><b>Nursing Courses</b></h4></div>
+                              </div>
+                              <div class="form-group">
+                                  <label class="text-center">We offer you the best nursing courses. Find here more on what nursing has to offer you</label>
+                                  <asp:Button ID="NursingInfoBtn" runat="server" Text="Click Here To Know More" class="btn btn-primary"/>                           
+                              </div>
+                        </div>
+                    </div> 
+                 </div>
+                               
+                
+                 </div>
+             </div>
+    
+    </form>
+</body>
+</html>

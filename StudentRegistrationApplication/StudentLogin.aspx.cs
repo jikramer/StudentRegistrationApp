@@ -30,7 +30,10 @@ namespace StudentRegistrationApplication
 
                 //TODO: figure out where to route, add validation...
                 if (result == 1)
+                {
+                    Session["username"] = txtUsername.Text;
                     Response.Redirect("~/MultiviewTest.aspx");
+                }
                 else
                     Response.Redirect("~/Signup.aspx");
             }

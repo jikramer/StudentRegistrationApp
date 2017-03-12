@@ -11,7 +11,8 @@ namespace StudentRegistrationApplication
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-
+            if (!IsPostBack)
+                lblWelcome.Text = "Welcome " + HttpContext.Current.Session["username"].ToString();
         }
 
         protected void ViewProfileButton_Click(object sender, EventArgs e)

@@ -18,9 +18,15 @@
                 <asp:Button ID="ViewProfileButton" runat="server" Text="View Profile" BackColor="Red" BorderStyle="None" Font-Size="Medium" ForeColor="White" Height="50px" OnClick="ViewProfileButton_Click" Width="120px" /></p>
             <p>
                 <asp:Button ID="EditProfileButton" runat="server" Text="Edit Profile" BackColor="Red" BorderStyle="None" Font-Size="Medium" ForeColor="White" Height="50px" Width="120px" OnClick="EditProfileButton_Click" /></p>
-        </div>
+        </div>:
         <div class="col-sm-6">
+            
+            <h2>
+                <asp:Label runat="server" cssClass="text-success" ID="lblWelcome"></asp:Label>
+            </h2>
+            
             <asp:MultiView ID="StudentMultiView" runat="server">
+                
                 <asp:View ID="ViewProfileView" runat="server">
                     <div class="container">
                         <div class="well well-sm">
@@ -227,7 +233,7 @@
                                 </div>
                             </div>
                             <div class="form-group">
-                                <label class="control-label col-sm-3">Student Type:</label>
+                                <label class="control-label col-sm-3" id="WelcomeLabel">Student Type:</label>
                                 <div class="col-sm-5">
                                     <asp:DropDownList ID="EditddlStudentType" runat="server" ForeColor="Black">
                                         <asp:ListItem>Undergraduate</asp:ListItem>

@@ -13,5 +13,27 @@ namespace StudentRegistrationApplication
         {
 
         }
+
+        protected void btnLogin_Click(object sender, EventArgs e)
+        {
+
+            String DatabaseConnectionString = System.Configuration.ConfigurationManager.ConnectionStrings["Conn"].ConnectionString;
+
+            using (System.Data.SqlClient.SqlConnection conn = new System.Data.SqlClient.SqlConnection(DatabaseConnectionString))
+            {
+                String queryString = "Select count(*) from UserDetails where userName = '" + txtUsername.Text + "' and password = '" + txtPassword.Text + "'";
+
+                conn.Open();
+                System.Data.SqlClient.SqlCommand cmd = new System.Data.SqlClient.SqlCommand(queryString, conn);
+                Int32 result = (Int32)cmd.ExecuteScalar();
+                System.Diagnostics.Debug.Write( "result: " + result);
+
+                //TODO: figure out where to route, add validation...
+                if (result == 1)
+                    Response.Redirect("~/MultiviewTest.aspx");
+                else
+                    Response.Redirect("~/Signup.aspx");
+            }
+        }
     }
 }

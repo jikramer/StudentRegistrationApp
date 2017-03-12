@@ -16,18 +16,18 @@
         <div class="form-group">
             <label class="col-sm-2">Enter Username:</label>
             <div class="col-sm-3">
-                <asp:TextBox ID="UsernameTxt" runat="server" CssClass="form-control"></asp:TextBox>
+                <asp:TextBox ID="txtUsername" runat="server" CssClass="form-control"></asp:TextBox>
             </div>
         </div>
         <div class="form-group">
             <label class="col-sm-2">Enter Password:</label>
             <div class="col-sm-3">
-                <asp:TextBox ID="PasswordTxt" runat="server" CssClass="form-control" TextMode="Password"></asp:TextBox>
+                <asp:TextBox ID="txtPassword" runat="server" CssClass="form-control" TextMode="Password"></asp:TextBox>
             </div>
         </div>
         <div class="form-group">
             <div class="col-sm-offset-2 col-sm-2">
-                <asp:Button ID="btnLogin" runat="server" Text="Login" CssClass="btn btn-primary" />
+                <asp:Button ID="btnLogin" runat="server" Text="Login" CssClass="btn btn-primary" OnClick="btnLogin_Click" />
                 <asp:Button ID="btnCancel" runat="server" Text="Cancel" CssClass="btn btn-primary" />
             </div>
         </div>

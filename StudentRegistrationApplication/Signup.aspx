@@ -186,7 +186,8 @@
     </div>
     <div class="form-group">
         <div class="col-sm-12">
-            <asp:Button ID="btnConfirm" runat="server" Text="Confirm" CssClass="btn btn-primary" PostBackUrl="~/Home.aspx" />
+            
+            <asp:Button ID="btnConfirm" runat="server" Text="Confirm" CssClass="btn btn-primary" OnClick="btnConfirm_Click" />
             <asp:Button ID="btnClear" runat="server" Text="Clear" CssClass="btn btn-primary" />
         </div>
     </div>

@@ -17,7 +17,13 @@ namespace StudentRegistrationApplication
         protected void Page_Load(object sender, EventArgs e)
         {
             // username = "sanjayj";
-            username = Session["username"].ToString();
+            if (Session["username"] == null)
+            {
+                //TODO - set up error handler
+                Response.Write("<h1>please claim your account</h1>");
+            }
+            else
+                username = Session["username"].ToString();
         }
 
         protected void ViewProfileButton_Click(object sender, EventArgs e)

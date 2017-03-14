@@ -98,10 +98,6 @@
     <Reference Include="System.EnterpriseServices" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="App_Data\stuRegAppDB.mdf" />
-    <Content Include="App_Data\stuRegAppDB_log.ldf">
-      <DependentUpon>stuRegAppDB.mdf</DependentUpon>
-    </Content>
     <Content Include="App_Data\UserInfo.mdf" />
     <Content Include="App_Data\UserInfo_log.ldf">
       <DependentUpon>UserInfo.mdf</DependentUpon>

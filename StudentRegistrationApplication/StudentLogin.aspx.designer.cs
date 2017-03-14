@@ -13,22 +13,31 @@ namespace StudentRegistrationApplication {
     public partial class StudentLogin {
         
         /// <summary>
-        /// txtUsername control.
+        /// UsernameTxt control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtUsername;
+        protected global::System.Web.UI.WebControls.TextBox UsernameTxt;
         
         /// <summary>
-        /// txtPassword control.
+        /// PasswordTxt control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtPassword;
+        protected global::System.Web.UI.WebControls.TextBox PasswordTxt;
+        
+        /// <summary>
+        /// WarningLabel control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label WarningLabel;
         
         /// <summary>
         /// btnLogin control.
@@ -49,12 +58,21 @@ namespace StudentRegistrationApplication {
         protected global::System.Web.UI.WebControls.Button btnCancel;
         
         /// <summary>
-        /// HyperLink1 control.
+        /// ClaimAccountHyperLink control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.HyperLink HyperLink1;
+        protected global::System.Web.UI.WebControls.HyperLink ClaimAccountHyperLink;
+        
+        /// <summary>
+        /// ForgotPasswordHyperLink control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.HyperLink ForgotPasswordHyperLink;
     }
 }

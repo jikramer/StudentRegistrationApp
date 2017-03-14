@@ -4,6 +4,10 @@ using System.Linq;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
+using System.Web.Configuration;
+using System.Data.SqlClient;
+using System.Data;
+using System.Configuration;
 
 namespace StudentRegistrationApplication
 {
@@ -16,26 +20,29 @@ namespace StudentRegistrationApplication
 
         protected void btnLogin_Click(object sender, EventArgs e)
         {
+            string username = UsernameTxt.Text;
+            string password = PasswordTxt.Text;
 
-            String DatabaseConnectionString = System.Configuration.ConfigurationManager.ConnectionStrings["Conn"].ConnectionString;
-
-            using (System.Data.SqlClient.SqlConnection conn = new System.Data.SqlClient.SqlConnection(DatabaseConnectionString))
+            string CS = ConfigurationManager.ConnectionStrings["UserInfoConnectionString"].ConnectionString;
+            using (SqlConnection con = new SqlConnection(CS))
             {
-                String queryString = "Select count(*) from UserDetails where userName = '" + txtUsername.Text + "' and password = '" + txtPassword.Text + "'";
+                SqlCommand cmd = new SqlCommand();
+                cmd.CommandText = "Select Student_UserID, Student_Password from StudentData where Student_UserID = '" + username + "'and Student_Password = '" + password + "'";
 
-                conn.Open();
-                System.Data.SqlClient.SqlCommand cmd = new System.Data.SqlClient.SqlCommand(queryString, conn);
-                Int32 result = (Int32)cmd.ExecuteScalar();
-                System.Diagnostics.Debug.Write( "result: " + result);
+                cmd.Connection = con;
+                con.Open();
+                SqlDataReader dr = cmd.ExecuteReader();
 
-                //TODO: figure out where to route, add validation...
-                if (result == 1)
+                if (dr.Read())
                 {
-                    Session["username"] = txtUsername.Text;
-                    Response.Redirect("~/MultiviewTest.aspx");
+                    WarningLabel.Visible = false;
+                    Session["username"] = username;
+                    Response.Redirect("Home.aspx");
                 }
                 else
-                    Response.Redirect("~/Signup.aspx");
+                    WarningLabel.Visible = true;
+
+
             }
         }
     }

@@ -4,6 +4,10 @@ using System.Linq;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
+using System.Web.Configuration;
+using System.Data.SqlClient;
+using System.Data;
+using System.Configuration;
 
 namespace StudentRegistrationApplication
 {
@@ -16,33 +20,39 @@ namespace StudentRegistrationApplication
 
         protected void btnConfirm_Click(object sender, EventArgs e)
         {
+            // getStudentData
+            string firstname = txtFirstName.Text;
+            string lastname = txtLastName.Text;
+            string contactno = txtPhone.Text;
+            string email = txtEmail.Text;
+            string dob = txtDOB.Text;
+            string StAddress = txtAddress.Text;
+            string city = txtCity.Text;
+            string state = ddlState.SelectedValue;
+            int zipcode = Convert.ToInt32(txtZip.Text);
+            string student_type = ddlStudentType.SelectedValue;
+            //  string userid = txtUsername.Text;
+            //  Session["username"] = userid;
+            //  string password = (string)txtPassword.Text;
 
-            SqlDataSource SqlDS = new SqlDataSource();
-            SqlDS.ID = "SqlDS";
-            this.Page.Controls.Add(SqlDS);
-            SqlDS.ConnectionString = System.Configuration.ConfigurationManager.ConnectionStrings["Conn"].ConnectionString;
+            // string CS = "Data Source=(LocalDB) MSSQLLocalDB; database= UserInfo.mdf;Integrated Security=True";
+            string CS = ConfigurationManager.ConnectionStrings["UserInfoConnectionString"].ConnectionString;
+            using (SqlConnection con = new SqlConnection(CS))
+            {
+                SqlCommand cmd = new SqlCommand();
+                cmd.CommandText = "Insert into StudentData (Student_FirstName, Student_LastName, Student_ContactNo, Student_email, Student_DOB, Student_StAddress, Student_City, Student_State, Student_Zipcode, Student_Type, Student_UserID, Student_Password) values('" + firstname + "', '" + lastname + "', '" + contactno + "', '" + email + "', '" + dob + "', '" + StAddress + "', '" + city + "', '" + state + "', '" + zipcode + "', '" + student_type + "', '" + null + "', '" + null + "'); ";
+                cmd.Connection = con;
+                con.Open();
+                cmd.ExecuteNonQuery();
+                Response.Write("You have signed up successfully!");
 
-            SqlDS.InsertCommandType = SqlDataSourceCommandType.Text;
-            SqlDS.InsertCommand = "Insert into UserDetails (username, password, firstName, lastName, phone, email, dob, address, city, state, zip, studentType) VALUES (@username, @password, @firstName, @lastName, @phone, @email, @dob, @address, @city, @state, @zip, @studentType)";
-             
+            }
+        }
 
-            SqlDS.InsertParameters.Add("username", txtUsername.Text);
-            SqlDS.InsertParameters.Add("password", txtPassword.Text);
-            SqlDS.InsertParameters.Add("firstName", txtFirstName.Text);
-            SqlDS.InsertParameters.Add("lastName", txtLastName.Text);
-            SqlDS.InsertParameters.Add("phone", txtPhone.Text);
-            SqlDS.InsertParameters.Add("email", txtEmail.Text);
-            SqlDS.InsertParameters.Add("dob", txtDOB.Text);
-            SqlDS.InsertParameters.Add("address", txtAddress.Text);
+        protected void getStudentData()
+        {
 
-            SqlDS.InsertParameters.Add("city", txtCity.Text);
-            SqlDS.InsertParameters.Add("state", "");
-            SqlDS.InsertParameters.Add("zip", txtZip.Text);
-            SqlDS.InsertParameters.Add("studentType","");
 
-            SqlDS.Insert();
-
-            Response.Redirect("~/Home.aspx");
         }
     }
 }

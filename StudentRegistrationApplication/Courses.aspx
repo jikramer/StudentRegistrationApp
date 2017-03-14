@@ -12,7 +12,6 @@
 <asp:Content ID="mainContent" ContentPlaceHolderID="mainPlaceHolder" runat="server">
     <div class="row content">
         <div class="col-sm-2 sidenav">
-            <!--this is Testing push-->
             <h4>
                 <p>
                     <asp:HyperLink ID="HomeHyperLink" runat="server" ForeColor="White" NavigateUrl="~/Home.aspx"><span class="glyphicon glyphicon-home"></span>Home</asp:HyperLink></p>

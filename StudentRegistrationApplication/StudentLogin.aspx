@@ -16,13 +16,18 @@
         <div class="form-group">
             <label class="col-sm-2">Enter Username:</label>
             <div class="col-sm-3">
-                <asp:TextBox ID="txtUsername" runat="server" CssClass="form-control"></asp:TextBox>
+                <asp:TextBox ID="UsernameTxt" runat="server" CssClass="form-control"></asp:TextBox>
             </div>
         </div>
         <div class="form-group">
             <label class="col-sm-2">Enter Password:</label>
             <div class="col-sm-3">
-                <asp:TextBox ID="txtPassword" runat="server" CssClass="form-control" TextMode="Password"></asp:TextBox>
+                <asp:TextBox ID="PasswordTxt" runat="server" CssClass="form-control" TextMode="Password"></asp:TextBox>
+            </div>
+        </div>
+        <div class="form-group">
+            <div class="col-sm-5">
+                <asp:Label ID="WarningLabel" runat="server" Text="Incorrect Username or Password!" Font-Size="Medium" ForeColor="Red" Visible="False"></asp:Label>
             </div>
         </div>
         <div class="form-group">
@@ -31,11 +36,16 @@
                 <asp:Button ID="btnCancel" runat="server" Text="Cancel" CssClass="btn btn-primary" />
             </div>
         </div>
-        <div class="form-group">
-            <div class="col-sm-offset-2 col-sm-5">
+        <div class="form-group text-left">
+            <div class="col-sm-offset-2 col-sm-10">
+                <p>
+                    <asp:HyperLink ID="ClaimAccountHyperLink" runat="server" NavigateUrl="~/ClaimAccount.aspx">Claim Your Account</asp:HyperLink>
+                </p>
+            </div>
+            <div class="col-sm-offset-2 col-sm-10">
                 <p>
                     Forgot Password?
-                    <asp:HyperLink ID="HyperLink1" runat="server">Click Here</asp:HyperLink>
+                    <asp:HyperLink ID="ForgotPasswordHyperLink" runat="server">Click Here</asp:HyperLink>
                 </p>
             </div>
         </div>

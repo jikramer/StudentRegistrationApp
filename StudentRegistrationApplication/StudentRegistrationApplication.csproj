@@ -102,6 +102,10 @@
     <Content Include="App_Data\stuRegAppDB_log.ldf">
       <DependentUpon>stuRegAppDB.mdf</DependentUpon>
     </Content>
+    <Content Include="App_Data\UserInfo.mdf" />
+    <Content Include="App_Data\UserInfo_log.ldf">
+      <DependentUpon>UserInfo.mdf</DependentUpon>
+    </Content>
     <Content Include="Courses.aspx" />
     <Content Include="Global.asax" />
     <Content Include="Home.aspx" />
@@ -120,6 +124,7 @@
     <Content Include="Scripts\jquery-3.1.1.slim.min.map" />
     <Content Include="Scripts\jquery-3.1.1.min.map" />
     <Content Include="Site.Master" />
+    <Content Include="ClaimAccount.aspx" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -149,6 +154,7 @@
     <Compile Include="Courses.aspx.designer.cs">
       <DependentUpon>Courses.aspx</DependentUpon>
     </Compile>
+    <Compile Include="DatabaseClasses\StudentInfoDBClass.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -194,6 +200,13 @@
     </Compile>
     <Compile Include="StudentLogin.aspx.designer.cs">
       <DependentUpon>StudentLogin.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ClaimAccount.aspx.cs">
+      <DependentUpon>ClaimAccount.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ClaimAccount.aspx.designer.cs">
+      <DependentUpon>ClaimAccount.aspx</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>

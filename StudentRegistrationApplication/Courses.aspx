@@ -62,9 +62,9 @@
                             <div class="form-group">
                                 <label class="control-label col-sm-3">Select Term:</label>
                                 <div class="col-sm-5">
-                                    <asp:DropDownList ID="ddlBrowseTerm" runat="server" ForeColor="Black">
+                                    <asp:DropDownList ID="ddlBrowseTerm" runat="server" ForeColor="Black" OnSelectedIndexChanged="ddlBrowseTerm_SelectedIndexChanged">
+                                        <asp:ListItem>Select Term</asp:ListItem>
                                         <asp:ListItem>Spring 2016</asp:ListItem>
-                                        <asp:ListItem>Summer 2016</asp:ListItem>
                                         <asp:ListItem>Fall 2016</asp:ListItem>
                                         <asp:ListItem>Spring 2017</asp:ListItem>
                                     </asp:DropDownList>
@@ -74,16 +74,21 @@
                                 <label class="control-label col-sm-3">Select Major:</label>
                                 <div class="col-sm-5">
                                     <asp:DropDownList ID="ddlBrowseMajor" runat="server" ForeColor="Black">
+                                        <asp:ListItem>Select Major</asp:ListItem>
                                         <asp:ListItem>Software Engineering</asp:ListItem>
                                         <asp:ListItem>Mechanical Engineering</asp:ListItem>
                                         <asp:ListItem>Electrical Engineering</asp:ListItem>
                                         <asp:ListItem>Management of Technology</asp:ListItem>
-                                        <asp:ListItem>Nursing</asp:ListItem>
                                     </asp:DropDownList>
                                 </div>
                             </div>
                             <div class="form-group">
-                                <div class="col-sm-offset-3 col-sm-5">
+                                <div class="col-sm-offset-4 col-sm-2">
+                                    <asp:Button ID="BrowseBtn" runat="server" Text="Browse" CssClass="btn btn-primary" OnClick="BrowseBtn_Click"/>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <div class="col-sm-offset-3 col-sm-9">
                                     <asp:GridView ID="BrowseGridView" runat="server" BackColor="White" BorderColor="#DEDFDE" BorderStyle="None" BorderWidth="1px" CellPadding="4" ForeColor="Black" GridLines="Vertical">
                                         <AlternatingRowStyle BackColor="White" />
                                         <FooterStyle BackColor="#CCCC99" />

@@ -4,6 +4,10 @@ using System.Linq;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
+using System.Web.Configuration;
+using System.Data.SqlClient;
+using System.Data;
+using System.Configuration;
 
 namespace StudentRegistrationApplication
 {
@@ -21,7 +25,7 @@ namespace StudentRegistrationApplication
 
         protected void BrowseClassButton_Click(object sender, EventArgs e)
         {
-            CoursesMultiView.ActiveViewIndex = 1;
+            CoursesMultiView.ActiveViewIndex = 1;           
         }
 
         protected void RegisterClassButton_Click(object sender, EventArgs e)
@@ -31,6 +35,33 @@ namespace StudentRegistrationApplication
 
         protected void PlanAheadButton_Click(object sender, EventArgs e)
         {
+
+        }
+
+        protected void ddlBrowseTerm_SelectedIndexChanged(object sender, EventArgs e)
+        {
+             
+     
+        }
+
+        protected void BrowseBtn_Click(object sender, EventArgs e)
+        {
+            string CS = ConfigurationManager.ConnectionStrings["UserInfoConnectionString"].ConnectionString;
+            using (SqlConnection con = new SqlConnection(CS))
+            {
+                if (ddlBrowseTerm.SelectedValue.Equals("Spring 2016"))
+                {
+                    if (ddlBrowseMajor.SelectedValue.Equals("Software Engineering"))
+                    {
+                        SqlCommand cmd = new SqlCommand();
+                        cmd.CommandText = "Select * from SoftwareEng where CRN_No='401' or CRN_No='402' or CRN_No='410' or CRN_No='412' or CRN_No='415'";
+                        cmd.Connection = con;
+                        con.Open();
+                        BrowseGridView.DataSource = cmd.ExecuteReader();
+                        BrowseGridView.DataBind();
+                    }
+                }
+            }
 
         }
     }

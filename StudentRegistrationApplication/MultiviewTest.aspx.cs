@@ -20,7 +20,7 @@ namespace StudentRegistrationApplication
             if (Session["username"] == null)
             {
                 //TODO - set up error handler
-                Response.Write("<h1>please claim your account</h1>");
+                Response.Write("<h1>Please Log in First</h1>");
             }
             else
                 username = Session["username"].ToString();

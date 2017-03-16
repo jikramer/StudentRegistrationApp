@@ -135,35 +135,40 @@
                                     </asp:DropDownList>
                                 </div>
                             </div>
+                            
                             <div class="form-group">
-                                <div class="col-sm-offset-3 col-sm-5">
-                                    <asp:GridView ID="RegisterGridView" runat="server" BackColor="White" BorderColor="#DEDFDE" BorderStyle="None" BorderWidth="1px" CellPadding="4" ForeColor="Black" GridLines="Vertical">
-                                        <AlternatingRowStyle BackColor="White" />
-                                        <FooterStyle BackColor="#CCCC99" />
-                                        <HeaderStyle BackColor="#6B696B" Font-Bold="True" ForeColor="White" />
-                                        <PagerStyle BackColor="#F7F7DE" ForeColor="Black" HorizontalAlign="Right" />
-                                        <RowStyle BackColor="#F7F7DE" />
-                                        <SelectedRowStyle BackColor="#CE5D5A" Font-Bold="True" ForeColor="White" />
-                                        <SortedAscendingCellStyle BackColor="#FBFBF2" />
-                                        <SortedAscendingHeaderStyle BackColor="#848384" />
-                                        <SortedDescendingCellStyle BackColor="#EAEAD3" />
-                                        <SortedDescendingHeaderStyle BackColor="#575357" />
-                                    </asp:GridView>
+                                <div class="col-sm-offset-4 col-sm-2">
+                                     <asp:Button ID="ViewListBtn" runat="server" Text="View Course List" CssClass="btn btn-primary" OnClick="ViewListBtn_Click"/>
                                 </div>
                             </div>
                             <div class="form-group">
-                                <div class="col-sm-offset-3 col-sm-5">
-                                    <asp:ListBox ID="lstCart" runat="server" CssClass="form-control"></asp:ListBox>
+                                <div class="col-sm-5">
+                                     <asp:Label ID="Label1" runat="server" Text="Select courses from the course list below:"></asp:Label>
+                                    <asp:ListBox ID="CourseList" runat="server" CssClass="form-control"></asp:ListBox>
                                 </div>
                                 <div class="col-sm-1">
                                     <p>
-                                        <asp:Button ID="RemoveButton" runat="server" Text="Remove" CssClass="btn btn-primary" /></p>
+                                        <asp:Button ID="AddBtn" runat="server" Text="Add" CssClass="btn btn-primary" OnClick="AddBtn_Click" /><span class="glyphicon glyphicon-arrow-right"></span></p>   
+                                                                   
+                                </div>
+                                <div class="col-sm-5">
+                                    <asp:Label ID="Label2" runat="server" Text="Add courses you want to register over here: "></asp:Label>
+                                    <asp:ListBox ID="RegCourseList" runat="server" CssClass="form-control"></asp:ListBox>
+                                </div>
+                                <div class="col-sm-1">
                                     <p>
-                                        <asp:Button ID="ClearAllButton" runat="server" Text="Clear All" CssClass="btn btn-primary" /></p>
+                                        <asp:Button ID="RemoveBtn" runat="server" Text="Remove" CssClass="btn btn-primary" /></p>
+                                    <p>
+                                        <asp:Button ID="ClearBtn" runat="server" Text="Clear All" CssClass="btn btn-primary" /></p>
                                 </div>
                             </div>
                             <div class="form-group ">
-                                <div class="col-sm-offset-3 col-sm-2">
+                                <div class="col-sm-offset-3 col-sm-5">
+                                     <asp:Label ID="LblMessage" runat="server" Text=""></asp:Label>
+                                </div>
+                            </div>
+                            <div class="form-group ">
+                                <div class="col-sm-offset-5 col-sm-2">
                                     <asp:Button ID="btnSubmit" runat="server" Text="Submit" CssClass="btn btn-primary" />
                                     <asp:Button ID="btnCancel" runat="server" Text="Cancel" CssClass="btn btn-primary" />
                                 </div>

@@ -11,6 +11,8 @@ namespace StudentRegistrationApplication.DatabaseClasses
 {
     public class StudentInfoDBClass
     {
+
+        //git hub
         /*  string CS = ConfigurationManager.ConnectionStrings["UserInfoConnectionString"].ConnectionString;
           string[] StudentInfoArray = new string[10];
           protected void InsertStudentInfo()

@@ -169,7 +169,7 @@
                             </div>
                             <div class="form-group ">
                                 <div class="col-sm-offset-5 col-sm-2">
-                                    <asp:Button ID="btnSubmit" runat="server" Text="Submit" CssClass="btn btn-primary" />
+                                    <asp:Button ID="btnSubmit" runat="server" Text="Submit" CssClass="btn btn-primary" OnClick="btnSubmit_Click" />
                                     <asp:Button ID="btnCancel" runat="server" Text="Cancel" CssClass="btn btn-primary" />
                                 </div>
                             </div>

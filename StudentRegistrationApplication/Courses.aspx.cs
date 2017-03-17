@@ -14,6 +14,7 @@ namespace StudentRegistrationApplication
     public partial class Courses : System.Web.UI.Page
     {
         private string username;
+        private string subject1, subject2, subject3;
         protected void Page_Load(object sender, EventArgs e)
         {
             if (Session["username"] == null)
@@ -29,8 +30,36 @@ namespace StudentRegistrationApplication
         protected void ViewEnrolledClassButton_Click(object sender, EventArgs e)
         {
             CoursesMultiView.ActiveViewIndex = 0;
+            string CS = ConfigurationManager.ConnectionStrings["UserInfoConnectionString"].ConnectionString;
+            using (SqlConnection con = new SqlConnection(CS))
+            {
+                SqlCommand cmd = new SqlCommand();
+                cmd.CommandText = "Select Course1, Course2, Course3 from StudentData where Student_UserID = '" + username + "'";
+                cmd.Connection = con;
+                con.Open();
+                SqlDataReader dr = cmd.ExecuteReader();
+                if (dr.Read())
+                {
+                    MessageLbl.Text = " ";
+                    subject1 = dr[0].ToString();
+                    subject2 = dr[1].ToString();
+                    subject3 = dr[2].ToString();                   
+                }
+                else
+                {
+                    MessageLbl.Text = "<h2>You have not registered any classes yet!</h2>";
+                }
+            }
+            using (SqlConnection conn = new SqlConnection(CS))
+            {
+                SqlCommand comnd = new SqlCommand();
+                comnd.CommandText = "Select * from SoftwareEng where Subject_Name = '" + subject1 + "' or Subject_Name = '" + subject2 + "' or Subject_Name = '" + subject3 + "'";
+                comnd.Connection = conn;
+                conn.Open();
+                EnrolledClassesGridView.DataSource = comnd.ExecuteReader();
+                EnrolledClassesGridView.DataBind();
+            }
         }
-
         protected void BrowseClassButton_Click(object sender, EventArgs e)
         {
             CoursesMultiView.ActiveViewIndex = 1;           
@@ -155,8 +184,26 @@ namespace StudentRegistrationApplication
                       con.Open();
                       cmd.ExecuteNonQuery();
                       Response.Write("You have registered your courses successfully!");
-
+                    btnSubmit.Enabled = false;
                   }
+            }
+        }
+
+        protected void ClearBtn_Click(object sender, EventArgs e)
+        {
+            RegCourseList.Items.Clear();
+        }
+
+        protected void RemoveBtn_Click(object sender, EventArgs e)
+        {
+            if (RegCourseList.SelectedIndex > -1)
+            {
+                LblMessage.Text = " ";
+                RegCourseList.Items.Remove(RegCourseList.SelectedItem);
+            }
+            else
+            {
+                LblMessage.Text = "Please select the item to remove";
             }
         }
     }

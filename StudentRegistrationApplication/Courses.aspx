@@ -50,6 +50,11 @@
                                     </asp:GridView>
                                 </div>
                             </div>
+                            <div class="form-group">
+                                <div class="col-sm-offset-3 col-sm-5">
+                                       <asp:Label ID="MessageLbl" runat="server" Text=" " ForeColor="Red"></asp:Label>
+                                </div>
+                            </div>           
                         </div>
                     </div>
                 </asp:View>
@@ -157,9 +162,9 @@
                                 </div>
                                 <div class="col-sm-1">
                                     <p>
-                                        <asp:Button ID="RemoveBtn" runat="server" Text="Remove" CssClass="btn btn-primary" /></p>
+                                        <asp:Button ID="RemoveBtn" runat="server" Text="Remove" CssClass="btn btn-primary" OnClick="RemoveBtn_Click" /></p>
                                     <p>
-                                        <asp:Button ID="ClearBtn" runat="server" Text="Clear All" CssClass="btn btn-primary" /></p>
+                                        <asp:Button ID="ClearBtn" runat="server" Text="Clear All" CssClass="btn btn-primary" OnClick="ClearBtn_Click" /></p>
                                 </div>
                             </div>
                             <div class="form-group ">

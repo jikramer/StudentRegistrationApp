@@ -23,26 +23,31 @@ namespace StudentRegistrationApplication
             string username = UsernameTxt.Text;
             string password = PasswordTxt.Text;
 
-            string CS = ConfigurationManager.ConnectionStrings["UserInfoConnectionString"].ConnectionString;
-            using (SqlConnection con = new SqlConnection(CS))
+            if (username.Equals("admin123") && password.Equals("adminpassword"))
             {
-                SqlCommand cmd = new SqlCommand();
-                cmd.CommandText = "Select Student_UserID, Student_Password from StudentData where Student_UserID = '" + username + "'and Student_Password = '" + password + "'";
-
-                cmd.Connection = con;
-                con.Open();
-                SqlDataReader dr = cmd.ExecuteReader();
-
-                if (dr.Read())
+                Response.Redirect("Signup.aspx");
+            }
+            else
+            {
+                string CS = ConfigurationManager.ConnectionStrings["UserInfoConnectionString"].ConnectionString;
+                using (SqlConnection con = new SqlConnection(CS))
                 {
-                    WarningLabel.Visible = false;
-                    Session["username"] = username;
-                    Response.Redirect("Home.aspx");
+                    SqlCommand cmd = new SqlCommand();
+                    cmd.CommandText = "Select Student_UserID, Student_Password from StudentData where Student_UserID = '" + username + "'and Student_Password = '" + password + "'";
+
+                    cmd.Connection = con;
+                    con.Open();
+                    SqlDataReader dr = cmd.ExecuteReader();
+
+                    if (dr.Read())
+                    {
+                        WarningLabel.Visible = false;
+                        Session["username"] = username;
+                        Response.Redirect("Home.aspx");
+                    }
+                    else
+                        WarningLabel.Visible = true;
                 }
-                else
-                    WarningLabel.Visible = true;
-
-
             }
         }
     }

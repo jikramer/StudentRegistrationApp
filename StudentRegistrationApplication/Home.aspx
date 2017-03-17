@@ -40,15 +40,11 @@
         <div class="col-sm-12">
             <div class="jumbotron">
                 <div class="text-center">
-                    <h1>STUDENT'S PORTAL</h1>
-                    <h2>We provide value embedded quality education</h2>
+                    <h1>CONNECTICUT STATE UNIVERSITY</h1>
+                    <h2>STUDENT'S PORTAL</h2>
+                    <h3>We provide value embedded quality education</h3>
                     <br />
-                    <h4>Login to find and enroll engineering and management Courses</h4>
-                    <h5>Don't have an account? 
-                             <asp:HyperLink ID="SignupHyperLink" runat="server" NavigateUrl="~/Signup.aspx" ForeColor="Wheat"><h4>Sign up</h4></asp:HyperLink>
-                        to get access to all features
-                    </h5>
-
+                    <h4>Please Login to find and enroll engineering and management Courses</h4>
                 </div>
             </div>
         </div>

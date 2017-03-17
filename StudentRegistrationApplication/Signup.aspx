@@ -9,6 +9,9 @@
 <asp:Content ID="mainContent" ContentPlaceHolderID="mainPlaceHolder" runat="server">
 <div class="container">
          <div class="jumbotron">
+             <div class="text-left">
+                 <h3>Welcome Admin!</h3>
+             </div>
             <h2>Student Registration</h2>     
           </div> 
     <asp:ValidationSummary ID="ValidationSummary1" runat="server" CssClass="summery text-danger" HeaderText="Please correct these entries:" Display="Dynamic" ForeColor="Red" />

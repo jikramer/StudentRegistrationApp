@@ -16,17 +16,21 @@ namespace StudentRegistrationApplication
 
         protected void SetPayMethodButton_Click(object sender, EventArgs e)
         {
-            PaymentMultiView.ActiveViewIndex = 0;
-        }
 
-        protected void ViewAccountButton_Click(object sender, EventArgs e)
-        {
-            PaymentMultiView.ActiveViewIndex = 1;
-        }
-
-        protected void MakePaymentButton_Click(object sender, EventArgs e)
-        {
-            PaymentMultiView.ActiveViewIndex = 2;
+            int paymentMethod = Int32.Parse(ddlPaymentMethod.SelectedValue.ToString());
+            if (paymentMethod ==  1)
+            {
+                PaymentMultiView.ActiveViewIndex = 0;
+            }
+            else if(paymentMethod == 2)
+            {
+                PaymentMultiView.ActiveViewIndex = 1;
+            }
+            else
+            {
+                PaymentMultiView.ActiveViewIndex = 2;
+            }
+            
         }
     }
 }

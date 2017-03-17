@@ -40,14 +40,9 @@
         <div class="col-sm-12">
             <div class="jumbotron">
                 <div class="text-center">
-                    <h1>STUDENT'S PORTAL</h1>
+                    <h1>Connecticut State University</h1>
                     <h2>We provide value embedded quality education</h2>
                     <br />
-                    <h4>Login to find and enroll engineering and management Courses</h4>
-                    <h5>Don't have an account? 
-                             <asp:HyperLink ID="SignupHyperLink" runat="server" NavigateUrl="~/Signup.aspx" ForeColor="Wheat"><h4>Sign up</h4></asp:HyperLink>
-                        to get access to all features
-                    </h5>
 
                 </div>
             </div>
@@ -60,7 +55,7 @@
                     <div class="container" style="width: 100%">
                         <div class="form-group">
                             <div class="img-responsive">
-                                <asp:Image ID="EngineeringImg" runat="server" ImageUrl="~/Images/engineering.jpg" Height="150px" Width="320px" CssClass="col-xs-offset-1" /></div>
+                                <asp:Image ID="EngineeringImg" runat="server" ImageUrl="~/Images/engineering.jpg" Height="150px" Width="100%" /></div>
                             <div class="text-center">
                                 <h4><b>Engineering Courses</b></h4>
                             </div>
@@ -72,18 +67,18 @@
                     </div>
                 </div>
             </div>
-            <div class="col-sm-4">
+            <div class="col-sm-3">
                 <div class="card">
                     <div class="container" style="width: 100%">
                         <div class="form-group">
                             <div class="img-responsive">
-                                <asp:Image ID="MgmtImg" runat="server" ImageUrl="~/Images/management.jpg" Height="150px" Width="320px" CssClass="col-xs-offset-2" /></div>
+                                <asp:Image ID="MgmtImg" runat="server" ImageUrl="~/Images/management.jpg" Height="150px" Width="100%"/></div>
                             <div class="text-center">
                                 <h4><b>Management Courses</b></h4>
                             </div>
                         </div>
                         <div class="form-group">
-                            <label class="text-center">We offer you the best management courses. Find here more on what management has to offer you</label>
+                            <label class="text-center">We offer you the best management courses. Find here more on what management has to &nbsp;&nbsp;&nbsp;offer you</label>
                             <asp:Button ID="MgmtInfoBtn" runat="server" Text="Click Here To Know More" class="btn btn-primary" />
                         </div>
                     </div>
@@ -94,7 +89,7 @@
                     <div class="container" style="width: 100%">
                         <div class="form-group">
                             <div class="img-responsive">
-                                <asp:Image ID="NursingImg" runat="server" ImageUrl="~/Images/nursing.jpg" Height="150px" Width="320px" /></div>
+                                <asp:Image ID="NursingImg" runat="server" ImageUrl="~/Images/nursing.jpg" Height="150px" Width="100%" /></div>
                             <div class="text-center">
                                 <h4><b>Nursing Courses</b></h4>
                             </div>

@@ -16,11 +16,13 @@ namespace StudentRegistrationApplication
         private string username;
         protected void Page_Load(object sender, EventArgs e)
         {
-            // username = "sanjayj";
+            //clear the control to support multiview
+            Label masterMsgLabel = (Label)Master.FindControl("lblUserMessage");
+            masterMsgLabel.Text = "";
+
             if (Session["username"] == null)
             {
-                //TODO - set up error handler
-                Response.Write("<h1>Please Log in First</h1>");
+                setMasterLabelMsg("Please log in first");
             }
             else
                 username = Session["username"].ToString();
@@ -105,9 +107,27 @@ namespace StudentRegistrationApplication
                 cmd.Connection = con;
                 con.Open();
                 cmd.ExecuteNonQuery();
-                Response.Write("You have updated your data successfully!");
+
+                setMasterLabelMsg("you have updated your data succesfully!");
+            }
+
+        }
+
+        /// <summary>
+        /// Set a value for label on top of master page shown on content page.  Use for info/error.
+        /// </summary>
+        /// <param name="msg"></param>
+        private void setMasterLabelMsg(String msg)
+        {
+            Label masterMsgLabel = (Label)Master.FindControl("lblUserMessage");
+            if (masterMsgLabel != null)
+            {
+                masterMsgLabel.Text = "<strong>***</strong> " + msg + "<strong>***</strong>";
 
             }
+            else
+                Response.Write(msg);
         }
+
     }
-}
+} 

@@ -17,12 +17,14 @@
 </head>
 <body>
 
-     
 
     <div class="container-fluid text-center">
         <main>
-
             <form id="form1" runat="server" class="form-horizontal">
+
+            <div class="alert-info">   
+                <asp:Label ID="lblUserMessage" runat="server" ></asp:Label>
+            </div>
 
                 <asp:ContentPlaceHolder ID="mainPlaceHolder" runat="server">
                 </asp:ContentPlaceHolder>

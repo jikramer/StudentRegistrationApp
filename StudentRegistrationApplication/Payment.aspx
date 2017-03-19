@@ -82,7 +82,7 @@
                                     <div class="form-group">
                                         <label class="control-label col-sm-3 subHeading">Card Number:</label>
                                         <div class="col-sm-5">
-                                            <asp:TextBox ID="txtCardNumber" runat="server" CssClass="form-control" TextMode="Number"></asp:TextBox>
+                                            <asp:TextBox ID="txtCardNumber" runat="server" CssClass="form-control"></asp:TextBox>
                                         </div>
                                         <div class="col-sm-3">
                                             <asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server"
@@ -91,7 +91,7 @@
                                             </asp:RequiredFieldValidator>
                                             <asp:RegularExpressionValidator ID="RegularExpressionValidator1" runat="server" 
                                                 ControlToValidate="txtCardNumber" ErrorMessage="Use this format: xxxx-xxxx-xxxx-xxxx" 
-                                                ValidationExpression="\d{4}-\d{4}-\d{4}" CssClass="text-danger" 
+                                                ValidationExpression="\d{4}-\d{4}-\d{4}-\d{4}" CssClass="text-danger" 
                                                 Display="Dynamic" ForeColor="Red">
                                             </asp:RegularExpressionValidator>
                                          </div>
@@ -221,7 +221,7 @@
                                     <div class="form-group">
                                         <label class="control-label col-sm-3 subHeading">Card Number:</label>
                                         <div class="col-sm-5">
-                                            <asp:TextBox ID="txtDebitCard" runat="server" CssClass="form-control" TextMode="Number"></asp:TextBox>
+                                            <asp:TextBox ID="txtDebitCard" runat="server" CssClass="form-control"></asp:TextBox>
                                         </div>
                                         <div class="col-sm-3">
                                             <asp:RequiredFieldValidator ID="RequiredFieldValidator9" runat="server"
@@ -230,7 +230,7 @@
                                             </asp:RequiredFieldValidator>
                                             <asp:RegularExpressionValidator ID="RegularExpressionValidator2" runat="server" 
                                                 ControlToValidate="txtDebitCard" ErrorMessage="Use this format: xxxx-xxxx-xxxx-xxxx" 
-                                                ValidationExpression="\d{4}-\d{4}-\d{4}" CssClass="text-danger" 
+                                                ValidationExpression="\d{4}-\d{4}-\d{4}-\d{4}" CssClass="text-danger" 
                                                 Display="Dynamic" ForeColor="Red">
                                             </asp:RegularExpressionValidator>
                                          </div>

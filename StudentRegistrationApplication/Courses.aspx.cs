@@ -23,6 +23,7 @@ namespace StudentRegistrationApplication
                 if (masterMsgLabel != null)
                 {
                     masterMsgLabel.Text = "<strong>Error!</strong> Please log in first!";
+                    Response.Redirect("StudentLogin.aspx");
                 }
                 else
                     Response.Write("Please Log in First!");

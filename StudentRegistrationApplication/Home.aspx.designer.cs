@@ -49,13 +49,13 @@ namespace StudentRegistrationApplication {
         protected global::System.Web.UI.WebControls.HyperLink PaymentHyperLink;
         
         /// <summary>
-        /// LoginHyperLink control.
+        /// OpenClose control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.HyperLink LoginHyperLink;
+        protected global::System.Web.UI.WebControls.LinkButton OpenClose;
         
         /// <summary>
         /// EngineeringImg control.

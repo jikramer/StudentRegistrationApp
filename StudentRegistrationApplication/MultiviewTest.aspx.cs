@@ -23,6 +23,7 @@ namespace StudentRegistrationApplication
             if (Session["username"] == null)
             {
                 setMasterLabelMsg("Please log in first");
+                Response.Redirect("StudentLogin.aspx");
             }
             else
                 username = Session["username"].ToString();

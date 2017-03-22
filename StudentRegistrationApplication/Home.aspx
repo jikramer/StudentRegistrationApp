@@ -29,7 +29,7 @@
                 </ul>
                 <ul class="nav navbar-nav navbar-right">
                     <li>
-                       <asp:LinkButton id="OpenClose" runat="server" OnClick="OpenClose_Click" AutoPostBack="true"><span class="glyphicon glyphicon-log-in"></span><asp:label runat="server" Text=" Login"></asp:label></asp:LinkButton>
+                       <asp:LinkButton id="OpenClose" runat="server" OnClick="OpenClose_Click" AutoPostBack="true"><span class="glyphicon glyphicon-log-in"></span><asp:label runat="server" ID="lbllogin" Text=" Admin Login"></asp:label></asp:LinkButton>
 
                         <%--<asp:HyperLink ID="LoginHyperLink" runat="server" NavigateUrl="~/StudentLogin.aspx"><span class="glyphicon glyphicon-log-in"></span> <asp:label runat="server" Text="close"></asp:label></asp:HyperLink>--%>
 

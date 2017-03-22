@@ -85,7 +85,12 @@ namespace StudentRegistrationApplication
                 cmd.Connection = con;
                 con.Open();
                 cmd.ExecuteNonQuery();
-                Response.Write("You have claimed your account successfully!");
+
+                Label masterMsgLabel = (Label)Master.FindControl("lblUserMessage");
+                if (masterMsgLabel != null) {
+                    masterMsgLabel.Text = "<strong>Success!</strong> You have claimed your account successfully!";
+                } else
+                    Response.Write("You have claimed your account successfully!");
             }
         }
     }

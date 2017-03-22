@@ -19,8 +19,14 @@ namespace StudentRegistrationApplication
         {
             if (Session["username"] == null)
             {
-                //TODO - set up error handler
-                Response.Write("<h1>Please Log in First</h1>");
+                Label masterMsgLabel = (Label)Master.FindControl("lblUserMessage");
+                if (masterMsgLabel != null)
+                {
+                    masterMsgLabel.Text = "<strong>Error!</strong> Please log in first!";
+                    Response.Redirect("StudentLogin.aspx");
+                }
+                else
+                    Response.Write("Please Log in First!");
             }
             else
                 username = Session["username"].ToString();
@@ -183,7 +189,16 @@ namespace StudentRegistrationApplication
                       cmd.Connection = con;
                       con.Open();
                       cmd.ExecuteNonQuery();
-                      Response.Write("You have registered your courses successfully!");
+
+
+                    Label masterMsgLabel = (Label)Master.FindControl("lblUserMessage");
+                    if (masterMsgLabel != null)
+                    {
+                        masterMsgLabel.Text = "<strong>Success!</strong> You have registered for your courses successfully!";
+                    }
+                    else
+                        Response.Write("You have registered for your courses successfully!");
+
                     btnSubmit.Enabled = false;
                   }
             }

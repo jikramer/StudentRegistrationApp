@@ -20,7 +20,7 @@
     padding: 2px 16px;
 }
  .jumbotron{
-    background-color: red;
+    background-color: rgba(95, 5, 84, 0.50);
     color: white;
     background-size: 100% 100%;
     margin-top: 1em;

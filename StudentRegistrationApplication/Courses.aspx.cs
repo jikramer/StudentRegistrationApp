@@ -17,7 +17,7 @@ namespace StudentRegistrationApplication
         private string subject1, subject2, subject3;
         protected void Page_Load(object sender, EventArgs e)
         {
-            if (Session["username"] == null)
+            if (Session["user"] == null)
             {
                 Label masterMsgLabel = (Label)Master.FindControl("lblUserMessage");
                 if (masterMsgLabel != null)
@@ -29,7 +29,7 @@ namespace StudentRegistrationApplication
                     Response.Write("Please Log in First!");
             }
             else
-                username = Session["username"].ToString();
+                username = Session["user"].ToString();
 
         }
 

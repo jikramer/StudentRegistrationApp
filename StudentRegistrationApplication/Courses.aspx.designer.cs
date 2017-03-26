@@ -58,6 +58,15 @@ namespace StudentRegistrationApplication {
         protected global::System.Web.UI.WebControls.Button PlanAheadButton;
         
         /// <summary>
+        /// TranscriptBtn control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button TranscriptBtn;
+        
+        /// <summary>
         /// CoursesMultiView control.
         /// </summary>
         /// <remarks>
@@ -272,5 +281,23 @@ namespace StudentRegistrationApplication {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.View PlanAheadView;
+        
+        /// <summary>
+        /// TranscriptView control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.View TranscriptView;
+        
+        /// <summary>
+        /// TranscriptGridView control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.GridView TranscriptGridView;
     }
 }

@@ -78,7 +78,7 @@ namespace StudentRegistrationApplication
 
         protected void PlanAheadButton_Click(object sender, EventArgs e)
         {
-
+            CoursesMultiView.ActiveViewIndex = 3;
         }
 
         protected void ddlBrowseTerm_SelectedIndexChanged(object sender, EventArgs e)
@@ -202,6 +202,11 @@ namespace StudentRegistrationApplication
                     btnSubmit.Enabled = false;
                   }
             }
+        }
+
+        protected void TranscriptBtn_Click(object sender, EventArgs e)
+        {
+            CoursesMultiView.ActiveViewIndex = 4;
         }
 
         protected void ClearBtn_Click(object sender, EventArgs e)

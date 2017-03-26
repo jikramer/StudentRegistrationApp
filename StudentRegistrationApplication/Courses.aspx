@@ -25,6 +25,8 @@
                 <asp:Button ID="RegisterClassButton" runat="server" Text="Register Classes" BackColor="Red" BorderStyle="None" Font-Size="Medium" ForeColor="White" Height="52px" Width="206px" OnClick="RegisterClassButton_Click" /></p>
             <p>
                 <asp:Button ID="PlanAheadButton" runat="server" Text="Plan Ahead" BackColor="Red" BorderStyle="None" Font-Size="Medium" ForeColor="White" Height="52px" Width="206px" OnClick="PlanAheadButton_Click" /></p>
+            <p>
+                <asp:Button ID="TranscriptBtn" runat="server" Text="Transcripts" BackColor="Red" BorderStyle="None" Font-Size="Medium" ForeColor="White" Height="52px" Width="206px" OnClick="TranscriptBtn_Click"/></p>
         </div>
         <div class="col-sm-6">
             <asp:MultiView ID="CoursesMultiView" runat="server">
@@ -182,6 +184,31 @@
                     </div>
                 </asp:View>
                 <asp:View ID="PlanAheadView" runat="server">
+                </asp:View>
+                <asp:View ID="TranscriptView" runat="server">
+                     <div class="container">
+                        <div class="well well-sm">
+                            <h2>Transcripts</h2>
+                        </div>
+                        <div class="form-horizontal">
+                             <div class="form-group">
+                                <div class="col-sm-offset-3 col-sm-9">
+                                    <asp:GridView ID="TranscriptGridView" runat="server" BackColor="White" BorderColor="#DEDFDE" BorderStyle="None" BorderWidth="1px" CellPadding="4" ForeColor="Black" GridLines="Vertical">
+                                        <AlternatingRowStyle BackColor="White" />
+                                        <FooterStyle BackColor="#CCCC99" />
+                                        <HeaderStyle BackColor="#6B696B" Font-Bold="True" ForeColor="White" />
+                                        <PagerStyle BackColor="#F7F7DE" ForeColor="Black" HorizontalAlign="Right" />
+                                        <RowStyle BackColor="#F7F7DE" />
+                                        <SelectedRowStyle BackColor="#CE5D5A" Font-Bold="True" ForeColor="White" />
+                                        <SortedAscendingCellStyle BackColor="#FBFBF2" />
+                                        <SortedAscendingHeaderStyle BackColor="#848384" />
+                                        <SortedDescendingCellStyle BackColor="#EAEAD3" />
+                                        <SortedDescendingHeaderStyle BackColor="#575357" />
+                                    </asp:GridView>
+                                </div>
+                            </div>
+                        </div>
+                     </div>
                 </asp:View>
             </asp:MultiView>
         </div>

@@ -30,7 +30,7 @@ namespace StudentRegistrationApplication
             {
                 Session["user"] = "admin123";
                 Session["role"] = "admin";
-                Response.Redirect("Signup.aspx");
+                Response.Redirect("AdmnStudentDetails.aspx");
             }
             else
             {

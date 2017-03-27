@@ -1,19 +1,22 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Signup.aspx.cs" MasterPageFile="~/Site.Master" Inherits="StudentRegistrationApplication.Signup" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Signup.aspx.cs" MasterPageFile="~/AdminView.Master" Inherits="StudentRegistrationApplication.Signup" %>
 
 
-<asp:Content ContentPlaceHolderID="headPlaceHolder" runat="server">
+<asp:Content ContentPlaceHolderID="AdminheadPlaceHolder" runat="server">
     <link href="StyleSheets/Site.css" rel="stylesheet" />
 </asp:Content>
 
 
-<asp:Content ID="mainContent" ContentPlaceHolderID="mainPlaceHolder" runat="server">
+<asp:Content ID="mainContent" ContentPlaceHolderID="AdminMainContent" runat="server">
     <div class="container">
-         <div class="jumbotron">
+        <div class="well well-sm" style="align-content:center">
+                            <h2>Student Registration</h2>
+            </div>
+         <%--<div class="jumbotron">
              <div class="text-left">
                  <h3>Welcome Admin!</h3>
              </div>
             <h2>Student Registration</h2>     
-          </div> 
+          </div>--%> 
     <asp:ValidationSummary ID="ValidationSummary1" runat="server" CssClass="summery text-danger" HeaderText="Please correct these entries:" Display="Dynamic" ForeColor="Red" />
 
     <h3>Personal Information</h3>
@@ -157,7 +160,7 @@
         
     <div class="form-group">
         <div class="col-sm-12">
-            <asp:HyperLink ID="HomeHyperLink" runat="server" NavigateUrl="~/Home.aspx"><span class="glyphicon glyphicon-home"></span>Home</asp:HyperLink>
+           <%-- <asp:HyperLink ID="HomeHyperLink" runat="server" NavigateUrl="~/Home.aspx"><span class="glyphicon glyphicon-home"></span>Home</asp:HyperLink>--%>
             <asp:Button ID="btnConfirm" runat="server" Text="Confirm" CssClass="btn btn-primary" OnClick="btnConfirm_Click" />
             <asp:Button ID="btnClear" runat="server" Text="Clear" CssClass="btn btn-primary" />
         </div>

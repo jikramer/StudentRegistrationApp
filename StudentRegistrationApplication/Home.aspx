@@ -66,7 +66,7 @@
                         </div>
                         <div class="form-group">
                             <label class="text-center">We offer you the best engineering courses. Find here more on what engineering has to offer you</label>
-                            <asp:Button ID="EngInfoBtn" runat="server" Text="Click Here To Know More" class="btn btn-primary" />
+                            <asp:Button ID="EngInfoBtn" runat="server" Text="Click Here To Know More" class="btn btn-primary" PostBackUrl="~/EngineeringCourses.aspx" />
                         </div>
                     </div>
                 </div>
@@ -83,7 +83,7 @@
                         </div>
                         <div class="form-group">
                             <label class="text-center">We offer you the best management courses. Find here more on what management has to &nbsp;&nbsp;&nbsp;offer you</label>
-                            <asp:Button ID="MgmtInfoBtn" runat="server" Text="Click Here To Know More" class="btn btn-primary" />
+                            <asp:Button ID="MgmtInfoBtn" runat="server" Text="Click Here To Know More" class="btn btn-primary" PostBackUrl="~/Management.aspx" />
                         </div>
                     </div>
                 </div>

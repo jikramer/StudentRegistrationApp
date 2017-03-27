@@ -105,14 +105,21 @@
       <DependentUpon>UserInfo.mdf</DependentUpon>
     </Content>
     <Content Include="Courses.aspx" />
+    <Content Include="ElectricalEngineering.aspx" />
+    <Content Include="EngineeringCourses.aspx" />
     <Content Include="Global.asax" />
     <Content Include="Home.aspx" />
     <Content Include="Images\book.jpg" />
+    <Content Include="Images\electricalengineeringrevised_1.jpg" />
     <Content Include="Images\engineering.jpg" />
     <Content Include="Images\management.jpg" />
+    <Content Include="Images\Mechanical Engineering.jpg" />
     <Content Include="Images\nursing.jpg" />
     <Content Include="Images\registration.jpg" />
     <Content Include="Images\signup.jpg" />
+    <Content Include="Images\Software_Engineer1.jpg" />
+    <Content Include="Management.aspx" />
+    <Content Include="MechanicalEngineering.aspx" />
     <Content Include="MultiviewTest.aspx" />
     <Content Include="packages.config" />
     <Content Include="ApplicationInsights.config">
@@ -137,7 +144,9 @@
     <Content Include="Scripts\jquery-3.1.1.min.js" />
     <Content Include="Scripts\jquery-3.1.1.slim.js" />
     <Content Include="Scripts\jquery-3.1.1.slim.min.js" />
+    <Content Include="SoftwareEngineering.aspx" />
     <Content Include="StudentDetails.aspx" />
+    <Content Include="StyleSheets\Courses.css" />
     <Content Include="StyleSheets\LoginStyle.css" />
     <Content Include="StyleSheets\MultiviewStlye.css" />
     <Content Include="StyleSheets\Site.css" />
@@ -176,6 +185,20 @@
       <DependentUpon>Courses.aspx</DependentUpon>
     </Compile>
     <Compile Include="DatabaseClasses\StudentInfoDBClass.cs" />
+    <Compile Include="ElectricalEngineering.aspx.cs">
+      <DependentUpon>ElectricalEngineering.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ElectricalEngineering.aspx.designer.cs">
+      <DependentUpon>ElectricalEngineering.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="EngineeringCourses.aspx.cs">
+      <DependentUpon>EngineeringCourses.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="EngineeringCourses.aspx.designer.cs">
+      <DependentUpon>EngineeringCourses.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -185,6 +208,20 @@
     </Compile>
     <Compile Include="Home.aspx.designer.cs">
       <DependentUpon>Home.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Management.aspx.cs">
+      <DependentUpon>Management.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Management.aspx.designer.cs">
+      <DependentUpon>Management.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="MechanicalEngineering.aspx.cs">
+      <DependentUpon>MechanicalEngineering.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MechanicalEngineering.aspx.designer.cs">
+      <DependentUpon>MechanicalEngineering.aspx</DependentUpon>
     </Compile>
     <Compile Include="Site.Master.cs">
       <DependentUpon>Site.Master</DependentUpon>
@@ -214,6 +251,13 @@
     </Compile>
     <Compile Include="Signup.aspx.designer.cs">
       <DependentUpon>Signup.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="SoftwareEngineering.aspx.cs">
+      <DependentUpon>SoftwareEngineering.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SoftwareEngineering.aspx.designer.cs">
+      <DependentUpon>SoftwareEngineering.aspx</DependentUpon>
     </Compile>
     <Compile Include="StudentDetails.aspx.cs">
       <DependentUpon>StudentDetails.aspx</DependentUpon>

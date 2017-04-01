@@ -114,17 +114,11 @@
     <div class="form-group">
         <label class="control-label col-sm-3">State:</label>
         <div class="col-sm-5">
-            <!-- <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:UserInfoConnectionString %>" SelectCommand="SELECT * FROM [States] ORDER BY [StateCode]"></asp:SqlDataSource>-->
-            <asp:DropDownList ID="ddlState" runat="server" CssClass="form-control" DataSourceID="SqlDataSource2" DataTextField="StateName" DataValueField="StateCode">
+            <asp:DropDownList ID="ddlState" runat="server" CssClass="form-control" DataSourceID="SqlDataSource1" DataTextField="StateName" DataValueField="StateCode">
                 <asp:ListItem Text="" Value="" Selected="True"></asp:ListItem>
             </asp:DropDownList>
         </div>
-        <%--<div class="col-sm-4">
-                    <asp:RequiredFieldValidator ID="rfvState" runat="server" 
-                        ErrorMessage="State is required" CssClass="text-danger" 
-                        Display="Dynamic" ControlToValidate="ddlState" ForeColor="Red"></asp:RequiredFieldValidator>
-                </div>--%>
-        <asp:SqlDataSource ID="SqlDataSource2" runat="server" ConnectionString="<%$ ConnectionStrings:UserInfoConnectionString %>" SelectCommand="SELECT * FROM [States] ORDER BY [StateCode]"></asp:SqlDataSource>
+        <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:UserInfoConnectionString %>" SelectCommand="SELECT * FROM [States] ORDER BY [StateCode]"></asp:SqlDataSource>
     </div>
 
     <div class="form-group">

@@ -40,31 +40,49 @@ namespace StudentRegistrationApplication {
         protected global::System.Web.UI.WebControls.HyperLink HomeHyperLink;
         
         /// <summary>
-        /// StudentHyperLink control.
+        /// RegisterHyperLink control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.HyperLink StudentHyperLink;
+        protected global::System.Web.UI.WebControls.HyperLink RegisterHyperLink;
         
         /// <summary>
-        /// CoursesHyperLink control.
+        /// StudentHistoryHyperLink control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.HyperLink CoursesHyperLink;
+        protected global::System.Web.UI.WebControls.HyperLink StudentHistoryHyperLink;
         
         /// <summary>
-        /// PaymentHyperLink control.
+        /// PaymentHistoryHyperLink control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.HyperLink PaymentHyperLink;
+        protected global::System.Web.UI.WebControls.HyperLink PaymentHistoryHyperLink;
+        
+        /// <summary>
+        /// UpdateResultSheetHL control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.HyperLink UpdateResultSheetHL;
+        
+        /// <summary>
+        /// StudentDetailsHL control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.HyperLink StudentDetailsHL;
         
         /// <summary>
         /// btnAddStudent control.

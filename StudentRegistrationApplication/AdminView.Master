@@ -25,6 +25,8 @@
     </asp:ContentPlaceHolder>
 </head>
 <body>
+    <div class="container-fluid text-center">
+        <main>
     <form id="form1" runat="server" class="form-horizontal">
         <div class="row content">
            
@@ -40,13 +42,19 @@
             <div class="collapse navbar-collapse" id="myNavbar">
                 <ul class="nav navbar-nav">
                     <li class="active">
-                        <asp:HyperLink ID="HomeHyperLink" runat="server"><span class="glyphicon glyphicon-home"></span>Home</asp:HyperLink></li>
+                        <asp:HyperLink ID="HomeHyperLink" runat="server" NavigateUrl="~/Home.aspx"><span class="glyphicon glyphicon-home"></span>Home</asp:HyperLink></li>
                     <li>
-                        <asp:HyperLink ID="StudentHyperLink" runat="server" NavigateUrl="~/AdmnStudentDetails.aspx">Student</asp:HyperLink></li>
+                        <asp:HyperLink ID="RegisterHyperLink" runat="server" NavigateUrl="~/Signup.aspx">Register Student</asp:HyperLink></li>
                     <li>
-                        <asp:HyperLink ID="CoursesHyperLink" runat="server" NavigateUrl="~/Courses.aspx">Courses</asp:HyperLink></li>
+                        <asp:HyperLink ID="StudentHistoryHyperLink" runat="server" NavigateUrl="~/StudentHistory.aspx">View Student History</asp:HyperLink></li>
                     <li>
-                        <asp:HyperLink ID="PaymentHyperLink" runat="server" NavigateUrl="~/Payment.aspx">Payment</asp:HyperLink></li>
+                        <asp:HyperLink ID="PaymentHistoryHyperLink" runat="server" NavigateUrl="~/PaymentHistory.aspx">View Student Payment History</asp:HyperLink></li>
+                    <li>
+                        <asp:HyperLink ID="UpdateResultSheetHL" runat="server" NavigateUrl="~/UpdateResultSheet.aspx">Update Student Result Sheet</asp:HyperLink></li>
+                     <li>
+                        <asp:HyperLink ID="StudentDetailsHL" runat="server" NavigateUrl="~/StudentDetails.aspx">View All Students</asp:HyperLink></li>
+                    
+                    
                 </ul>
                 <ul class="nav navbar-nav navbar-right">
                     <li>
@@ -59,7 +67,7 @@
             </div>
         </div>
     </nav>
-            <div class="col-sm-2 sidenav">
+          <!--  <div class="col-sm-2 sidenav">
            
             <br />
              <p style="padding-left :10px">
@@ -68,18 +76,19 @@
             <p style="padding-left :10px">
                 <asp:Button ID="StudentDetails" runat="server" Text="StudentDetails"  BackColor="Red" BorderStyle="None" Font-Size="Medium" ForeColor="White" Height="40px" Width="120px" CssClass="paddingstyle" OnClick="StudentDetails_Click" />
             </p>
-        </div>
+        </div>-->
 
-           
-            <main class="col-sm-9">
                 <h1>
                     <asp:Label ID="lblHeaderPage" runat="server"></asp:Label>
                 </h1>
                 <asp:ContentPlaceHolder ID="AdminMainContent" runat="server">
+
                 </asp:ContentPlaceHolder>
-            </main>
+            
         </div>
     </form>
+   </main>
+   </div>
 </body>
 </html>
 

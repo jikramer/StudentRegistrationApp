@@ -109,15 +109,18 @@
     <Content Include="EngineeringCourses.aspx" />
     <Content Include="Global.asax" />
     <Content Include="Home.aspx" />
+    <Content Include="Images\543230-460x321.jpg" />
     <Content Include="Images\book.jpg" />
     <Content Include="Images\electricalengineeringrevised_1.jpg" />
     <Content Include="Images\engineering.jpg" />
     <Content Include="Images\management.jpg" />
     <Content Include="Images\Mechanical Engineering.jpg" />
     <Content Include="Images\nursing.jpg" />
+    <Content Include="Images\PaymentHistory.jpg" />
     <Content Include="Images\registration.jpg" />
     <Content Include="Images\signup.jpg" />
     <Content Include="Images\Software_Engineer1.jpg" />
+    <Content Include="Images\StudentRecords.gif" />
     <Content Include="Management.aspx" />
     <Content Include="MechanicalEngineering.aspx" />
     <Content Include="MultiviewTest.aspx" />
@@ -131,6 +134,9 @@
     <Content Include="Site.Master" />
     <Content Include="ClaimAccount.aspx" />
     <Content Include="AdminView.Master" />
+    <Content Include="StudentHistory.aspx" />
+    <Content Include="PaymentHistory.aspx" />
+    <Content Include="UpdateResultSheet.aspx" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -149,10 +155,12 @@
     <Content Include="StyleSheets\Courses.css" />
     <Content Include="StyleSheets\LoginStyle.css" />
     <Content Include="StyleSheets\MultiviewStlye.css" />
+    <Content Include="StyleSheets\PaymentSheet.css" />
     <Content Include="StyleSheets\Site.css" />
     <Content Include="Signup.aspx" />
     <Content Include="StudentLogin.aspx" />
     <Content Include="StyleSheets\Styles.css" />
+    <Content Include="StyleSheets\ViewStyle.css" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
@@ -279,6 +287,27 @@
     </Compile>
     <Compile Include="ClaimAccount.aspx.designer.cs">
       <DependentUpon>ClaimAccount.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="StudentHistory.aspx.cs">
+      <DependentUpon>StudentHistory.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="StudentHistory.aspx.designer.cs">
+      <DependentUpon>StudentHistory.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="PaymentHistory.aspx.cs">
+      <DependentUpon>PaymentHistory.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="PaymentHistory.aspx.designer.cs">
+      <DependentUpon>PaymentHistory.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="UpdateResultSheet.aspx.cs">
+      <DependentUpon>UpdateResultSheet.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UpdateResultSheet.aspx.designer.cs">
+      <DependentUpon>UpdateResultSheet.aspx</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>

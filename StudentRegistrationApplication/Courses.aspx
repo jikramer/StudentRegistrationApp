@@ -184,6 +184,86 @@
                     </div>
                 </asp:View>
                 <asp:View ID="PlanAheadView" runat="server">
+                     <div class="container">
+                        <div class="well well-sm">
+                            <h2>Plan your courses</h2>
+                        </div>
+                        <div class="form-horizontal">
+                             <div class="form-group">
+                                 <label class="control-label col-sm-3">Select Major:</label>
+                                 <div class="col-sm-5">
+                                     <asp:DropDownList ID="ddlMajor" runat="server">
+                                         <asp:ListItem>Software Engineering</asp:ListItem>
+                                         <asp:ListItem>Mechanical Engineering</asp:ListItem>
+                                         <asp:ListItem>Electrical Engineering</asp:ListItem>
+                                         <asp:ListItem>Management of Technology</asp:ListItem>
+                                         <asp:ListItem></asp:ListItem>
+                                     </asp:DropDownList>
+                                 </div>
+                             </div>
+                          
+                            <div class="form-group">
+                                <div class="col-sm-5">
+                                     <asp:Label ID="Label3" runat="server" Text="View Required Courses:"></asp:Label>
+                                    <asp:ListBox ID="ViewReqList" runat="server" CssClass="form-control"></asp:ListBox>
+                                </div>
+                                <div class="col-sm-1">
+                                    <p>
+                                        <asp:Button ID="AddBtnReq" runat="server" Text="Add" CssClass="btn btn-primary"/><span class="glyphicon glyphicon-arrow-right"></span></p>   
+                                                                   
+                                </div>
+                                <div class="col-sm-5">
+                                    <asp:Label ID="Label4" runat="server" Text="Add Required Courses: "></asp:Label>
+                                    <asp:ListBox ID="AddReqList" runat="server" CssClass="form-control"></asp:ListBox>
+                                </div>
+                                
+                            </div>
+
+                            <div class="form-group">
+                                <div class="col-sm-5">
+                                     <asp:Label ID="Label5" runat="server" Text="View Required Courses:"></asp:Label>
+                                    <asp:ListBox ID="ViewSplList" runat="server" CssClass="form-control"></asp:ListBox>
+                                </div>
+                                <div class="col-sm-1">
+                                    <p>
+                                        <asp:Button ID="AddBtnSpl" runat="server" Text="Add" CssClass="btn btn-primary"/><span class="glyphicon glyphicon-arrow-right"></span></p>   
+                                                                   
+                                </div>
+                                <div class="col-sm-5">
+                                    <asp:Label ID="Label6" runat="server" Text="Add Required Courses: "></asp:Label>
+                                    <asp:ListBox ID="AddSplList" runat="server" CssClass="form-control"></asp:ListBox>
+                                </div>
+                                <div class="col-sm-1">
+                                    <p>
+                                        <asp:Button ID="SplBtnRemove" runat="server" Text="Remove" CssClass="btn btn-primary"/></p>
+                                    <p>
+                                        <asp:Button ID="SplBtnClear" runat="server" Text="Clear All" CssClass="btn btn-primary"/></p>
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <div class="col-sm-5">
+                                     <asp:Label ID="Label7" runat="server" Text="View Required Courses:"></asp:Label>
+                                    <asp:ListBox ID="ViewElectiveList" runat="server" CssClass="form-control"></asp:ListBox>
+                                </div>
+                                <div class="col-sm-1">
+                                    <p>
+                                        <asp:Button ID="AddBtnElective" runat="server" Text="Add" CssClass="btn btn-primary"/><span class="glyphicon glyphicon-arrow-right"></span></p>   
+                                                                   
+                                </div>
+                                <div class="col-sm-5">
+                                    <asp:Label ID="Label8" runat="server" Text="Add Required Courses: "></asp:Label>
+                                    <asp:ListBox ID="AddElectiveList" runat="server" CssClass="form-control"></asp:ListBox>
+                                </div>
+                                <div class="col-sm-1">
+                                    <p>
+                                        <asp:Button ID="ElectiveBtnRemove" runat="server" Text="Remove" CssClass="btn btn-primary"/></p>
+                                    <p>
+                                        <asp:Button ID="ElectiveBtnClear" runat="server" Text="Clear All" CssClass="btn btn-primary"/></p>
+                                </div>
+                            </div>
+                        </div>
+                     </div>
                 </asp:View>
                 <asp:View ID="TranscriptView" runat="server">
                      <div class="container">

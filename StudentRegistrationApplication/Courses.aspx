@@ -25,6 +25,8 @@
                 <asp:Button ID="RegisterClassButton" runat="server" Text="Register Classes" BackColor="Red" BorderStyle="None" Font-Size="Medium" ForeColor="White" Height="52px" Width="206px" OnClick="RegisterClassButton_Click" /></p>
             <p>
                 <asp:Button ID="PlanAheadButton" runat="server" Text="Plan Ahead" BackColor="Red" BorderStyle="None" Font-Size="Medium" ForeColor="White" Height="52px" Width="206px" OnClick="PlanAheadButton_Click" /></p>
+            <p>
+                <asp:Button ID="TranscriptBtn" runat="server" Text="Transcripts" BackColor="Red" BorderStyle="None" Font-Size="Medium" ForeColor="White" Height="52px" Width="206px" OnClick="TranscriptBtn_Click"/></p>
         </div>
         <div class="col-sm-6">
             <asp:MultiView ID="CoursesMultiView" runat="server">
@@ -182,6 +184,111 @@
                     </div>
                 </asp:View>
                 <asp:View ID="PlanAheadView" runat="server">
+                     <div class="container">
+                        <div class="well well-sm">
+                            <h2>Plan your courses</h2>
+                        </div>
+                        <div class="form-horizontal">
+                             <div class="form-group">
+                                 <label class="control-label col-sm-3">Select Major:</label>
+                                 <div class="col-sm-5">
+                                     <asp:DropDownList ID="ddlMajor" runat="server">
+                                         <asp:ListItem>Software Engineering</asp:ListItem>
+                                         <asp:ListItem>Mechanical Engineering</asp:ListItem>
+                                         <asp:ListItem>Electrical Engineering</asp:ListItem>
+                                         <asp:ListItem>Management of Technology</asp:ListItem>
+                                         <asp:ListItem></asp:ListItem>
+                                     </asp:DropDownList>
+                                 </div>
+                             </div>
+                          
+                            <div class="form-group">
+                                <div class="col-sm-5">
+                                     <asp:Label ID="Label3" runat="server" Text="View Required Courses:"></asp:Label>
+                                    <asp:ListBox ID="ViewReqList" runat="server" CssClass="form-control"></asp:ListBox>
+                                </div>
+                                <div class="col-sm-1">
+                                    <p>
+                                        <asp:Button ID="AddBtnReq" runat="server" Text="Add" CssClass="btn btn-primary"/><span class="glyphicon glyphicon-arrow-right"></span></p>   
+                                                                   
+                                </div>
+                                <div class="col-sm-5">
+                                    <asp:Label ID="Label4" runat="server" Text="Add Required Courses: "></asp:Label>
+                                    <asp:ListBox ID="AddReqList" runat="server" CssClass="form-control"></asp:ListBox>
+                                </div>
+                                
+                            </div>
+
+                            <div class="form-group">
+                                <div class="col-sm-5">
+                                     <asp:Label ID="Label5" runat="server" Text="View Required Courses:"></asp:Label>
+                                    <asp:ListBox ID="ViewSplList" runat="server" CssClass="form-control"></asp:ListBox>
+                                </div>
+                                <div class="col-sm-1">
+                                    <p>
+                                        <asp:Button ID="AddBtnSpl" runat="server" Text="Add" CssClass="btn btn-primary"/><span class="glyphicon glyphicon-arrow-right"></span></p>   
+                                                                   
+                                </div>
+                                <div class="col-sm-5">
+                                    <asp:Label ID="Label6" runat="server" Text="Add Required Courses: "></asp:Label>
+                                    <asp:ListBox ID="AddSplList" runat="server" CssClass="form-control"></asp:ListBox>
+                                </div>
+                                <div class="col-sm-1">
+                                    <p>
+                                        <asp:Button ID="SplBtnRemove" runat="server" Text="Remove" CssClass="btn btn-primary"/></p>
+                                    <p>
+                                        <asp:Button ID="SplBtnClear" runat="server" Text="Clear All" CssClass="btn btn-primary"/></p>
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <div class="col-sm-5">
+                                     <asp:Label ID="Label7" runat="server" Text="View Required Courses:"></asp:Label>
+                                    <asp:ListBox ID="ViewElectiveList" runat="server" CssClass="form-control"></asp:ListBox>
+                                </div>
+                                <div class="col-sm-1">
+                                    <p>
+                                        <asp:Button ID="AddBtnElective" runat="server" Text="Add" CssClass="btn btn-primary"/><span class="glyphicon glyphicon-arrow-right"></span></p>   
+                                                                   
+                                </div>
+                                <div class="col-sm-5">
+                                    <asp:Label ID="Label8" runat="server" Text="Add Required Courses: "></asp:Label>
+                                    <asp:ListBox ID="AddElectiveList" runat="server" CssClass="form-control"></asp:ListBox>
+                                </div>
+                                <div class="col-sm-1">
+                                    <p>
+                                        <asp:Button ID="ElectiveBtnRemove" runat="server" Text="Remove" CssClass="btn btn-primary"/></p>
+                                    <p>
+                                        <asp:Button ID="ElectiveBtnClear" runat="server" Text="Clear All" CssClass="btn btn-primary"/></p>
+                                </div>
+                            </div>
+                        </div>
+                     </div>
+                </asp:View>
+                <asp:View ID="TranscriptView" runat="server">
+                     <div class="container">
+                        <div class="well well-sm">
+                            <h2>Transcripts</h2>
+                        </div>
+                        <div class="form-horizontal">
+                             <div class="form-group">
+                                <div class="col-sm-offset-3 col-sm-9">
+                                    <asp:GridView ID="TranscriptGridView" runat="server" BackColor="White" BorderColor="#DEDFDE" BorderStyle="None" BorderWidth="1px" CellPadding="4" ForeColor="Black" GridLines="Vertical">
+                                        <AlternatingRowStyle BackColor="White" />
+                                        <FooterStyle BackColor="#CCCC99" />
+                                        <HeaderStyle BackColor="#6B696B" Font-Bold="True" ForeColor="White" />
+                                        <PagerStyle BackColor="#F7F7DE" ForeColor="Black" HorizontalAlign="Right" />
+                                        <RowStyle BackColor="#F7F7DE" />
+                                        <SelectedRowStyle BackColor="#CE5D5A" Font-Bold="True" ForeColor="White" />
+                                        <SortedAscendingCellStyle BackColor="#FBFBF2" />
+                                        <SortedAscendingHeaderStyle BackColor="#848384" />
+                                        <SortedDescendingCellStyle BackColor="#EAEAD3" />
+                                        <SortedDescendingHeaderStyle BackColor="#575357" />
+                                    </asp:GridView>
+                                </div>
+                            </div>
+                        </div>
+                     </div>
                 </asp:View>
             </asp:MultiView>
         </div>

@@ -1,0 +1,13 @@
+﻿.container {
+    border: 1px solid #cecece;
+    margin-top: 1em;
+     padding: 10px 16px;
+}
+.jumbotron{
+    background: url(/Images/PaymentHistory.jpg);    
+    color: black;
+    background-size: 100% 100%;
+    margin-top: 1em;
+}
+
+

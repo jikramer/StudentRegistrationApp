@@ -18,14 +18,15 @@ namespace StudentRegistrationApplication
         {
             //clear the control to support multiview
             Label masterMsgLabel = (Label)Master.FindControl("lblUserMessage");
-            masterMsgLabel.Text = "";
+            masterMsgLabel.Text = " ";
 
-            if (Session["username"] == null)
+            if (Session["user"] == null)
             {
                 setMasterLabelMsg("Please log in first");
+                Response.Redirect("StudentLogin.aspx");
             }
             else
-                username = Session["username"].ToString();
+                username = Session["user"].ToString();
         }
 
         protected void ViewProfileButton_Click(object sender, EventArgs e)

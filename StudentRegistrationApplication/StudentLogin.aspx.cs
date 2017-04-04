@@ -13,9 +13,12 @@ namespace StudentRegistrationApplication
 {
     public partial class StudentLogin : System.Web.UI.Page
     {
+        string CS = ConfigurationManager.ConnectionStrings["UserInfoConnectionString"].ConnectionString;
         protected void Page_Load(object sender, EventArgs e)
         {
-
+            Session["user"] = "";
+            Session["role"] = "";
+           
         }
 
         protected void btnLogin_Click(object sender, EventArgs e)
@@ -25,11 +28,13 @@ namespace StudentRegistrationApplication
 
             if (username.Equals("admin123") && password.Equals("adminpassword"))
             {
-                Response.Redirect("Signup.aspx");
+                Session["user"] = "admin123";
+                Session["role"] = "admin";
+                Response.Redirect("AdmnStudentDetails.aspx");
             }
             else
             {
-                string CS = ConfigurationManager.ConnectionStrings["UserInfoConnectionString"].ConnectionString;
+               
                 using (SqlConnection con = new SqlConnection(CS))
                 {
                     SqlCommand cmd = new SqlCommand();
@@ -42,13 +47,20 @@ namespace StudentRegistrationApplication
                     if (dr.Read())
                     {
                         WarningLabel.Visible = false;
-                        Session["username"] = username;
+                        Session["user"]  = username;
+
                         Response.Redirect("Home.aspx");
                     }
                     else
                         WarningLabel.Visible = true;
                 }
             }
+        }
+
+        protected void btnCancel_Click(object sender, EventArgs e)
+        {
+           
+            Response.Redirect("Home.aspx");
         }
     }
 }

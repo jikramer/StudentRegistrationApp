@@ -98,19 +98,31 @@
     <Reference Include="System.EnterpriseServices" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="AddStudent.aspx" />
+    <Content Include="AdmnStudentDetails.aspx" />
     <Content Include="App_Data\UserInfo.mdf" />
     <Content Include="App_Data\UserInfo_log.ldf">
       <DependentUpon>UserInfo.mdf</DependentUpon>
     </Content>
     <Content Include="Courses.aspx" />
+    <Content Include="ElectricalEngineering.aspx" />
+    <Content Include="EngineeringCourses.aspx" />
     <Content Include="Global.asax" />
     <Content Include="Home.aspx" />
+    <Content Include="Images\543230-460x321.jpg" />
     <Content Include="Images\book.jpg" />
+    <Content Include="Images\electricalengineeringrevised_1.jpg" />
     <Content Include="Images\engineering.jpg" />
     <Content Include="Images\management.jpg" />
+    <Content Include="Images\Mechanical Engineering.jpg" />
     <Content Include="Images\nursing.jpg" />
+    <Content Include="Images\PaymentHistory.jpg" />
     <Content Include="Images\registration.jpg" />
     <Content Include="Images\signup.jpg" />
+    <Content Include="Images\Software_Engineer1.jpg" />
+    <Content Include="Images\StudentRecords.gif" />
+    <Content Include="Management.aspx" />
+    <Content Include="MechanicalEngineering.aspx" />
     <Content Include="MultiviewTest.aspx" />
     <Content Include="packages.config" />
     <Content Include="ApplicationInsights.config">
@@ -121,6 +133,10 @@
     <Content Include="Scripts\jquery-3.1.1.min.map" />
     <Content Include="Site.Master" />
     <Content Include="ClaimAccount.aspx" />
+    <Content Include="AdminView.Master" />
+    <Content Include="StudentHistory.aspx" />
+    <Content Include="PaymentHistory.aspx" />
+    <Content Include="UpdateResultSheet.aspx" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -134,15 +150,41 @@
     <Content Include="Scripts\jquery-3.1.1.min.js" />
     <Content Include="Scripts\jquery-3.1.1.slim.js" />
     <Content Include="Scripts\jquery-3.1.1.slim.min.js" />
+    <Content Include="SoftwareEngineering.aspx" />
+    <Content Include="StudentDetails.aspx" />
+    <Content Include="StyleSheets\Courses.css" />
     <Content Include="StyleSheets\LoginStyle.css" />
     <Content Include="StyleSheets\MultiviewStlye.css" />
+    <Content Include="StyleSheets\PaymentSheet.css" />
     <Content Include="StyleSheets\Site.css" />
     <Content Include="Signup.aspx" />
     <Content Include="StudentLogin.aspx" />
     <Content Include="StyleSheets\Styles.css" />
+    <Content Include="StyleSheets\ViewStyle.css" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AddStudent.aspx.cs">
+      <DependentUpon>AddStudent.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AddStudent.aspx.designer.cs">
+      <DependentUpon>AddStudent.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminView.Master.cs">
+      <DependentUpon>AdminView.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminView.Master.designer.cs">
+      <DependentUpon>AdminView.Master</DependentUpon>
+    </Compile>
+    <Compile Include="AdmnStudentDetails.aspx.cs">
+      <DependentUpon>AdmnStudentDetails.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdmnStudentDetails.aspx.designer.cs">
+      <DependentUpon>AdmnStudentDetails.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Courses.aspx.cs">
       <DependentUpon>Courses.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -151,6 +193,20 @@
       <DependentUpon>Courses.aspx</DependentUpon>
     </Compile>
     <Compile Include="DatabaseClasses\StudentInfoDBClass.cs" />
+    <Compile Include="ElectricalEngineering.aspx.cs">
+      <DependentUpon>ElectricalEngineering.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ElectricalEngineering.aspx.designer.cs">
+      <DependentUpon>ElectricalEngineering.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="EngineeringCourses.aspx.cs">
+      <DependentUpon>EngineeringCourses.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="EngineeringCourses.aspx.designer.cs">
+      <DependentUpon>EngineeringCourses.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -160,6 +216,20 @@
     </Compile>
     <Compile Include="Home.aspx.designer.cs">
       <DependentUpon>Home.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Management.aspx.cs">
+      <DependentUpon>Management.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Management.aspx.designer.cs">
+      <DependentUpon>Management.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="MechanicalEngineering.aspx.cs">
+      <DependentUpon>MechanicalEngineering.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MechanicalEngineering.aspx.designer.cs">
+      <DependentUpon>MechanicalEngineering.aspx</DependentUpon>
     </Compile>
     <Compile Include="Site.Master.cs">
       <DependentUpon>Site.Master</DependentUpon>
@@ -190,6 +260,20 @@
     <Compile Include="Signup.aspx.designer.cs">
       <DependentUpon>Signup.aspx</DependentUpon>
     </Compile>
+    <Compile Include="SoftwareEngineering.aspx.cs">
+      <DependentUpon>SoftwareEngineering.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SoftwareEngineering.aspx.designer.cs">
+      <DependentUpon>SoftwareEngineering.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="StudentDetails.aspx.cs">
+      <DependentUpon>StudentDetails.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="StudentDetails.aspx.designer.cs">
+      <DependentUpon>StudentDetails.aspx</DependentUpon>
+    </Compile>
     <Compile Include="StudentLogin.aspx.cs">
       <DependentUpon>StudentLogin.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -203,6 +287,27 @@
     </Compile>
     <Compile Include="ClaimAccount.aspx.designer.cs">
       <DependentUpon>ClaimAccount.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="StudentHistory.aspx.cs">
+      <DependentUpon>StudentHistory.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="StudentHistory.aspx.designer.cs">
+      <DependentUpon>StudentHistory.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="PaymentHistory.aspx.cs">
+      <DependentUpon>PaymentHistory.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="PaymentHistory.aspx.designer.cs">
+      <DependentUpon>PaymentHistory.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="UpdateResultSheet.aspx.cs">
+      <DependentUpon>UpdateResultSheet.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UpdateResultSheet.aspx.designer.cs">
+      <DependentUpon>UpdateResultSheet.aspx</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>

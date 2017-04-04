@@ -1,0 +1,61 @@
+﻿body {
+}
+.coursesCard{
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    transition: 0.3s;
+    width:1150px;
+    height:450px;
+    border:groove;
+}
+.cardCoursesFont{
+    color:red;
+    font-size:45px;
+}
+.coursesInfo{
+    font-size:medium;
+    color:black;
+    text-align:justify;
+    width:85%;
+}
+.paragraph{
+    font-size:small;
+    text-align:justify;
+    width:97%;
+}
+.EngineeringCoursesCard{
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    transition: 0.3s;
+    width:1065px;
+    height:450px;
+    border:groove;
+    padding: 2px 16px;
+}
+.individualCoursesCard{
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    transition: 0.3s;
+    width:100%;
+    border:solid;
+}
+.container {
+    padding: 2px 16px;
+}
+.cardCoursesFont{
+    color:red;
+    font-size:45px;
+}
+.heading{
+    color:black;
+    font-size:45px;
+}
+.subHeading{
+    color:black;
+    font-weight:bold;
+    font-size:large;
+}
+.sidenav {
+   padding-top: 20px;
+   background-color: black;
+   width:auto;
+   color:white;
+   height:2900px;
+}

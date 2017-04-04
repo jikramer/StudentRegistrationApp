@@ -17,18 +17,19 @@ namespace StudentRegistrationApplication
         private string subject1, subject2, subject3;
         protected void Page_Load(object sender, EventArgs e)
         {
-            if (Session["username"] == null)
+            if (Session["user"] == null)
             {
                 Label masterMsgLabel = (Label)Master.FindControl("lblUserMessage");
                 if (masterMsgLabel != null)
                 {
                     masterMsgLabel.Text = "<strong>Error!</strong> Please log in first!";
+                    Response.Redirect("StudentLogin.aspx");
                 }
                 else
                     Response.Write("Please Log in First!");
             }
             else
-                username = Session["username"].ToString();
+                username = Session["user"].ToString();
 
         }
 
@@ -77,6 +78,7 @@ namespace StudentRegistrationApplication
 
         protected void PlanAheadButton_Click(object sender, EventArgs e)
         {
+            CoursesMultiView.ActiveViewIndex = 3;
 
         }
 
@@ -201,6 +203,11 @@ namespace StudentRegistrationApplication
                     btnSubmit.Enabled = false;
                   }
             }
+        }
+
+        protected void TranscriptBtn_Click(object sender, EventArgs e)
+        {
+            CoursesMultiView.ActiveViewIndex = 4;
         }
 
         protected void ClearBtn_Click(object sender, EventArgs e)

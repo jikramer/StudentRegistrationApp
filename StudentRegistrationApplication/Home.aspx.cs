@@ -11,7 +11,19 @@ namespace StudentRegistrationApplication
     {
         protected void Page_Load(object sender, EventArgs e)
         {
+            if (Page.IsPostBack)
+            {
+                if(!(string.IsNullOrEmpty((string)Session["user"])))
+                lbllogin.Text = "Logout";
+            }
 
         }
+
+        protected void OpenClose_Click(object sender, EventArgs e)
+        {
+
+            Response.Redirect("StudentLogin.aspx");
+        }
+       
     }
 }

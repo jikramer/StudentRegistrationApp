@@ -1,19 +1,22 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Signup.aspx.cs" MasterPageFile="~/Site.Master" Inherits="StudentRegistrationApplication.Signup" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Signup.aspx.cs" MasterPageFile="~/AdminView.Master" Inherits="StudentRegistrationApplication.Signup" %>
 
 
-<asp:Content ContentPlaceHolderID="headPlaceHolder" runat="server">
+<asp:Content ContentPlaceHolderID="AdminheadPlaceHolder" runat="server">
     <link href="StyleSheets/Site.css" rel="stylesheet" />
 </asp:Content>
 
 
-<asp:Content ID="mainContent" ContentPlaceHolderID="mainPlaceHolder" runat="server">
-<div class="container">
-         <div class="jumbotron">
+<asp:Content ID="mainContent" ContentPlaceHolderID="AdminMainContent" runat="server">
+    <div class="container">
+        <div class="well well-sm" style="align-content:center">
+                            <h2>Student Registration</h2>
+            </div>
+         <%--<div class="jumbotron">
              <div class="text-left">
                  <h3>Welcome Admin!</h3>
              </div>
             <h2>Student Registration</h2>     
-          </div> 
+          </div>--%> 
     <asp:ValidationSummary ID="ValidationSummary1" runat="server" CssClass="summery text-danger" HeaderText="Please correct these entries:" Display="Dynamic" ForeColor="Red" />
 
     <h3>Personal Information</h3>
@@ -111,16 +114,11 @@
     <div class="form-group">
         <label class="control-label col-sm-3">State:</label>
         <div class="col-sm-5">
-             <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:UserInfoConnectionString %>" SelectCommand="SELECT * FROM [States] ORDER BY [StateCode]"></asp:SqlDataSource>
             <asp:DropDownList ID="ddlState" runat="server" CssClass="form-control" DataSourceID="SqlDataSource1" DataTextField="StateName" DataValueField="StateCode">
                 <asp:ListItem Text="" Value="" Selected="True"></asp:ListItem>
             </asp:DropDownList>
         </div>
-        <%--<div class="col-sm-4">
-                    <asp:RequiredFieldValidator ID="rfvState" runat="server" 
-                        ErrorMessage="State is required" CssClass="text-danger" 
-                        Display="Dynamic" ControlToValidate="ddlState" ForeColor="Red"></asp:RequiredFieldValidator>
-                </div>--%>
+        <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:UserInfoConnectionString %>" SelectCommand="SELECT * FROM [States] ORDER BY [StateCode]"></asp:SqlDataSource>
     </div>
 
     <div class="form-group">
@@ -156,7 +154,7 @@
         
     <div class="form-group">
         <div class="col-sm-12">
-            <asp:HyperLink ID="HomeHyperLink" runat="server" NavigateUrl="~/Home.aspx"><span class="glyphicon glyphicon-home"></span>Home</asp:HyperLink>
+           <%-- <asp:HyperLink ID="HomeHyperLink" runat="server" NavigateUrl="~/Home.aspx"><span class="glyphicon glyphicon-home"></span>Home</asp:HyperLink>--%>
             <asp:Button ID="btnConfirm" runat="server" Text="Confirm" CssClass="btn btn-primary" OnClick="btnConfirm_Click" />
             <asp:Button ID="btnClear" runat="server" Text="Clear" CssClass="btn btn-primary" />
         </div>

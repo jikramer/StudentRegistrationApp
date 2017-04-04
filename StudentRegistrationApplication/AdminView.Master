@@ -1,0 +1,95 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="AdminView.master.cs" Inherits="StudentRegistrationApplication.AdminView" %>
+
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title>Student Registration Application</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet" />
+
+    <script src="Scripts/jquery-1.9.1.min.js"></script>
+    <script src="Scripts/bootstrap.min.js"></script>
+    <link href="StyleSheets/MultiviewStlye.css" rel="stylesheet" />
+    <style type="text/css">
+        
+        .auto-style1 {
+            margin-left: 10px;
+        }
+       
+    </style>
+    <asp:ContentPlaceHolder ID="AdminheadPlaceHolder" runat="server">
+
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <div class="container-fluid text-center">
+        <main>
+    <form id="form1" runat="server" class="form-horizontal">
+        <div class="row content">
+           
+                <nav class="navbar navbar-inverse">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+            </div>
+            <div class="collapse navbar-collapse" id="myNavbar">
+                <ul class="nav navbar-nav">
+                    <li class="active">
+                        <asp:HyperLink ID="HomeHyperLink" runat="server" NavigateUrl="~/Home.aspx"><span class="glyphicon glyphicon-home"></span>Home</asp:HyperLink></li>
+                    <li>
+                        <asp:HyperLink ID="RegisterHyperLink" runat="server" NavigateUrl="~/Signup.aspx">Register Student</asp:HyperLink></li>
+                    <li>
+                        <asp:HyperLink ID="StudentHistoryHyperLink" runat="server" NavigateUrl="~/StudentHistory.aspx">View Student History</asp:HyperLink></li>
+                    <li>
+                        <asp:HyperLink ID="PaymentHistoryHyperLink" runat="server" NavigateUrl="~/PaymentHistory.aspx">View Student Payment History</asp:HyperLink></li>
+                    <li>
+                        <asp:HyperLink ID="UpdateResultSheetHL" runat="server" NavigateUrl="~/UpdateResultSheet.aspx">Update Student Result Sheet</asp:HyperLink></li>
+                     <li>
+                        <asp:HyperLink ID="StudentDetailsHL" runat="server" NavigateUrl="~/StudentDetails.aspx">View All Students</asp:HyperLink></li>
+                    
+                    
+                </ul>
+                <ul class="nav navbar-nav navbar-right">
+                    <li>
+                      <%-- <asp:LinkButton id="OpenClose" runat="server" OnClick="OpenClose_Click" AutoPostBack="true"><span class="glyphicon glyphicon-log-in"></span><asp:label runat="server" ID="lbllogin" Text=" Admin Login"></asp:label></asp:LinkButton>--%>
+
+                        <%--<asp:HyperLink ID="LoginHyperLink" runat="server" NavigateUrl="~/StudentLogin.aspx"><span class="glyphicon glyphicon-log-in"></span> <asp:label runat="server" Text="close"></asp:label></asp:HyperLink>--%>
+
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+          <!--  <div class="col-sm-2 sidenav">
+           
+            <br />
+             <p style="padding-left :10px">
+                <asp:Button ID="btnAddStudent" runat="server" Text="Add Student"  BackColor="Red" BorderStyle="None" Font-Size="Medium" ForeColor="White" Height="40px" Width="120px" CssClass="paddingstyle" OnClick="btnAddStudent_Click" />
+            </p>
+            <p style="padding-left :10px">
+                <asp:Button ID="StudentDetails" runat="server" Text="StudentDetails"  BackColor="Red" BorderStyle="None" Font-Size="Medium" ForeColor="White" Height="40px" Width="120px" CssClass="paddingstyle" OnClick="StudentDetails_Click" />
+            </p>
+        </div>-->
+
+                <h1>
+                    <asp:Label ID="lblHeaderPage" runat="server"></asp:Label>
+                </h1>
+                <asp:ContentPlaceHolder ID="AdminMainContent" runat="server">
+
+                </asp:ContentPlaceHolder>
+            
+        </div>
+    </form>
+   </main>
+   </div>
+</body>
+</html>
+
+

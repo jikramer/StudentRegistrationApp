@@ -124,6 +124,7 @@
     <Content Include="Management.aspx" />
     <Content Include="MechanicalEngineering.aspx" />
     <Content Include="MultiviewTest.aspx" />
+    <Content Include="Nursing.aspx" />
     <Content Include="packages.config" />
     <Content Include="ApplicationInsights.config">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
@@ -230,6 +231,13 @@
     </Compile>
     <Compile Include="MechanicalEngineering.aspx.designer.cs">
       <DependentUpon>MechanicalEngineering.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Nursing.aspx.cs">
+      <DependentUpon>Nursing.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Nursing.aspx.designer.cs">
+      <DependentUpon>Nursing.aspx</DependentUpon>
     </Compile>
     <Compile Include="Site.Master.cs">
       <DependentUpon>Site.Master</DependentUpon>

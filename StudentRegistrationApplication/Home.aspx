@@ -99,8 +99,8 @@
                             </div>
                         </div>
                         <div class="form-group">
-                            <label class="text-center">We offer you the best nursing courses. Find here more on what nursing has to offer you</label>
-                            <asp:Button ID="NursingInfoBtn" runat="server" Text="Click Here To Know More" class="btn btn-primary" />
+                            <label class="text-center">We offer you the best nursing courses. Find here more on what nursing has to <br />offer you</label>
+                            <asp:Button ID="NursingInfoBtn" runat="server" Text="Click Here To Know More" class="btn btn-primary" PostBackUrl="~/Nursing.aspx" />
                         </div>
                     </div>
                 </div>

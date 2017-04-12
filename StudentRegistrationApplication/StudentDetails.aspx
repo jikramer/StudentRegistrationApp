@@ -14,14 +14,14 @@
                                     <asp:BoundField DataField="Student_LastName" HeaderText="Student_LastName" SortExpression="Student_LastName"></asp:BoundField>
                                     <asp:BoundField DataField="Student_ContactNo" HeaderText="Student_ContactNo" SortExpression="Student_ContactNo"></asp:BoundField>
                                     <asp:BoundField DataField="Student_email" HeaderText="Student_email" SortExpression="Student_email"></asp:BoundField>
-                                    <asp:BoundField DataField="Student_DOB" HeaderText="Student_DOB" SortExpression="Student_DOB"></asp:BoundField>
+                                    
                                     <asp:BoundField DataField="Student_StAddress" HeaderText="Student_StAddress" SortExpression="Student_StAddress"></asp:BoundField>
-                                    <asp:BoundField DataField="Student_City" HeaderText="Student_City" SortExpression="Student_City"></asp:BoundField>
-                                    <asp:BoundField DataField="Student_State" HeaderText="Student_State" SortExpression="Student_State"></asp:BoundField>
-                                    <asp:BoundField DataField="Student_Zipcode" HeaderText="Student_Zipcode" SortExpression="Student_Zipcode"></asp:BoundField>
+                                    
+                                    
+                                    
                                     <asp:BoundField DataField="Student_Type" HeaderText="Student_Type" SortExpression="Student_Type"></asp:BoundField>
                                     <asp:BoundField DataField="Student_UserID" HeaderText="Student_UserID" SortExpression="Student_UserID"></asp:BoundField>
-                                    <asp:BoundField DataField="Student_Password" HeaderText="Student_Password" SortExpression="Student_Password"></asp:BoundField>
+                                    
                                 </Columns>
                             </asp:GridView>
 

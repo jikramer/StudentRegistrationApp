@@ -14,14 +14,18 @@ namespace StudentRegistrationApplication
 
         }
 
+        public string HeaderText {
+            set { lblHeaderPage.Text = value; }
+        }
+
         protected void btnAddStudent_Click(object sender, EventArgs e)
         {
-            //Response.Redirect("~/Signup.aspx");
+            //Response.Redirect("~/Signup");
         }
 
         protected void StudentDetails_Click(object sender, EventArgs e)
         {
-            Response.Redirect("~/StudentDetails.aspx");
+            Response.Redirect("~/StudentDetails");
             
         }
     }

@@ -12,34 +12,8 @@
 
     </asp:ScriptManager>
     <asp:UpdatePanel ID="UpdatePanel1" runat="server">
-        <ContentTemplate>
-            <nav class="navbar navbar-inverse">
-        <div class="container-fluid">
-            <div class="navbar-header">
-                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
-            </div>
-            <div class="collapse navbar-collapse" id="myNavbar">
-                <ul class="nav navbar-nav">
-                    <li>
-                        <asp:HyperLink ID="HyperLink1" runat="server" NavigateUrl="~/Home.aspx"><span class="glyphicon glyphicon-home"></span>Home</asp:HyperLink></li>
-                    <li>
-                        <asp:HyperLink ID="StudentHyperLink" runat="server" NavigateUrl="~/MultiviewTest.aspx">Student</asp:HyperLink></li>
-                    <li>
-                        <asp:HyperLink ID="CoursesHyperLink" runat="server" NavigateUrl="~/Courses.aspx">Courses</asp:HyperLink></li>
-                    <li class="active">
-                        <asp:HyperLink ID="PaymentHyperLink" runat="server">Payment</asp:HyperLink></li>
-                </ul>
-                <ul class="nav navbar-nav navbar-right">
-                    <li>
-                        <asp:HyperLink ID="LoginHyperLink" runat="server" NavigateUrl="~/StudentLogin.aspx"><span class="glyphicon glyphicon-log-in"></span> Login</asp:HyperLink></li>
-                </ul>
-            </div>
-        </div>
-    </nav>
+    <ContentTemplate>
+    
     <br /><br />
     <div class="row">
         <div class="form-group">

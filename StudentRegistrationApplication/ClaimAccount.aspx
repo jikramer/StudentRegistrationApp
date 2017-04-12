@@ -120,9 +120,9 @@
         <div class="form-group">
             <div class="col-sm-offset-2 col-sm-10">
                 <asp:Button ID="btnClaim" runat="server" Text="Claim" CssClass="btn btn-primary" Enabled="False" OnClick="btnClaim_Click" />
-                <asp:Button ID="btnCancel" runat="server" Text="Cancel" CssClass="btn btn-primary" PostBackUrl="~/StudentLogin.aspx" />
-                <asp:HyperLink ID="LoginHyperLink" runat="server" NavigateUrl="~/StudentLogin.aspx">Go Back To Login</asp:HyperLink>
-                <asp:HyperLink ID="HomeHyperLink" runat="server" NavigateUrl="~/Home.aspx">Home</asp:HyperLink>
+                <asp:Button ID="btnCancel" runat="server" Text="Cancel" CssClass="btn btn-primary" PostBackUrl="~/StudentLogin" />
+                <asp:HyperLink ID="LoginHyperLink" runat="server" NavigateUrl="~/StudentLogin">Go Back To Login</asp:HyperLink>
+                <asp:HyperLink ID="HomeHyperLink" runat="server" NavigateUrl="~/Home">Home</asp:HyperLink>
             </div>
         </div>
      </div>

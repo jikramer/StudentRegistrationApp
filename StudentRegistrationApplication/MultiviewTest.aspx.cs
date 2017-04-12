@@ -27,6 +27,10 @@ namespace StudentRegistrationApplication
             }
             else
                 username = Session["user"].ToString();
+
+            Control c = Master.FindControl("masterNavBarDiv");// "masterDiv"= the Id of the div.
+            c.Visible = false;//to set the div to be hidden.
+
         }
 
         protected void ViewProfileButton_Click(object sender, EventArgs e)

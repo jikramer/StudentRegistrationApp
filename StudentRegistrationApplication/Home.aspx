@@ -1,43 +1,11 @@
 ﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Home.aspx.cs" MasterPageFile="~/Site.Master" Inherits="StudentRegistrationApplication.Home" %>
-
+<%@ MasterType VirtualPath="~/Site.Master" %>
 
 <asp:Content ContentPlaceHolderID="headPlaceHolder" runat="server">
     <link href="StyleSheets/Styles.css" rel="stylesheet" />
 </asp:Content>
 
 <asp:Content ID="mainContent" ContentPlaceHolderID="mainPlaceHolder" runat="server">
-
-    <nav class="navbar navbar-inverse">
-        <div class="container-fluid">
-            <div class="navbar-header">
-                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
-            </div>
-            <div class="collapse navbar-collapse" id="myNavbar">
-                <ul class="nav navbar-nav">
-                    <li class="active">
-                        <asp:HyperLink ID="HomeHyperLink" runat="server"><span class="glyphicon glyphicon-home"></span>Home</asp:HyperLink></li>
-                    <li>
-                        <asp:HyperLink ID="StudentHyperLink" runat="server" NavigateUrl="~/MultiviewTest.aspx">Student</asp:HyperLink></li>
-                    <li>
-                        <asp:HyperLink ID="CoursesHyperLink" runat="server" NavigateUrl="~/Courses.aspx">Courses</asp:HyperLink></li>
-                    <li>
-                        <asp:HyperLink ID="PaymentHyperLink" runat="server" NavigateUrl="~/Payment.aspx">Payment</asp:HyperLink></li>
-                </ul>
-                <ul class="nav navbar-nav navbar-right">
-                    <li>
-                       <asp:LinkButton id="OpenClose" runat="server" OnClick="OpenClose_Click" AutoPostBack="true"><span class="glyphicon glyphicon-log-in"></span><asp:label runat="server" ID="lbllogin" Text=" Admin Login"></asp:label></asp:LinkButton>
-
-                        <%--<asp:HyperLink ID="LoginHyperLink" runat="server" NavigateUrl="~/StudentLogin.aspx"><span class="glyphicon glyphicon-log-in"></span> <asp:label runat="server" Text="close"></asp:label></asp:HyperLink>--%>
-
-                    </li>
-                </ul>
-            </div>
-        </div>
-    </nav>
 
 
     <div class="row">
@@ -66,8 +34,10 @@
                         </div>
                         <div class="form-group">
                             <label class="text-center">We offer you the best engineering courses. Find here more on what engineering has to offer you</label>
-                            <asp:Button ID="EngInfoBtn" runat="server" Text="Click Here To Know More" class="btn btn-primary" PostBackUrl="~/EngineeringCourses.aspx" />
-                        </div>
+                            <div class="btn btn-primary">
+                                <asp:Button ID="EngInfoBtn" runat="server" Text="Click Here To Know More"  PostBackUrl="~/EngineeringCourses.aspx" />
+                            </div>
+                            </div>
                     </div>
                 </div>
             </div>
@@ -83,7 +53,9 @@
                         </div>
                         <div class="form-group">
                             <label class="text-center">We offer you the best management courses. Find here more on what management has to &nbsp;&nbsp;&nbsp;offer you</label>
-                            <asp:Button ID="MgmtInfoBtn" runat="server" Text="Click Here To Know More" class="btn btn-primary" PostBackUrl="~/Management.aspx" />
+                            <div class="btn btn-primary">
+                                <asp:Button ID="MgmtInfoBtn" runat="server" Text="Click Here To Know More"  PostBackUrl="~/Management.aspx" />
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -100,7 +72,9 @@
                         </div>
                         <div class="form-group">
                             <label class="text-center">We offer you the best nursing courses. Find here more on what nursing has to offer you</label>
-                            <asp:Button ID="NursingInfoBtn" runat="server" Text="Click Here To Know More" class="btn btn-primary" />
+                            <div class="btn btn-primary">
+                                <asp:Button ID="NursingInfoBtn" runat="server" Text="Click Here To Know More"  />
+                            </div>
                         </div>
                     </div>
                 </div>

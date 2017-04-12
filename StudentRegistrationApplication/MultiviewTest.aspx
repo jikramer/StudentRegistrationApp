@@ -1,4 +1,5 @@
 ﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="MultiviewTest.aspx.cs" MasterPageFile="~/Site.Master" Inherits="StudentRegistrationApplication.MultiviewTest" %>
+<%@ MasterType VirtualPath="~/Site.Master" %>
 
 <asp:Content ContentPlaceHolderID="headPlaceHolder" runat="server">
     <link href="StyleSheets/MultiviewStlye.css" rel="stylesheet" />
@@ -6,7 +7,7 @@
 
 
 <asp:Content ID="mainContent" ContentPlaceHolderID="mainPlaceHolder" runat="server">
-
+ 
     <div class="row content">
         <div class="col-sm-2 sidenav">
             <h4>

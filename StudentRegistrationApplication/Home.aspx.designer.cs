@@ -13,60 +13,6 @@ namespace StudentRegistrationApplication {
     public partial class Home {
         
         /// <summary>
-        /// HomeHyperLink control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.HyperLink HomeHyperLink;
-        
-        /// <summary>
-        /// StudentHyperLink control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.HyperLink StudentHyperLink;
-        
-        /// <summary>
-        /// CoursesHyperLink control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.HyperLink CoursesHyperLink;
-        
-        /// <summary>
-        /// PaymentHyperLink control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.HyperLink PaymentHyperLink;
-        
-        /// <summary>
-        /// OpenClose control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.LinkButton OpenClose;
-        
-        /// <summary>
-        /// lbllogin control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lbllogin;
-        
-        /// <summary>
         /// EngineeringImg control.
         /// </summary>
         /// <remarks>
@@ -119,5 +65,17 @@ namespace StudentRegistrationApplication {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Button NursingInfoBtn;
+        
+        /// <summary>
+        /// Master property.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated property.
+        /// </remarks>
+        public new StudentRegistrationApplication.Master Master {
+            get {
+                return ((StudentRegistrationApplication.Master)(base.Master));
+            }
+        }
     }
 }

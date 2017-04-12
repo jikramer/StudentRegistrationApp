@@ -23,13 +23,16 @@ namespace StudentRegistrationApplication
                 if (masterMsgLabel != null)
                 {
                     masterMsgLabel.Text = "<strong>Error!</strong> Please log in first!";
-                    Response.Redirect("StudentLogin.aspx");
+                    Response.Redirect("StudentLogin");
                 }
                 else
                     Response.Write("Please Log in First!");
             }
             else
                 username = Session["user"].ToString();
+
+            Control c = Master.FindControl("masterNavBarDiv");// "masterDiv"= the Id of the div.
+            c.Visible = false;//to set the div to be hidden.
 
         }
 

@@ -15,7 +15,7 @@ namespace StudentRegistrationApplication
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-
+           
         }
 
         protected void btnConfirm_Click(object sender, EventArgs e)
@@ -45,17 +45,11 @@ namespace StudentRegistrationApplication
                 con.Open();
                 cmd.ExecuteNonQuery();
 
-                Label masterMsgLabel = (Label)Master.FindControl("lblUserMessage");
-                if (masterMsgLabel != null)
-                {
-                    masterMsgLabel.Text = "<strong>Success!</strong> You have signed up successfully!";
-                }
-                else
-                    Response.Write("You have signed up successfully!");
-                 
+                Master.HeaderText = "<strong>Success!</strong> You have signed up successfully!";
             }
-        }
 
+        }
+    
         protected void getStudentData()
         {
 

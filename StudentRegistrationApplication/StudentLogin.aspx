@@ -1,5 +1,5 @@
 ﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="StudentLogin.aspx.cs" MasterPageFile="~/Site.Master" Inherits="StudentRegistrationApplication.StudentLogin" %>
-
+<%@ MasterType VirtualPath="~/Site.Master" %>
 
 <asp:Content ContentPlaceHolderID="headPlaceHolder" runat="server">
     <link href="StyleSheets/LoginStyle.css" rel="stylesheet" />

@@ -1,5 +1,5 @@
 ﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Signup.aspx.cs" MasterPageFile="~/AdminView.Master" Inherits="StudentRegistrationApplication.Signup" %>
-
+<%@ MasterType VirtualPath = "~/AdminView.Master" %>
 
 <asp:Content ContentPlaceHolderID="AdminheadPlaceHolder" runat="server">
     <link href="StyleSheets/Site.css" rel="stylesheet" />

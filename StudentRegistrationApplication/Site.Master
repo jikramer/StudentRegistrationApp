@@ -26,6 +26,47 @@
                 <asp:Label ID="lblUserMessage" runat="server" ></asp:Label>
             </div>
 
+            <div id="masterNavBarDiv" runat="server">
+                <nav class="navbar navbar-inverse">
+                    <div class="container-fluid">
+                        <div class="navbar-header">
+                            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+                                <span class="icon-bar"></span>
+                                <span class="icon-bar"></span>
+                                <span class="icon-bar"></span>
+                            </button>
+                        </div>
+                        <div class="collapse navbar-collapse" id="myNavbar">
+                            <ul class="nav navbar-nav">
+                                <li>
+                                    <asp:HyperLink ID="HomeHyperLink" runat="server" NavigateUrl="~/Home">
+                                           <span class="glyphicon glyphicon-home"></span>Home</asp:HyperLink></li>
+                                <li>
+                                    <asp:HyperLink ID="StudentHyperLink" runat="server" NavigateUrl="~/MultiviewTest">Student</asp:HyperLink></li>
+                                <li>
+                                    <asp:HyperLink ID="CoursesHyperLink" runat="server" NavigateUrl="~/Courses">Courses</asp:HyperLink></li>
+                                <li>
+                                    <asp:HyperLink ID="PaymentHyperLink" runat="server" NavigateUrl="~/Payment">Payment</asp:HyperLink></li>
+                            </ul>
+                            <ul class="nav navbar-nav navbar-right">
+                                <li>
+                                         <asp:LinkButton id="OpenClose" runat="server" OnClick="OpenClose_Click" AutoPostBack="true">
+                                             <span class="glyphicon glyphicon-log-in" ></span>
+                                     
+                                         <asp:label runat="server" ID="lbllogin" Text=" Admin Login"></asp:label>
+
+                                         </asp:LinkButton>
+                                 
+                                    <%--<asp:HyperLink ID="LoginHyperLink" runat="server" NavigateUrl="~/StudentLogin.aspx"><span class="glyphicon glyphicon-log-in"></span> <asp:label runat="server" Text="close"></asp:label></asp:HyperLink>--%>
+
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </nav>
+                </div>
+
+
                 <asp:ContentPlaceHolder ID="mainPlaceHolder" runat="server">
                 </asp:ContentPlaceHolder>
 

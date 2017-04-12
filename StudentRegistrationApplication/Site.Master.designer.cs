@@ -40,6 +40,69 @@ namespace StudentRegistrationApplication {
         protected global::System.Web.UI.WebControls.Label lblUserMessage;
         
         /// <summary>
+        /// masterNavBarDiv control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl masterNavBarDiv;
+        
+        /// <summary>
+        /// HomeHyperLink control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.HyperLink HomeHyperLink;
+        
+        /// <summary>
+        /// StudentHyperLink control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.HyperLink StudentHyperLink;
+        
+        /// <summary>
+        /// CoursesHyperLink control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.HyperLink CoursesHyperLink;
+        
+        /// <summary>
+        /// PaymentHyperLink control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.HyperLink PaymentHyperLink;
+        
+        /// <summary>
+        /// OpenClose control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.LinkButton OpenClose;
+        
+        /// <summary>
+        /// lbllogin control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lbllogin;
+        
+        /// <summary>
         /// mainPlaceHolder control.
         /// </summary>
         /// <remarks>

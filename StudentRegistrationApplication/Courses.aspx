@@ -1,4 +1,5 @@
 ﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Courses.aspx.cs" MasterPageFile="~/Site.Master" Inherits="StudentRegistrationApplication.Courses" %>
+<%@ MasterType VirtualPath="~/Site.Master" %>
 
 <asp:Content ContentPlaceHolderID="headPlaceHolder" runat="server">
     <link href="StyleSheets/MultiviewStlye.css" rel="stylesheet" />
@@ -14,7 +15,7 @@
         <div class="col-sm-2 sidenav">
             <h4>
                 <p>
-                    <asp:HyperLink ID="HomeHyperLink" runat="server" ForeColor="White" NavigateUrl="~/Home.aspx"><span class="glyphicon glyphicon-home"></span>Home</asp:HyperLink></p>
+                    <asp:HyperLink ID="HomeHyperLink" runat="server" ForeColor="White" NavigateUrl="~/Home"><span class="glyphicon glyphicon-home"></span>Home</asp:HyperLink></p>
             </h4>
             <br />
             <p>

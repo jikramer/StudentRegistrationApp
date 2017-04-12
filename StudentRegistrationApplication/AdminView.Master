@@ -28,6 +28,11 @@
     <div class="container-fluid text-center">
         <main>
     <form id="form1" runat="server" class="form-horizontal">
+
+            <div class="alert-info">   
+                <asp:Label ID="lblUserMessage" runat="server" ></asp:Label>
+            </div>
+
         <div class="row content">
            
                 <nav class="navbar navbar-inverse">
@@ -42,17 +47,17 @@
             <div class="collapse navbar-collapse" id="myNavbar">
                 <ul class="nav navbar-nav">
                     <li class="active">
-                        <asp:HyperLink ID="HomeHyperLink" runat="server" NavigateUrl="~/Home.aspx"><span class="glyphicon glyphicon-home"></span>Home</asp:HyperLink></li>
+                        <asp:HyperLink ID="HomeHyperLink" runat="server" NavigateUrl="~/Home"><span class="glyphicon glyphicon-home"></span>Home</asp:HyperLink></li>
                     <li>
-                        <asp:HyperLink ID="RegisterHyperLink" runat="server" NavigateUrl="~/Signup.aspx">Register Student</asp:HyperLink></li>
+                        <asp:HyperLink ID="RegisterHyperLink" runat="server" NavigateUrl="~/Signup">Register Student</asp:HyperLink></li>
                     <li>
-                        <asp:HyperLink ID="StudentHistoryHyperLink" runat="server" NavigateUrl="~/StudentHistory.aspx">View Student History</asp:HyperLink></li>
+                        <asp:HyperLink ID="StudentHistoryHyperLink" runat="server" NavigateUrl="~/StudentHistory">View Student History</asp:HyperLink></li>
                     <li>
-                        <asp:HyperLink ID="PaymentHistoryHyperLink" runat="server" NavigateUrl="~/PaymentHistory.aspx">View Student Payment History</asp:HyperLink></li>
+                        <asp:HyperLink ID="PaymentHistoryHyperLink" runat="server" NavigateUrl="~/PaymentHistory">View Student Payment History</asp:HyperLink></li>
                     <li>
-                        <asp:HyperLink ID="UpdateResultSheetHL" runat="server" NavigateUrl="~/UpdateResultSheet.aspx">Update Student Result Sheet</asp:HyperLink></li>
+                        <asp:HyperLink ID="UpdateResultSheetHL" runat="server" NavigateUrl="~/UpdateResultSheet">Update Student Result Sheet</asp:HyperLink></li>
                      <li>
-                        <asp:HyperLink ID="StudentDetailsHL" runat="server" NavigateUrl="~/StudentDetails.aspx">View All Students</asp:HyperLink></li>
+                        <asp:HyperLink ID="StudentDetailsHL" runat="server" NavigateUrl="~/StudentDetails">View All Students</asp:HyperLink></li>
                     
                     
                 </ul>
@@ -60,7 +65,7 @@
                     <li>
                       <%-- <asp:LinkButton id="OpenClose" runat="server" OnClick="OpenClose_Click" AutoPostBack="true"><span class="glyphicon glyphicon-log-in"></span><asp:label runat="server" ID="lbllogin" Text=" Admin Login"></asp:label></asp:LinkButton>--%>
 
-                        <%--<asp:HyperLink ID="LoginHyperLink" runat="server" NavigateUrl="~/StudentLogin.aspx"><span class="glyphicon glyphicon-log-in"></span> <asp:label runat="server" Text="close"></asp:label></asp:HyperLink>--%>
+                        <%--<asp:HyperLink ID="LoginHyperLink" runat="server" NavigateUrl="~/StudentLogin "><span class="glyphicon glyphicon-log-in"></span> <asp:label runat="server" Text="close"></asp:label></asp:HyperLink>--%>
 
                     </li>
                 </ul>

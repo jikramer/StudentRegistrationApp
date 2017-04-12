@@ -13,6 +13,22 @@ namespace StudentRegistrationApplication
         {
 
         }
+
+        public string HeaderText {
+                set { lblUserMessage.Text = value; }
+        }
+
+        public string AdminLoginText{
+            set { lbllogin.Text = value; }
+        }
+
+         
+
+        protected void OpenClose_Click(object sender, EventArgs e)
+        {
+
+            Response.Redirect("StudentLogin.aspx");
+        }
     }
 
 }

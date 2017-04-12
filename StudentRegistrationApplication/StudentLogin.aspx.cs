@@ -18,7 +18,10 @@ namespace StudentRegistrationApplication
         {
             Session["user"] = "";
             Session["role"] = "";
-           
+
+            Control c = Master.FindControl("masterNavBarDiv");// "masterDiv"= the Id of the div.
+            c.Visible = false;//to set the div to be hidden.
+
         }
 
         protected void btnLogin_Click(object sender, EventArgs e)

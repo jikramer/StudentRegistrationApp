@@ -389,5 +389,17 @@ namespace StudentRegistrationApplication {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Button btnClear;
+        
+        /// <summary>
+        /// Master property.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated property.
+        /// </remarks>
+        public new StudentRegistrationApplication.Master Master {
+            get {
+                return ((StudentRegistrationApplication.Master)(base.Master));
+            }
+        }
     }
 }

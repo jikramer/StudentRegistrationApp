@@ -13,7 +13,7 @@ namespace StudentRegistrationApplication
         {
             if (Session["user"] == null)
             {
-                Response.Redirect("StudentLogin.aspx");
+                Response.Redirect("StudentLogin");
             }
         }
 
@@ -24,7 +24,7 @@ namespace StudentRegistrationApplication
 
         protected void btnAddStudent_Click(object sender, EventArgs e)
         {
-            Response.Redirect("Signup.aspx");
+            Response.Redirect("Signup");
         }
     }
 }

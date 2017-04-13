@@ -28,5 +28,18 @@ namespace StudentRegistrationApplication
             Response.Redirect("~/StudentDetails");
             
         }
+
+        protected void OpenClose_Click(object sender, EventArgs e)
+        {
+            if (Session["user"] != null && Session["role"] != null)
+            {
+                if (Session["role"].ToString() == "admin")
+                {
+                    Session.Clear();
+                    Response.Redirect("~/Home.aspx");
+                }
+
+            }
+        }
     }
 }

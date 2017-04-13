@@ -40,15 +40,6 @@ namespace StudentRegistrationApplication {
         protected global::System.Web.UI.WebControls.Label lblUserMessage;
         
         /// <summary>
-        /// HomeHyperLink control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.HyperLink HomeHyperLink;
-        
-        /// <summary>
         /// RegisterHyperLink control.
         /// </summary>
         /// <remarks>
@@ -92,6 +83,24 @@ namespace StudentRegistrationApplication {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.HyperLink StudentDetailsHL;
+        
+        /// <summary>
+        /// OpenClose control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.LinkButton OpenClose;
+        
+        /// <summary>
+        /// lbllogin control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lbllogin;
         
         /// <summary>
         /// btnAddStudent control.

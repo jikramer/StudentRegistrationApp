@@ -46,9 +46,7 @@
             </div>
             <div class="collapse navbar-collapse" id="myNavbar">
                 <ul class="nav navbar-nav">
-                    <li class="active">
-                        <asp:HyperLink ID="HomeHyperLink" runat="server" NavigateUrl="~/Home"><span class="glyphicon glyphicon-home"></span>Home</asp:HyperLink></li>
-                    <li>
+                  <li>
                         <asp:HyperLink ID="RegisterHyperLink" runat="server" NavigateUrl="~/Signup">Register Student</asp:HyperLink></li>
                     <li>
                         <asp:HyperLink ID="StudentHistoryHyperLink" runat="server" NavigateUrl="~/StudentHistory">View Student History</asp:HyperLink></li>
@@ -63,7 +61,7 @@
                 </ul>
                 <ul class="nav navbar-nav navbar-right">
                     <li>
-                      <%-- <asp:LinkButton id="OpenClose" runat="server" OnClick="OpenClose_Click" AutoPostBack="true"><span class="glyphicon glyphicon-log-in"></span><asp:label runat="server" ID="lbllogin" Text=" Admin Login"></asp:label></asp:LinkButton>--%>
+                        <asp:LinkButton id="OpenClose" runat="server" OnClick="OpenClose_Click" AutoPostBack="true"><span class="glyphicon glyphicon-log-out"></span><asp:label runat="server" ID="lbllogin" Text=" Admin Logut"></asp:label></asp:LinkButton>
 
                         <%--<asp:HyperLink ID="LoginHyperLink" runat="server" NavigateUrl="~/StudentLogin "><span class="glyphicon glyphicon-log-in"></span> <asp:label runat="server" Text="close"></asp:label></asp:HyperLink>--%>
 

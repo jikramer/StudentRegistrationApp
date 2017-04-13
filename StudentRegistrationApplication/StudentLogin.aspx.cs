@@ -16,8 +16,7 @@ namespace StudentRegistrationApplication
         string CS = ConfigurationManager.ConnectionStrings["UserInfoConnectionString"].ConnectionString;
         protected void Page_Load(object sender, EventArgs e)
         {
-            Session["user"] = "";
-            Session["role"] = "";
+          
 
             Control c = Master.FindControl("masterNavBarDiv");// "masterDiv"= the Id of the div.
             c.Visible = false;//to set the div to be hidden.

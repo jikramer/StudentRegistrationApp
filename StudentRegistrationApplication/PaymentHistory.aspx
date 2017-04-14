@@ -56,7 +56,7 @@
     </div> 
     <div class="form-group">
         <div class="col-sm-12">
-           <asp:Button ID="btnEdit" runat="server" Text="Edit" CssClass="btn btn-primary"/>
+           <asp:Button ID="btnEdit" runat="server" Text="Payment History" CssClass="btn btn-primary" OnClick="btnEdit_Click"/>
             <asp:Button ID="btnUpdate" runat="server" Text="Update" CssClass="btn btn-primary"/>
         </div>
     </div>

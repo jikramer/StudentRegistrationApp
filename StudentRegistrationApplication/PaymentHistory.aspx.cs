@@ -13,5 +13,10 @@ namespace StudentRegistrationApplication
         {
 
         }
+
+        protected void btnEdit_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

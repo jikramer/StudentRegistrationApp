@@ -40,6 +40,15 @@ namespace StudentRegistrationApplication {
         protected global::System.Web.UI.WebControls.TextBox txtStudentID;
         
         /// <summary>
+        /// WarningLabel control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label WarningLabel;
+        
+        /// <summary>
         /// rfvStudentID control.
         /// </summary>
         /// <remarks>
@@ -56,6 +65,15 @@ namespace StudentRegistrationApplication {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.RegularExpressionValidator revStudentID;
+        
+        /// <summary>
+        /// btnstudentHistory control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button btnstudentHistory;
         
         /// <summary>
         /// txtFirstName control.

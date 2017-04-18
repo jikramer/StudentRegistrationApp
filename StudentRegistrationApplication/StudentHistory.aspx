@@ -18,6 +18,7 @@
         <label class="control-label col-sm-3">Enter Student ID:</label>
         <div class="col-sm-5">
             <asp:TextBox ID="txtStudentID" runat="server" CssClass="form-control"></asp:TextBox>
+             <asp:Label ID="WarningLabel" runat="server" Text="Incorrect Username or Password!" Font-Size="Medium" ForeColor="Red" Visible="False"></asp:Label>
         </div>
         <div class="col-sm-4">
             <asp:RequiredFieldValidator ID="rfvStudentID" runat="server"
@@ -25,11 +26,16 @@
                 Display="Dynamic" ControlToValidate="txtStudentID" ForeColor="Red"></asp:RequiredFieldValidator>
         <asp:RegularExpressionValidator ID="revStudentID" runat="server"
                 ErrorMessage="Enter a six digit ID" CssClass="text-danger"
-                Display="Dynamic" ValidationExpression="\d{4}"
+                Display="Dynamic" ValidationExpression="\d{6}"
                 ControlToValidate="txtStudentID" ForeColor="Red"></asp:RegularExpressionValidator>        
         </div>
     </div>
-
+ <div class="form-group">
+        <div class="col-sm-12">
+           <asp:Button ID="btnstudentHistory" runat="server" Text="StudentHistory" OnClick="btnstudentHistory_Click" CssClass="btn btn-primary"/>
+            <%--<asp:Button ID="Button2" runat="server" Text="Update" CssClass="btn btn-primary" />--%>
+        </div>
+    </div>
     <h3>Personal Information</h3>
      <div class="form-group">
         <label class="control-label col-sm-3">First Name:</label>
@@ -140,7 +146,7 @@
     </div> 
     <div class="form-group">
         <div class="col-sm-12">
-           <asp:Button ID="btnEdit" runat="server" Text="Edit" CssClass="btn btn-primary"/>
+           <asp:Button ID="btnEdit" runat="server" Text="StudentHistory" OnClick="btnEdit_Click" CssClass="btn btn-primary"/>
             <asp:Button ID="btnUpdate" runat="server" Text="Update" CssClass="btn btn-primary" />
         </div>
     </div>

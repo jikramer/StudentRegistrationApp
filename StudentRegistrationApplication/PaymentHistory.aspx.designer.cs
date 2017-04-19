@@ -58,13 +58,13 @@ namespace StudentRegistrationApplication {
         protected global::System.Web.UI.WebControls.RegularExpressionValidator revStudentID;
         
         /// <summary>
-        /// txtSelectedPayMethod control.
+        /// btnEdit control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtSelectedPayMethod;
+        protected global::System.Web.UI.WebControls.Button btnEdit;
         
         /// <summary>
         /// PaymentDetailsGridView control.
@@ -76,21 +76,12 @@ namespace StudentRegistrationApplication {
         protected global::System.Web.UI.WebControls.GridView PaymentDetailsGridView;
         
         /// <summary>
-        /// btnEdit control.
+        /// WarningLabel control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btnEdit;
-        
-        /// <summary>
-        /// btnUpdate control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btnUpdate;
+        protected global::System.Web.UI.WebControls.Label WarningLabel;
     }
 }

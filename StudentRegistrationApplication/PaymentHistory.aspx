@@ -25,21 +25,29 @@
                 Display="Dynamic" ControlToValidate="txtStudentID" ForeColor="Red"></asp:RequiredFieldValidator>
         <asp:RegularExpressionValidator ID="revStudentID" runat="server"
                 ErrorMessage="Enter a six digit ID" CssClass="text-danger"
-                Display="Dynamic" ValidationExpression="\d{4}"
+                Display="Dynamic" ValidationExpression="\d{6}"
                 ControlToValidate="txtStudentID" ForeColor="Red"></asp:RegularExpressionValidator>        
         </div>
     </div>
-     <div class="form-group">
+         <div class="form-group">
+        <div class="col-sm-12">
+           <asp:Button ID="btnEdit" runat="server" Text="Details" OnClick="btnEdit_Click" CssClass="btn btn-primary"/>
+            <%--<asp:Button ID="btnUpdate" runat="server" Text="Update" CssClass="btn btn-primary"/>--%>
+        </div>
+    </div>
+     <%--<div class="form-group">
         <label class="control-label col-sm-3">Selected Payment Method:</label>
         <div class="col-sm-5">
             <asp:TextBox ID="txtSelectedPayMethod" runat="server" CssClass="form-control"></asp:TextBox>
         </div>
-    </div>
+    </div>--%>
     
     <div class="form-group">
         <label class="control-label col-sm-2">Payment Details:</label>
         <div class="col-sm-12">
-            <asp:GridView ID="PaymentDetailsGridView" runat="server" CellPadding="4" ForeColor="#333333" GridLines="None">
+            <asp:GridView ID="PaymentDetailsGridView" runat="server" AllowPaging="True" AllowSorting="True"
+               
+                CssClass="table table-bordered table-condensed">
                 <AlternatingRowStyle BackColor="White" ForeColor="#284775" />
                 <EditRowStyle BackColor="#999999" />
                 <FooterStyle BackColor="#5D7B9D" Font-Bold="True" ForeColor="White" />
@@ -53,12 +61,12 @@
                 <SortedDescendingHeaderStyle BackColor="#6F8DAE" />
             </asp:GridView>
         </div>
-    </div> 
-    <div class="form-group">
-        <div class="col-sm-12">
-           <asp:Button ID="btnEdit" runat="server" Text="Edit" CssClass="btn btn-primary"/>
-            <asp:Button ID="btnUpdate" runat="server" Text="Update" CssClass="btn btn-primary"/>
-        </div>
     </div>
+         <div class="form-group">
+            <div class="col-sm-5">
+                <asp:Label ID="WarningLabel" runat="server" Text="Student records not found!" Font-Size="Medium" ForeColor="Red" Visible="False"></asp:Label>
+            </div>
+        </div> 
+    
     </div>
 </asp:Content>

@@ -180,17 +180,19 @@ namespace StudentRegistrationApplication
                   string course1 = listItemArray[0].ToString();
                   string course2 = listItemArray[1].ToString();
                   string course3 = listItemArray[2].ToString();
+                int Amount = 7200;
 
-                  string CS = ConfigurationManager.ConnectionStrings["UserInfoConnectionString"].ConnectionString;
+                string CS = ConfigurationManager.ConnectionStrings["UserInfoConnectionString"].ConnectionString;
                   using (SqlConnection con = new SqlConnection(CS))
                   {               
                       SqlCommand cmd = new SqlCommand();
-                      cmd.CommandText = "UPDATE StudentData SET Course1 = @course1, Course2 = @course2, Course3 = @course3 where Student_UserID = '" + username + "'";
+                      cmd.CommandText = "UPDATE StudentData SET Course1 = @course1, Course2 = @course2, Course3 = @course3, Amount = @Amount where Student_UserID = '" + username + "'";
                       cmd.Parameters.AddWithValue("@course1", course1);
                       cmd.Parameters.AddWithValue("@course2", course2);
                       cmd.Parameters.AddWithValue("@course3", course3);
+                    cmd.Parameters.AddWithValue("@Amount", Amount);
 
-                      cmd.Connection = con;
+                    cmd.Connection = con;
                       con.Open();
                       cmd.ExecuteNonQuery();
 

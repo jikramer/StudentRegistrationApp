@@ -19,39 +19,20 @@ namespace StudentRegistrationApplication
 
         protected void btnEdit_Click(object sender, EventArgs e)
         {
-            string constr = ConfigurationManager.ConnectionStrings["UserInfoConnectionString"].ConnectionString;
-            string query = "select s.StudentUniqueID,ph.StudentName,p.PaymenchannelName, ph.PaymentAmount,ph.Status,ph.CreatedDate from PaymentHistory As ph "
-                 + "join PaymentChannals as p on p.id = ph.PaymentChannelId "
-                 + "join StudentData as s on s.Student_Id = ph.StudentId where s.StudentUniqueID = @studentid ";
-           // query += "SELECT TOP 10 (FirstName + ' ' + LastName) EmployeeName, City, Country FROM Employees";
-
-            using (SqlConnection con = new SqlConnection(constr))
+            string CS = ConfigurationManager.ConnectionStrings["UserInfoConnectionString"].ConnectionString;
+            using (SqlConnection con = new SqlConnection(CS))
             {
-                using (SqlCommand cmd = new SqlCommand(query))
-                {
-                    cmd.Parameters.AddWithValue("@studentid", txtStudentID.Text);
-                    using (SqlDataAdapter sda = new SqlDataAdapter())
-                    {
-                        cmd.Connection = con;
-                        sda.SelectCommand = cmd;
-                        
-                        using (DataSet ds = new DataSet())
-                        {
-                            //if (ds.Tables.Count == 0)
-                            //{
-                            //    WarningLabel.Visible = true;
-                            //}
-                            //else
-                            //{
+                SqlCommand cmd = new SqlCommand();
 
-                                sda.Fill(ds);
-                                PaymentDetailsGridView.DataSource = ds.Tables[0];
-                                PaymentDetailsGridView.DataBind();
-                            //}
-                          
-                           
-                        }
-                    }
+                cmd.CommandText = "Select Student_UserID from PaymentHistory where Student_UserID='" + txtStudentID.Text + "'";
+
+                cmd.Connection = con;
+                con.Open();
+                SqlDataReader dr = cmd.ExecuteReader();
+
+                if (dr.Read())
+                {
+                    lblUserNamePaymentHistory.Text = dr[0].ToString();
                 }
             }
         }

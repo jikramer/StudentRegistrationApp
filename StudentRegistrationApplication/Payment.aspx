@@ -413,7 +413,7 @@
                             </div>
                             <div class="form-group ">
                                 <div class="col-sm-offset-3 col-sm-5">
-                                    <asp:Label ID="lblCreditPaymentSucessful" runat="server"></asp:Label>
+                                    <asp:Label ID="lblCreditPaymentSucessful" runat="server" Font-Size="Large"></asp:Label>
                                 </div>
                             </div>
                             </asp:View>
@@ -708,7 +708,7 @@
                             </div>
                             <div class="form-group ">
                                 <div class="col-sm-offset-3 col-sm-5">
-                                    <asp:Label ID="lblDebitPaymentSucessful" runat="server"></asp:Label>
+                                    <asp:Label ID="lblDebitPaymentSucessful" runat="server" Font-Size="Large"></asp:Label>
                                 </div>
                             </div>
                             </asp:View>
@@ -996,7 +996,7 @@
                             </div>
                             <div class="form-group ">
                                 <div class="col-sm-offset-3 col-sm-5">
-                                    <asp:Label ID="lblCashPaymentSucessful" runat="server"></asp:Label>
+                                    <asp:Label ID="lblCashPaymentSucessful" Font-Size="Large" runat="server"></asp:Label>
                                 </div>
                             </div>
                             </asp:View>

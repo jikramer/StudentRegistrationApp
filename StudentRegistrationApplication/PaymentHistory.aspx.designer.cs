@@ -67,21 +67,48 @@ namespace StudentRegistrationApplication {
         protected global::System.Web.UI.WebControls.Button btnEdit;
         
         /// <summary>
-        /// PaymentDetailsGridView control.
+        /// lblUserNameStudentData control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.GridView PaymentDetailsGridView;
+        protected global::System.Web.UI.WebControls.Label lblUserNameStudentData;
         
         /// <summary>
-        /// WarningLabel control.
+        /// lblUserNamePaymentHistory control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label WarningLabel;
+        protected global::System.Web.UI.WebControls.Label lblUserNamePaymentHistory;
+        
+        /// <summary>
+        /// grdPaymentHistory control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.GridView grdPaymentHistory;
+        
+        /// <summary>
+        /// SqlDataSource4 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.SqlDataSource SqlDataSource4;
+        
+        /// <summary>
+        /// Label1 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label Label1;
     }
 }

@@ -8,6 +8,7 @@ using System.Web.Configuration;
 using System.Data.SqlClient;
 using System.Data;
 using System.Configuration;
+using System.Drawing;
 
 namespace StudentRegistrationApplication
 {
@@ -495,6 +496,7 @@ namespace StudentRegistrationApplication
                             string CreditMakePaymentSaved;
                             CreditMakePaymentSaved = "Your due amount is "+Amount+" and you are trying to pay "+ ExtraAmount + " extra!,";
                             lblCreditPaymentSucessful.Text = CreditMakePaymentSaved.ToString();
+                            lblCreditPaymentSucessful.ForeColor = Color.Red;
                         }
                         else
                         {
@@ -556,6 +558,7 @@ namespace StudentRegistrationApplication
                             string DebitMakePaymentSaved;
                             DebitMakePaymentSaved = "Your due amount is " + Amount + " and you are trying to pay " + ExtraAmount + " extra!,";
                             lblDebitPaymentSucessful.Text = DebitMakePaymentSaved.ToString();
+                            lblDebitPaymentSucessful.ForeColor = Color.Red;
                         }
                         else
                         {
@@ -617,6 +620,7 @@ namespace StudentRegistrationApplication
                             string CashMakePaymentSaved;
                             CashMakePaymentSaved = "Your due amount is " + Amount + " and you are trying to pay " + ExtraAmount + " extra!,";
                             lblCashPaymentSucessful.Text = CashMakePaymentSaved.ToString();
+                            lblCashPaymentSucessful.ForeColor = Color.Red;
                         }
                         else
                         {

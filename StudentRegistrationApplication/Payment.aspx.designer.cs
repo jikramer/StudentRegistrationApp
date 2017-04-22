@@ -652,6 +652,15 @@ namespace StudentRegistrationApplication {
         protected global::System.Web.UI.WebControls.TextBox txtCreditMakePaymentAmount;
         
         /// <summary>
+        /// lblCreditPaymentSucessful control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lblCreditPaymentSucessful;
+        
+        /// <summary>
         /// MakePaymentMultiViewEditDetails control.
         /// </summary>
         /// <remarks>
@@ -1129,6 +1138,15 @@ namespace StudentRegistrationApplication {
         protected global::System.Web.UI.WebControls.TextBox txtDebitMakePaymentAmount;
         
         /// <summary>
+        /// lblDebitPaymentSucessful control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lblDebitPaymentSucessful;
+        
+        /// <summary>
         /// MakePaymentDebitMultiViewEdit control.
         /// </summary>
         /// <remarks>
@@ -1588,6 +1606,15 @@ namespace StudentRegistrationApplication {
         protected global::System.Web.UI.WebControls.TextBox txtCashMakePaymentAmount;
         
         /// <summary>
+        /// lblCashPaymentSucessful control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lblCashPaymentSucessful;
+        
+        /// <summary>
         /// MakePaymentCashMultiViewEdit control.
         /// </summary>
         /// <remarks>
@@ -1856,6 +1883,15 @@ namespace StudentRegistrationApplication {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.View PaymentHistoryView;
+        
+        /// <summary>
+        /// lblUserName control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lblUserName;
         
         /// <summary>
         /// grdPaymentHistory control.

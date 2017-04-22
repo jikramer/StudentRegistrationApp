@@ -206,7 +206,7 @@ namespace StudentRegistrationApplication
                   string course1 = listItemArray[0].ToString();
                   string course2 = listItemArray[1].ToString();
                   string course3 = listItemArray[2].ToString();
-                int Amount = 7200;
+                int Amount = (listItemArray.Length) * 2400;
 
                 string CS = ConfigurationManager.ConnectionStrings["UserInfoConnectionString"].ConnectionString;
                   using (SqlConnection con = new SqlConnection(CS))

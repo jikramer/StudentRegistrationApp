@@ -34,8 +34,8 @@
                         </div>
                         <div class="form-group">
                             <label class="text-center">We offer you the best engineering courses. Find here more on what engineering has to offer you</label>
-                            <div class="btn btn-primary">
-                                <asp:Button ID="EngInfoBtn" runat="server" Text="Click Here To Know More"  PostBackUrl="~/EngineeringCourses" ForeColor="Black"/>
+                            <div>
+                                <asp:Button ID="EngInfoBtn" CssClass="btn btn-primary" runat="server" Text="Click Here To Know More"  PostBackUrl="~/EngineeringCourses" ForeColor="White"/>
                             </div>
                             </div>
                     </div>
@@ -53,8 +53,8 @@
                         </div>
                         <div class="form-group">
                             <label class="text-center">We offer you the best management courses. Find here more on what management has to &nbsp;&nbsp;&nbsp;offer you</label>
-                            <div class="btn btn-primary">
-                                <asp:Button ID="MgmtInfoBtn" runat="server" Text="Click Here To Know More"  PostBackUrl="~/Management" ForeColor="Black"/>
+                            <div>
+                                <asp:Button ID="MgmtInfoBtn" class="btn btn-primary" runat="server" Text="Click Here To Know More"  PostBackUrl="~/Management" ForeColor="White"/>
                             </div>
                         </div>
                     </div>
@@ -71,9 +71,9 @@
                             </div>
                         </div>
                         <div class="form-group">
-                            <label class="text-center">We offer you the best nursing courses. Find here more on what nursing has to offer you</label>
-                            <div class="btn btn-primary">
-                                <asp:Button ID="NursingInfoBtn" runat="server" Text="Click Here To Know More"  PostBackUrl="~/Nursing" ForeColor="Black" />
+                            <label class="text-center">We offer you the best nursing courses. Find here more on what nursing has to <br /> offer you</label>
+                            <div>
+                                <asp:Button ID="NursingInfoBtn" class="btn btn-primary" runat="server" Text="Click Here To Know More"  PostBackUrl="~/Nursing" ForeColor="White" />
                             </div>
                         </div>
                     </div>

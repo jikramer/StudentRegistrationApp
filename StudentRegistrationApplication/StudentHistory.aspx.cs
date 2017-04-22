@@ -1,11 +1,7 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Configuration;
 using System.Data.SqlClient;
-using System.Linq;
-using System.Web;
-using System.Web.UI;
-using System.Web.UI.WebControls;
+using System.Drawing.Printing;
 
 namespace StudentRegistrationApplication
 {
@@ -19,7 +15,7 @@ namespace StudentRegistrationApplication
 
         protected void btnEdit_Click(object sender, EventArgs e)
         {
-           
+
         }
 
         protected void btnstudentHistory_Click(object sender, EventArgs e)
@@ -58,6 +54,16 @@ namespace StudentRegistrationApplication
                     }
                 }
             }
+        }
+
+        protected void PrintHp_Click(object sender, EventArgs e)
+        {
+            Page.RegisterStartupScript("PrintPage", "<script language='javascript'>window.print()</script>");
+        }
+
+        protected void DownloadHp_Click(object sender, EventArgs e)
+        {
+            Page.RegisterStartupScript("PrintPage", "<script language='javascript'>window.print()</script>");
         }
     }
 }

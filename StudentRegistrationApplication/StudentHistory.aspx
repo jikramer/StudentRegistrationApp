@@ -9,8 +9,9 @@
         </div>   
     <div class="form-group text-right">
         <div class="col-sm-3">
-           <asp:HyperLink ID="PrintHp" runat="server"><span class="glyphicon glyphicon-print"></span>Print</asp:HyperLink>
-           <asp:HyperLink ID="DownloadHp" runat="server"><span class="glyphicon glyphicon-download"></span>Download</asp:HyperLink>
+                    
+           <asp:LinkButton ID="PrintHp" runat="server" OnClick="PrintHp_Click"><span class="glyphicon glyphicon-print"></span>Print</asp:LinkButton>
+           <asp:LinkButton ID="DownloadHp" runat="server" OnClick="DownloadHp_Click"><span class="glyphicon glyphicon-download"></span>Download</asp:LinkButton>
         
         </div>
     </div>

@@ -27,7 +27,11 @@
             <p>
                 <asp:Button ID="PlanAheadButton" runat="server" Text="Plan Ahead" BackColor="Red" BorderStyle="None" Font-Size="Medium" ForeColor="White" Height="52px" Width="206px" OnClick="PlanAheadButton_Click" /></p>
             <p>
+                <asp:Button ID="ViewPlannedCourses" runat="server" Text="View Planned Courses" BackColor="Red" BorderStyle="None" Font-Size="Medium" ForeColor="White" Height="52px" Width="206px" OnClick="ViewPlannedCourses_Click"/></p>
+        
+            <p>
                 <asp:Button ID="TranscriptBtn" runat="server" Text="Transcripts" BackColor="Red" BorderStyle="None" Font-Size="Medium" ForeColor="White" Height="52px" Width="206px" OnClick="TranscriptBtn_Click"/></p>
+            
         </div>
         <div class="col-sm-6">
             <asp:MultiView ID="CoursesMultiView" runat="server">
@@ -38,8 +42,8 @@
                         </div>
                         <div class="form-horizontal">
                             <div class="form-group">
-                                <div class="col-sm-offset-3 col-sm-5">
-                                    <asp:GridView ID="EnrolledClassesGridView" runat="server" BackColor="White" BorderColor="#DEDFDE" BorderStyle="None" BorderWidth="1px" CellPadding="4" ForeColor="Black" GridLines="Vertical">
+                                <div class="col-sm-offset-2 col-sm-10">
+                                    <asp:GridView ID="EnrolledClassesGridView" runat="server" BackColor="White" BorderColor="#DEDFDE" BorderStyle="None" BorderWidth="1px" CellPadding="4" ForeColor="Black" GridLines="Vertical" Height="223px" Width="667px">
                                         <AlternatingRowStyle BackColor="White" />
                                         <FooterStyle BackColor="#CCCC99" />
                                         <HeaderStyle BackColor="#6B696B" Font-Bold="True" ForeColor="White" />
@@ -96,8 +100,8 @@
                                 </div>
                             </div>
                             <div class="form-group">
-                                <div class="col-sm-offset-3 col-sm-9">
-                                    <asp:GridView ID="BrowseGridView" runat="server" BackColor="White" BorderColor="#DEDFDE" BorderStyle="None" BorderWidth="1px" CellPadding="4" ForeColor="Black" GridLines="Vertical">
+                                <div class="col-sm-offset-1 col-sm-11">
+                                    <asp:GridView ID="BrowseGridView" runat="server" BackColor="White" BorderColor="#DEDFDE" BorderStyle="None" BorderWidth="1px" CellPadding="4" ForeColor="Black" GridLines="Vertical" Height="286px" Width="871px">
                                         <AlternatingRowStyle BackColor="White" />
                                         <FooterStyle BackColor="#CCCC99" />
                                         <HeaderStyle BackColor="#6B696B" Font-Bold="True" ForeColor="White" />
@@ -202,7 +206,12 @@
                                      </asp:DropDownList>
                                  </div>
                              </div>
-                          
+
+                           <div class="form-group">
+                               <div class="col-sm-12">
+                                   <asp:Button ID="ButtonView" runat="server" Text="View" CssClass="btn btn-primary" OnClick="ButtonView_Click" />
+                               </div>
+                           </div>
                             <div class="form-group">
                                 <div class="col-sm-5">
                                      <asp:Label ID="Label3" runat="server" Text="View Required Courses:"></asp:Label>
@@ -222,45 +231,69 @@
 
                             <div class="form-group">
                                 <div class="col-sm-5">
-                                     <asp:Label ID="Label5" runat="server" Text="View Required Courses:"></asp:Label>
+                                     <asp:Label ID="Label5" runat="server" Text="View Specialization Courses:"></asp:Label>
                                     <asp:ListBox ID="ViewSplList" runat="server" CssClass="form-control"></asp:ListBox>
                                 </div>
                                 <div class="col-sm-1">
                                     <p>
-                                        <asp:Button ID="AddBtnSpl" runat="server" Text="Add" CssClass="btn btn-primary"/><span class="glyphicon glyphicon-arrow-right"></span></p>   
+                                        <asp:Button ID="AddBtnSpl" runat="server" Text="Add" CssClass="btn btn-primary" OnClick="AddBtnSpl_Click"/><span class="glyphicon glyphicon-arrow-right"></span></p>   
                                                                    
                                 </div>
                                 <div class="col-sm-5">
-                                    <asp:Label ID="Label6" runat="server" Text="Add Required Courses: "></asp:Label>
+                                    <asp:Label ID="Label6" runat="server" Text="Add Specialization Courses: "></asp:Label>
                                     <asp:ListBox ID="AddSplList" runat="server" CssClass="form-control"></asp:ListBox>
                                 </div>
                                 <div class="col-sm-1">
                                     <p>
-                                        <asp:Button ID="SplBtnRemove" runat="server" Text="Remove" CssClass="btn btn-primary"/></p>
+                                        <asp:Button ID="SplBtnRemove" runat="server" Text="Remove" CssClass="btn btn-primary" OnClick="SplBtnRemove_Click"/></p>
                                     <p>
-                                        <asp:Button ID="SplBtnClear" runat="server" Text="Clear All" CssClass="btn btn-primary"/></p>
+                                        <asp:Button ID="SplBtnClear" runat="server" Text="Clear All" CssClass="btn btn-primary" OnClick="SplBtnClear_Click"/></p>
                                 </div>
                             </div>
 
                             <div class="form-group">
                                 <div class="col-sm-5">
-                                     <asp:Label ID="Label7" runat="server" Text="View Required Courses:"></asp:Label>
+                                     <asp:Label ID="Label7" runat="server" Text="View Elective Courses:"></asp:Label>
                                     <asp:ListBox ID="ViewElectiveList" runat="server" CssClass="form-control"></asp:ListBox>
                                 </div>
                                 <div class="col-sm-1">
                                     <p>
-                                        <asp:Button ID="AddBtnElective" runat="server" Text="Add" CssClass="btn btn-primary"/><span class="glyphicon glyphicon-arrow-right"></span></p>   
+                                        <asp:Button ID="AddBtnElective" runat="server" Text="Add" CssClass="btn btn-primary" OnClick="AddBtnElective_Click"/><span class="glyphicon glyphicon-arrow-right"></span></p>   
                                                                    
                                 </div>
                                 <div class="col-sm-5">
-                                    <asp:Label ID="Label8" runat="server" Text="Add Required Courses: "></asp:Label>
+                                    <asp:Label ID="Label8" runat="server" Text="Add Elective Courses: "></asp:Label>
                                     <asp:ListBox ID="AddElectiveList" runat="server" CssClass="form-control"></asp:ListBox>
                                 </div>
                                 <div class="col-sm-1">
                                     <p>
-                                        <asp:Button ID="ElectiveBtnRemove" runat="server" Text="Remove" CssClass="btn btn-primary"/></p>
+                                        <asp:Button ID="ElectiveBtnRemove" runat="server" Text="Remove" CssClass="btn btn-primary" OnClick="ElectiveBtnRemove_Click"/></p>
                                     <p>
-                                        <asp:Button ID="ElectiveBtnClear" runat="server" Text="Clear All" CssClass="btn btn-primary"/></p>
+                                        <asp:Button ID="ElectiveBtnClear" runat="server" Text="Clear All" CssClass="btn btn-primary" OnClick="ElectiveBtnClear_Click"/></p>
+                                </div>
+                            </div>
+                            <div class="form-group ">
+                                <div class="col-sm-offset-3 col-sm-5">
+                                     <asp:Label ID="LabelMessage" runat="server" Text=""></asp:Label>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <div class="col-sm-12">
+                                    <asp:Button ID="ButtonSubmit" runat="server" Text="Submit" CssClass="btn btn-primary" OnClick="ButtonSubmit_Click"/>
+                                </div>
+                            </div>
+                        </div>
+                     </div>
+                </asp:View>
+                <asp:View ID="PlannedCoursesView" runat="server">
+                     <div class="container">
+                        <div class="well well-sm">
+                            <h2>View Planned Courses</h2>
+                        </div>
+                        <div class="form-horizontal">
+                             <div class="form-group">
+                                <div class="col-sm-12">
+                                    <asp:ListBox ID="ListBoxViewPlan" runat="server" Enabled="False" Height="292px" Width="587px"></asp:ListBox>
                                 </div>
                             </div>
                         </div>
@@ -273,8 +306,8 @@
                         </div>
                         <div class="form-horizontal">
                              <div class="form-group">
-                                <div class="col-sm-offset-3 col-sm-9">
-                                    <asp:GridView ID="TranscriptGridView" runat="server" BackColor="White" BorderColor="#DEDFDE" BorderStyle="None" BorderWidth="1px" CellPadding="4" ForeColor="Black" GridLines="Vertical">
+                                <div class="col-sm-offset-2 col-sm-10">
+                                    <asp:GridView ID="TranscriptGridView" runat="server" BackColor="White" BorderColor="#DEDFDE" BorderStyle="None" BorderWidth="1px" CellPadding="4" ForeColor="Black" GridLines="Vertical" Height="254px" Width="624px">
                                         <AlternatingRowStyle BackColor="White" />
                                         <FooterStyle BackColor="#CCCC99" />
                                         <HeaderStyle BackColor="#6B696B" Font-Bold="True" ForeColor="White" />
@@ -286,6 +319,24 @@
                                         <SortedDescendingCellStyle BackColor="#EAEAD3" />
                                         <SortedDescendingHeaderStyle BackColor="#575357" />
                                     </asp:GridView>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label class="control-label col-sm-3">Total Grade Points:</label>
+                                <div class="col-sm-5">
+                                    <asp:TextBox ID="txtGradePoint" runat="server" CssClass="form-control" Enabled="False"></asp:TextBox>
+                                </div>
+                            </div>
+                             <div class="form-group">
+                                <label class="control-label col-sm-3">Total Credit Hours:</label>
+                                <div class="col-sm-5">
+                                    <asp:TextBox ID="txtTotalCreditHours" runat="server" CssClass="form-control" Enabled="False"></asp:TextBox>
+                                </div>
+                            </div>
+                             <div class="form-group">
+                                <label class="control-label col-sm-3">GPA:</label>
+                                <div class="col-sm-5">
+                                    <asp:TextBox ID="txtGPA" runat="server" CssClass="form-control" Enabled="False"></asp:TextBox>
                                 </div>
                             </div>
                         </div>

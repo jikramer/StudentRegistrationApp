@@ -35,7 +35,7 @@
                         <div class="form-group">
                             <label class="text-center">We offer you the best engineering courses. Find here more on what engineering has to offer you</label>
                             <div class="btn btn-primary">
-                                <asp:Button ID="EngInfoBtn" runat="server" Text="Click Here To Know More"  PostBackUrl="~/EngineeringCourses" />
+                                <asp:Button ID="EngInfoBtn" runat="server" Text="Click Here To Know More"  PostBackUrl="~/EngineeringCourses" ForeColor="Black"/>
                             </div>
                             </div>
                     </div>
@@ -54,7 +54,7 @@
                         <div class="form-group">
                             <label class="text-center">We offer you the best management courses. Find here more on what management has to &nbsp;&nbsp;&nbsp;offer you</label>
                             <div class="btn btn-primary">
-                                <asp:Button ID="MgmtInfoBtn" runat="server" Text="Click Here To Know More"  PostBackUrl="~/Management" />
+                                <asp:Button ID="MgmtInfoBtn" runat="server" Text="Click Here To Know More"  PostBackUrl="~/Management" ForeColor="Black"/>
                             </div>
                         </div>
                     </div>
@@ -73,7 +73,7 @@
                         <div class="form-group">
                             <label class="text-center">We offer you the best nursing courses. Find here more on what nursing has to offer you</label>
                             <div class="btn btn-primary">
-                                <asp:Button ID="NursingInfoBtn" runat="server" Text="Click Here To Know More"  PostBackUrl="~/Nursing" />/>
+                                <asp:Button ID="NursingInfoBtn" runat="server" Text="Click Here To Know More"  PostBackUrl="~/Nursing" ForeColor="Black" />
                             </div>
                         </div>
                     </div>

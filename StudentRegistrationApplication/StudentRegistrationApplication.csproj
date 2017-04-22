@@ -125,6 +125,7 @@
     <Content Include="Images\signup.jpg" />
     <Content Include="Images\Software_Engineer1.jpg" />
     <Content Include="Images\StudentRecords.gif" />
+    <Content Include="Images\uni.jpg" />
     <Content Include="Management.aspx" />
     <Content Include="MechanicalEngineering.aspx" />
     <Content Include="MultiviewTest.aspx" />

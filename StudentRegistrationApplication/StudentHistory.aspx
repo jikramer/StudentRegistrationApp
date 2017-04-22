@@ -24,15 +24,15 @@
             <asp:RequiredFieldValidator ID="rfvStudentID" runat="server"
                 ErrorMessage="Student ID is required" CssClass="text-danger"
                 Display="Dynamic" ControlToValidate="txtStudentID" ForeColor="Red"></asp:RequiredFieldValidator>
-        <asp:RegularExpressionValidator ID="revStudentID" runat="server"
+      <!--  <asp:RegularExpressionValidator ID="revStudentID" runat="server"
                 ErrorMessage="Enter a six digit ID" CssClass="text-danger"
                 Display="Dynamic" ValidationExpression="\d{6}"
-                ControlToValidate="txtStudentID" ForeColor="Red"></asp:RegularExpressionValidator>        
+                ControlToValidate="txtStudentID" ForeColor="Red"></asp:RegularExpressionValidator>    -->    
         </div>
     </div>
  <div class="form-group">
         <div class="col-sm-12">
-           <asp:Button ID="btnstudentHistory" runat="server" Text="StudentHistory" OnClick="btnstudentHistory_Click" CssClass="btn btn-primary"/>
+           <asp:Button ID="btnstudentHistory" runat="server" Text="Check Student History" OnClick="btnstudentHistory_Click" CssClass="btn btn-primary"/>
             <%--<asp:Button ID="Button2" runat="server" Text="Update" CssClass="btn btn-primary" />--%>
         </div>
     </div>
@@ -85,7 +85,7 @@
     <div class="form-group">
         <label class="control-label col-sm-3">State:</label>
         <div class="col-sm-5">
-           <asp:TextBox ID="TxtState" runat="server" CssClass="form-control"></asp:TextBox>
+            <asp:TextBox ID="txtState" runat="server" CssClass="form-control"></asp:TextBox>
         </div>
     </div>
 
@@ -128,9 +128,16 @@
     </div>
     <div class="form-group">
         <label class="control-label col-sm-2">Academic Chart:</label>
-        <div class="col-sm-12">
-            <asp:GridView ID="StudentHistoryGridView" runat="server" CellPadding="4" ForeColor="#333333" GridLines="None">
+        <div class="col-sm-offset-2 col-sm-10">
+            <asp:GridView ID="StudentHistoryGridView" runat="server" CellPadding="4" ForeColor="#333333" GridLines="None" Height="168px" Width="717px" AllowPaging="True" AutoGenerateColumns="False" DataSourceID="SqlDataSource1">
                 <AlternatingRowStyle BackColor="White" ForeColor="#284775" />
+                <Columns>
+                    <asp:BoundField DataField="Term" HeaderText="Term" SortExpression="Term" />
+                    <asp:BoundField DataField="Course" HeaderText="Course" SortExpression="Course" />
+                    <asp:BoundField DataField="CreditHours" HeaderText="CreditHours" SortExpression="CreditHours" />
+                    <asp:BoundField DataField="Grade" HeaderText="Grade" SortExpression="Grade" />
+                    <asp:BoundField DataField="Grade_point" HeaderText="Grade_point" SortExpression="Grade_point" />
+                </Columns>
                 <EditRowStyle BackColor="#999999" />
                 <FooterStyle BackColor="#5D7B9D" Font-Bold="True" ForeColor="White" />
                 <HeaderStyle BackColor="#5D7B9D" Font-Bold="True" ForeColor="White" />
@@ -142,11 +149,17 @@
                 <SortedDescendingCellStyle BackColor="#FFFDF8" />
                 <SortedDescendingHeaderStyle BackColor="#6F8DAE" />
             </asp:GridView>
+
         </div>
+        <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:UserInfoConnectionString %>" SelectCommand="SELECT [Term], [Course], [CreditHours], [Grade], [Grade_point] FROM [Transcript] WHERE ([Student_UserId] = @Student_UserId)">
+            <SelectParameters>
+                <asp:ControlParameter ControlID="txtStudentID" Name="Student_UserId" PropertyName="Text" Type="String" />
+            </SelectParameters>
+        </asp:SqlDataSource>
     </div> 
     <div class="form-group">
         <div class="col-sm-12">
-           <asp:Button ID="btnEdit" runat="server" Text="StudentHistory" OnClick="btnEdit_Click" CssClass="btn btn-primary"/>
+           <asp:Button ID="btnEdit" runat="server" Text="Edit" OnClick="btnEdit_Click" CssClass="btn btn-primary"/>
             <asp:Button ID="btnUpdate" runat="server" Text="Update" CssClass="btn btn-primary" />
         </div>
     </div>

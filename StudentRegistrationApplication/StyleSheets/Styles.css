@@ -20,7 +20,8 @@
     padding: 2px 16px;
 }
  .jumbotron{
-    background-color: rgba(95, 5, 84, 0.50);
+   /*background-color: rgba(95, 5, 84, 0.50);*/ 
+    background-image:url(/Images/uni.jpg);
     color: white;
     background-size: 100% 100%;
     margin-top: 1em;

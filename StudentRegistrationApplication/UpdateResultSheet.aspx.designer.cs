@@ -40,6 +40,24 @@ namespace StudentRegistrationApplication {
         protected global::System.Web.UI.WebControls.RegularExpressionValidator revStudentID;
         
         /// <summary>
+        /// ddlSelectTerm control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.DropDownList ddlSelectTerm;
+        
+        /// <summary>
+        /// CheckBtn control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button CheckBtn;
+        
+        /// <summary>
         /// txtCourseCode1 control.
         /// </summary>
         /// <remarks>
@@ -47,15 +65,6 @@ namespace StudentRegistrationApplication {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox txtCourseCode1;
-        
-        /// <summary>
-        /// TxtGrade1 control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox TxtGrade1;
         
         /// <summary>
         /// TxtCredits1 control.
@@ -67,6 +76,15 @@ namespace StudentRegistrationApplication {
         protected global::System.Web.UI.WebControls.TextBox TxtCredits1;
         
         /// <summary>
+        /// TxtGrade1 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox TxtGrade1;
+        
+        /// <summary>
         /// txtCourseCode2 control.
         /// </summary>
         /// <remarks>
@@ -74,15 +92,6 @@ namespace StudentRegistrationApplication {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox txtCourseCode2;
-        
-        /// <summary>
-        /// TxtGrade2 control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox TxtGrade2;
         
         /// <summary>
         /// TxtCredits2 control.
@@ -94,6 +103,15 @@ namespace StudentRegistrationApplication {
         protected global::System.Web.UI.WebControls.TextBox TxtCredits2;
         
         /// <summary>
+        /// TxtGrade2 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox TxtGrade2;
+        
+        /// <summary>
         /// txtCourseCode3 control.
         /// </summary>
         /// <remarks>
@@ -103,15 +121,6 @@ namespace StudentRegistrationApplication {
         protected global::System.Web.UI.WebControls.TextBox txtCourseCode3;
         
         /// <summary>
-        /// TxtGrade3 control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox TxtGrade3;
-        
-        /// <summary>
         /// TxtCredits3 control.
         /// </summary>
         /// <remarks>
@@ -119,6 +128,15 @@ namespace StudentRegistrationApplication {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox TxtCredits3;
+        
+        /// <summary>
+        /// TxtGrade3 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox TxtGrade3;
         
         /// <summary>
         /// BtnCalculate control.
@@ -137,6 +155,15 @@ namespace StudentRegistrationApplication {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox TxtGPA;
+        
+        /// <summary>
+        /// LabelMessage control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label LabelMessage;
         
         /// <summary>
         /// btnUpdate control.

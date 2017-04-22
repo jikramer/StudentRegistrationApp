@@ -58,6 +58,15 @@ namespace StudentRegistrationApplication {
         protected global::System.Web.UI.WebControls.Button PlanAheadButton;
         
         /// <summary>
+        /// ViewPlannedCourses control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button ViewPlannedCourses;
+        
+        /// <summary>
         /// TranscriptBtn control.
         /// </summary>
         /// <remarks>
@@ -292,6 +301,15 @@ namespace StudentRegistrationApplication {
         protected global::System.Web.UI.WebControls.DropDownList ddlMajor;
         
         /// <summary>
+        /// ButtonView control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button ButtonView;
+        
+        /// <summary>
         /// Label3 control.
         /// </summary>
         /// <remarks>
@@ -463,6 +481,42 @@ namespace StudentRegistrationApplication {
         protected global::System.Web.UI.WebControls.Button ElectiveBtnClear;
         
         /// <summary>
+        /// LabelMessage control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label LabelMessage;
+        
+        /// <summary>
+        /// ButtonSubmit control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button ButtonSubmit;
+        
+        /// <summary>
+        /// PlannedCoursesView control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.View PlannedCoursesView;
+        
+        /// <summary>
+        /// ListBoxViewPlan control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.ListBox ListBoxViewPlan;
+        
+        /// <summary>
         /// TranscriptView control.
         /// </summary>
         /// <remarks>
@@ -479,6 +533,33 @@ namespace StudentRegistrationApplication {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.GridView TranscriptGridView;
+        
+        /// <summary>
+        /// txtGradePoint control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox txtGradePoint;
+        
+        /// <summary>
+        /// txtTotalCreditHours control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox txtTotalCreditHours;
+        
+        /// <summary>
+        /// txtGPA control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox txtGPA;
         
         /// <summary>
         /// Master property.

@@ -409,6 +409,11 @@
                                 <label class="control-label col-sm-3">Amount:</label>
                                 <div class="col-sm-5">
                                     <asp:TextBox ID="txtCreditMakePaymentAmount" runat="server" CssClass="form-control text-left"></asp:TextBox>                                                        
+                                </div>                                
+                            </div>
+                            <div class="form-group ">
+                                <div class="col-sm-offset-3 col-sm-5">
+                                    <asp:Label ID="lblCreditPaymentSucessful" runat="server"></asp:Label>
                                 </div>
                             </div>
                             </asp:View>
@@ -602,7 +607,7 @@
                                                 Display="Dynamic" ControlToValidate="txtCreditMakePaymentEditAmount" ForeColor="Red">
                                             </asp:RequiredFieldValidator>
                                         </div>
-                                    </div>
+                                    </div>                                    
                                 </asp:View>
                             </asp:MultiView>
                         <br /><br />                        
@@ -699,6 +704,11 @@
                                 <label class="control-label col-sm-3">Amount:</label>
                                 <div class="col-sm-5">
                                     <asp:TextBox ID="txtDebitMakePaymentAmount" runat="server" CssClass="form-control text-left"></asp:TextBox>                                                        
+                                </div>
+                            </div>
+                            <div class="form-group ">
+                                <div class="col-sm-offset-3 col-sm-5">
+                                    <asp:Label ID="lblDebitPaymentSucessful" runat="server"></asp:Label>
                                 </div>
                             </div>
                             </asp:View>
@@ -984,6 +994,11 @@
                                     <asp:TextBox ID="txtCashMakePaymentAmount" runat="server" CssClass="form-control text-left"></asp:TextBox>                                                        
                                 </div>
                             </div>
+                            <div class="form-group ">
+                                <div class="col-sm-offset-3 col-sm-5">
+                                    <asp:Label ID="lblCashPaymentSucessful" runat="server"></asp:Label>
+                                </div>
+                            </div>
                             </asp:View>
                             <asp:View ID="MakePaymentCashMultiViewEdit" runat="server">
                                 <div class="form-group">
@@ -1178,15 +1193,16 @@
                             <h2>View Profile</h2>
                         </div>
                         <div class="form-horizontal col-sm-11 table-responsive">
+                            <asp:Label runat="server" Enabled="false" ID="lblUserName" Visible="false"></asp:Label>
                             <asp:GridView ID="grdPaymentHistory" runat="server" AutoGenerateColumns="False" 
                                 DataSourceID="SqlDataSource4" DataKeyNames="FirstName" 
                                 CssClass="table table-bordered table-condensed table-hover" 
                                 OnPreRender="grdPaymentHistory_Prerender" 
-                                PageSize="5" AllowPaging="true" >
+                                PageSize="5" AllowPaging="True" >
                                 <Columns>
                                     <asp:BoundField DataField="FirstName" HeaderText="First Name" 
                                         ReadOnly="True" SortExpression="FirstName">
-                                        <ItemStyle CssClass="col-sm-3 text-center" />
+                                        <ItemStyle CssClass="col-sm-2 text-center" />
                                     </asp:BoundField>
                                     <asp:BoundField DataField="LastName" HeaderText="Last Name" 
                                         ReadOnly="True" SortExpression="LastName">
@@ -1198,17 +1214,21 @@
                                     </asp:BoundField>
                                     <asp:BoundField DataField="PaymentMethod" HeaderText="Payment Method" 
                                         ReadOnly="True" SortExpression="PaymentMethod">
-                                        <ItemStyle CssClass="col-sm-3 text-center" />
+                                        <ItemStyle CssClass="col-sm-2 text-center" />
                                     </asp:BoundField>
                                     <asp:BoundField DataField="AmountPaid" HeaderText="AmountPaid" 
                                         ReadOnly="True" SortExpression="AmountPaid">
                                         <ItemStyle CssClass="col-sm-2 text-center" />
+                                    </asp:BoundField>
+                                    <asp:BoundField DataField="DueAmount" HeaderText="Due Amount" 
+                                        ReadOnly="True" SortExpression="DueAmount">
+                                        <ItemStyle CssClass="col-sm-2 text-center" />
                                     </asp:BoundField>                                    
                                 </Columns>
                                 <HeaderStyle BackColor="#8c8c8c" ForeColor="White" Font-Bold="true" />
-                                <PagerSettings Mode="NextPreviousFirstLast" />
+                                <PagerSettings Mode="Numeric" />
                                 <PagerStyle CssClass="pagerStyle" 
-                                    BackColor="#8c8c8c" HorizontalAlign="Center" />
+                                    BackColor="#8c8c8c" HorizontalAlign="Center" ForeColor="White" />
                                 <SelectedRowStyle CssClass="warning" />
                                 <FooterStyle BackColor="#8c8c8c" ForeColor="White" Font-Bold="true" />
                                 <EditRowStyle CssClass="warning" />
@@ -1216,7 +1236,10 @@
                             </asp:GridView>
                             <asp:SqlDataSource ID="SqlDataSource4" runat="server" 
                                 ConnectionString="<%$ ConnectionStrings:UserInfoConnectionString %>" 
-                                SelectCommand="SELECT [FirstName], [LastName],[PaymentDate],[PaymentMethod],[AmountPaid] FROM [PaymentHistory]">
+                                SelectCommand="SELECT [FirstName], [LastName], [PaymentDate], [PaymentMethod], [AmountPaid], [DueAmount] FROM [PaymentHistory] WHERE ([Student_UserID] = @Student_UserID)">
+                                <SelectParameters>
+                                    <asp:ControlParameter ControlID="lblUserName" Name="Student_UserID" PropertyName="Text" Type="String" />
+                                </SelectParameters>
                             </asp:SqlDataSource>
                         </div>
                     </div>

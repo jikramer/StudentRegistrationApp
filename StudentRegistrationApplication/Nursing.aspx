@@ -30,17 +30,17 @@
             <div class="collapse navbar-collapse" id="myNavbar">
                 <ul class="nav navbar-nav">
                     <li>
-                        <asp:HyperLink ID="HomeHyperLink" runat="server" NavigateUrl="~/Home.aspx"><span class="glyphicon glyphicon-home"></span>Home</asp:HyperLink></li>
+                        <asp:HyperLink ID="HomeHyperLink" runat="server" NavigateUrl="~/Home"><span class="glyphicon glyphicon-home"></span>Home</asp:HyperLink></li>
                     <li>
-                        <asp:HyperLink ID="StudentHyperLink" runat="server" NavigateUrl="~/MultiviewTest.aspx">Student</asp:HyperLink></li>
+                        <asp:HyperLink ID="StudentHyperLink" runat="server" NavigateUrl="~/MultiviewTest">Student</asp:HyperLink></li>
                     <li>
-                        <asp:HyperLink ID="CoursesHyperLink" runat="server" NavigateUrl="~/Courses.aspx">Courses</asp:HyperLink></li>
+                        <asp:HyperLink ID="CoursesHyperLink" runat="server" NavigateUrl="~/Courses">Courses</asp:HyperLink></li>
                     <li>
-                        <asp:HyperLink ID="PaymentHyperLink" runat="server" NavigateUrl="~/Payment.aspx">Payment</asp:HyperLink></li>
+                        <asp:HyperLink ID="PaymentHyperLink" runat="server" NavigateUrl="~/Payment">Payment</asp:HyperLink></li>
                 </ul>
                 <ul class="nav navbar-nav navbar-right">
                     <li>
-                       <asp:LinkButton id="OpenClose" runat="server" PostBackUrl="~/StudentLogin.aspx" AutoPostBack="true"><span class="glyphicon glyphicon-log-in"></span><asp:label runat="server" Text=" Login"></asp:label></asp:LinkButton>
+                       <asp:LinkButton id="OpenClose" runat="server" PostBackUrl="~/StudentLogin" AutoPostBack="true"><span class="glyphicon glyphicon-log-in"></span><asp:label runat="server" Text=" Login"></asp:label></asp:LinkButton>
 
                         <%--<asp:HyperLink ID="LoginHyperLink" runat="server" NavigateUrl="~/StudentLogin.aspx"><span class="glyphicon glyphicon-log-in"></span> <asp:label runat="server" Text="close"></asp:label></asp:HyperLink>--%>
 

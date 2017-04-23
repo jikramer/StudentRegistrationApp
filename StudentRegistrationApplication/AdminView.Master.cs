@@ -36,7 +36,7 @@ namespace StudentRegistrationApplication
                 if (Session["role"].ToString() == "admin")
                 {
                     Session.Clear();
-                    Response.Redirect("~/Home.aspx");
+                    Response.Redirect("~/Home");
                 }
 
             }

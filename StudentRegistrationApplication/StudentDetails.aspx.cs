@@ -16,7 +16,7 @@ namespace StudentRegistrationApplication
 
         protected void btnConfirm_Click(object sender, EventArgs e)
         {
-            Response.Redirect("~/Signup.aspx");
+            Response.Redirect("~/Signup");
         }
     }
 }

@@ -39,7 +39,7 @@
         <div class="form-group text-left">
             <div class="col-sm-offset-2 col-sm-10">
                 <p>
-                    <asp:HyperLink ID="ClaimAccountHyperLink" runat="server" NavigateUrl="~/ClaimAccount.aspx">Claim Your Account</asp:HyperLink>
+                    <asp:HyperLink ID="ClaimAccountHyperLink" runat="server" NavigateUrl="~/ClaimAccount">Claim Your Account</asp:HyperLink>
                 </p>
             </div>
             <div class="col-sm-offset-2 col-sm-10">

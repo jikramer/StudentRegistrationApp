@@ -30,17 +30,17 @@
             <div class="collapse navbar-collapse" id="myNavbar">
                 <ul class="nav navbar-nav">
                     <li>
-                        <asp:HyperLink ID="HomeHyperLink" runat="server" NavigateUrl="~/Home.aspx"><span class="glyphicon glyphicon-home"></span>Home</asp:HyperLink></li>
+                        <asp:HyperLink ID="HomeHyperLink" runat="server" NavigateUrl="~/Home"><span class="glyphicon glyphicon-home"></span>Home</asp:HyperLink></li>
                     <li>
-                        <asp:HyperLink ID="StudentHyperLink" runat="server" NavigateUrl="~/MultiviewTest.aspx">Student</asp:HyperLink></li>
+                        <asp:HyperLink ID="StudentHyperLink" runat="server" NavigateUrl="~/MultiviewTest">Student</asp:HyperLink></li>
                     <li>
-                        <asp:HyperLink ID="CoursesHyperLink" runat="server" NavigateUrl="~/Courses.aspx">Courses</asp:HyperLink></li>
+                        <asp:HyperLink ID="CoursesHyperLink" runat="server" NavigateUrl="~/Courses">Courses</asp:HyperLink></li>
                     <li>
-                        <asp:HyperLink ID="PaymentHyperLink" runat="server" NavigateUrl="~/Payment.aspx">Payment</asp:HyperLink></li>
+                        <asp:HyperLink ID="PaymentHyperLink" runat="server" NavigateUrl="~/Payment">Payment</asp:HyperLink></li>
                 </ul>
                 <ul class="nav navbar-nav navbar-right">
                     <li>
-                       <asp:LinkButton id="OpenClose" runat="server" PostBackUrl="~/StudentLogin.aspx" AutoPostBack="true"><span class="glyphicon glyphicon-log-in"></span><asp:label runat="server" Text=" Login"></asp:label></asp:LinkButton>
+                       <asp:LinkButton id="OpenClose" runat="server" PostBackUrl="~/StudentLogin" AutoPostBack="true"><span class="glyphicon glyphicon-log-in"></span><asp:label runat="server" Text=" Login"></asp:label></asp:LinkButton>
 
                         <%--<asp:HyperLink ID="LoginHyperLink" runat="server" NavigateUrl="~/StudentLogin.aspx"><span class="glyphicon glyphicon-log-in"></span> <asp:label runat="server" Text="close"></asp:label></asp:HyperLink>--%>
 
@@ -79,7 +79,7 @@
                                         </div>                         
                                         <div class="form-group">
                                             <label class="text-center">The ME program is designed as a course of study to provide graduate engineers with a deeper and broader understanding of the methods and skills in the area of mechanical engineering.</label>                            
-                                            <asp:Button ID="EngInfoBtn" runat="server" Text="Click Here To Know More" class="btn btn-primary col-sm-offset-2" PostBackUrl="~/MechanicalEngineering.aspx"/>  
+                                            <asp:Button ID="EngInfoBtn" runat="server" Text="Click Here To Know More" class="btn btn-primary col-sm-offset-2" PostBackUrl="~/MechanicalEngineering"/>  
                                         </div>                         
                                     </div>
                                  </div>
@@ -96,7 +96,7 @@
                                         </div>
                                         <div class="form-group">
                                             <label class="text-center">The SE program is intended to serve the needs of software developers, web programmers, network and information security administrators, database administrators.</label>
-                                            <asp:Button ID="MgmtInfoBtn" runat="server" Text="Click Here To Know More" class="btn btn-primary col-sm-offset-2" PostBackUrl="~/SoftwareEngineering.aspx" />
+                                            <asp:Button ID="MgmtInfoBtn" runat="server" Text="Click Here To Know More" class="btn btn-primary col-sm-offset-2" PostBackUrl="~/SoftwareEngineering" />
                                         </div>
                                     </div>
                                 </div>
@@ -113,7 +113,7 @@
                                         </div>
                                         <div class="form-group">
                                             <label class="text-center">An ECE student can focus on topics that can result in a leadership position in a high-technology industry and to provide an entrepreneurial career.</label>
-                                            <asp:Button ID="NursingInfoBtn" runat="server" Text="Click Here To Know More" class="btn btn-primary col-sm-offset-2" PostBackUrl="~/ElectricalEngineering.aspx" />
+                                            <asp:Button ID="NursingInfoBtn" runat="server" Text="Click Here To Know More" class="btn btn-primary col-sm-offset-2" PostBackUrl="~/ElectricalEngineering" />
                                         </div>
                                     </div>
                                 </div>

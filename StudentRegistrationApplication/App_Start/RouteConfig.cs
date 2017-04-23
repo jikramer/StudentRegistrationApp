@@ -15,6 +15,10 @@ namespace StudentRegistrationApplication
             routes.EnableFriendlyUrls(settings, new MyUrlResolver());
 
             routes.MapPageRoute("Home", "StuReg/Home", "~/Home.aspx");
+         //   routes.MapPageRoute("Courses", "StuReg/Courses", "~/Courses.aspx");
+            routes.MapPageRoute("Payment", "StuReg/Payment", "~/Payment.aspx");
+
+
         }
     }
 }

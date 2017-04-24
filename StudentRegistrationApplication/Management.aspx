@@ -1,21 +1,75 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Management.aspx.cs" Inherits="StudentRegistrationApplication.Management" MasterPageFile="~/Site.Master" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Management.aspx.cs" Inherits="StudentRegistrationApplication.Management1" %>
 
-<%@ MasterType VirtualPath="~/Site.Master" %>
+<!DOCTYPE html>
 
-<asp:Content ContentPlaceHolderID="headPlaceHolder" runat="server">
-    <link href="StyleSheets/MultiviewStlye.css" rel="stylesheet" />
-    <style type="text/css">
-        .auto-style1 {
-            margin-left: 7;
-        }
-    </style>
-</asp:Content>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title></title>
+    <link href="StyleSheets/Courses.css" rel="stylesheet" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet" />
+    <script src="Scripts/jquery-1.9.1.min.js"></script>
+    <script src="Scripts/bootstrap.min.js"></script>
+</head>
+<body>
+    <div class="container-fluid">
+        <div class="alert-info">
+            <asp:Label ID="lblUserMessage" runat="server" ></asp:Label>
+        </div>
+        <main>
+            <form id="form1" runat="server">
+                <nav class="navbar navbar-inverse">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+            </div>
+            <div class="collapse navbar-collapse" id="myNavbar">
+                <ul class="nav navbar-nav">
+                    <li>
+                        <asp:HyperLink ID="HomeHyperLink" runat="server" NavigateUrl="~/Home"><span class="glyphicon glyphicon-home"></span>Home</asp:HyperLink></li>
+                    <li>
+                        <asp:HyperLink ID="StudentHyperLink" runat="server" NavigateUrl="~/MultiviewTest">Student</asp:HyperLink></li>
+                    <li>
+                        <asp:HyperLink ID="CoursesHyperLink" runat="server" NavigateUrl="~/Courses">Courses</asp:HyperLink></li>
+                    <li>
+                        <asp:HyperLink ID="PaymentHyperLink" runat="server" NavigateUrl="~/Payment">Payment</asp:HyperLink></li>
+                </ul>
+                <ul class="nav navbar-nav navbar-right">
+                    <% if (Session["user"] == null) %>
+                                    <% { %>
+                                    <li>
+                                         <asp:LinkButton id="OpenClose" runat="server" OnClick="OpenClose_Click" AutoPostBack="true">
+                                             <span class="glyphicon glyphicon-log-in" ></span>
+                                     
+                                         <asp:label runat="server" ID="lbllogin" Text="Login"></asp:label>
 
-<asp:Content ID="mainContent" ContentPlaceHolderID="mainPlaceHolder" runat="server">
-  
+                                         </asp:LinkButton>
+                                    </li>
+                                    <%--<asp:HyperLink ID="LoginHyperLink" runat="server" NavigateUrl="~/StudentLogin.aspx"><span class="glyphicon glyphicon-log-in"></span> <asp:label runat="server" Text="close"></asp:label></asp:HyperLink>--%>
+                                    <% } else { %>
+                                    <li style="padding:15px; color:white;">
+                                            <label>Hello</label>
+                                            <asp:Label runat="server" ID="lblUserName"></asp:Label>
+                                            <label>!</label>
+                                    </li>
+                                    <li>
+                                        <asp:LinkButton id="LinkButton1" runat="server" OnClick="LogOut_Click" AutoPostBack="true">
+                                             <span class="glyphicon glyphicon-log-in" ></span>
+                                     
+                                         <asp:label runat="server" ID="Label1" Text=" Student LogOut"></asp:label>
 
-
-          <div class="row col-sm-offset-1">
+                                         </asp:LinkButton>
+                                    </li>
+                                    <% } %>
+                </ul>
+            </div>
+        </div>
+    </nav>
+                <div class="row col-sm-offset-1">
         <h2 class="heading col-sm-offset-3">Management of Technology</h2>
         <h3 class="subHeading">Introduction</h3>
         <p class="paragraph">The MOT program at Connecticut State University serves the needs of professional technologists, engineers and managers in their progression into management-level positions. The program instructs and trains engineers and scientists, and motivated people from any discipline who have a need to make management decisions in a technology environment or will be involved in the management of such functions as technology research and development, product design, manufacturing, human and physical resources, product and system test, information and data analysis, and product and service support.</p>
@@ -126,4 +180,8 @@
         <br />
         <br />
     </div>
-</asp:Content>
+            </form>
+        </main>
+    </div>
+</body>
+</html>

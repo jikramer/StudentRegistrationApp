@@ -4,14 +4,34 @@ using System.Linq;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
+using System.Web.Configuration;
+using System.Data.SqlClient;
+using System.Data;
+using System.Configuration;
+using System.Drawing;
 
 namespace StudentRegistrationApplication
 {
     public partial class Master : System.Web.UI.MasterPage
     {
+        private string username;
         protected void Page_Load(object sender, EventArgs e)
         {
+            string CS = ConfigurationManager.ConnectionStrings["UserInfoConnectionString"].ConnectionString;
+            using (SqlConnection con = new SqlConnection(CS))
+            {
+                SqlCommand cmd = new SqlCommand();
+                cmd.CommandText = "Select Student_FirstName from StudentData where Student_UserID='" + Session["user"] + "'";
 
+                cmd.Connection = con;
+                con.Open();
+                SqlDataReader dr = cmd.ExecuteReader();
+
+                if (dr.Read())
+                {
+                    lblUserName.Text = dr[0].ToString();
+                }
+            }
         }
 
         public string HeaderText {
@@ -28,6 +48,16 @@ namespace StudentRegistrationApplication
         {
 
             Response.Redirect("StudentLogin.aspx");
+
+            
+        }
+        protected void LogOut_Click(object sender, EventArgs e)
+        {
+            if (Session["user"] != null)
+            {
+                    Session.Clear();
+                    Response.Redirect("Home.aspx");
+            }
         }
     }
 

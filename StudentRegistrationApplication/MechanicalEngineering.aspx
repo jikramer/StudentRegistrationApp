@@ -1,18 +1,74 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="MechanicalEngineering.aspx.cs" Inherits="StudentRegistrationApplication.MechanicalEngineering" MasterPageFile="~/Site.Master" %>
- 
-<%@ MasterType VirtualPath="~/Site.Master" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="MechanicalEngineering.aspx.cs" Inherits="StudentRegistrationApplication.MechanicalEngineering1" %>
 
-<asp:Content ContentPlaceHolderID="headPlaceHolder" runat="server">
-    <link href="StyleSheets/MultiviewStlye.css" rel="stylesheet" />
-    <style type="text/css">
-        .auto-style1 {
-            margin-left: 7;
-        }
-    </style>
-</asp:Content>
+<!DOCTYPE html>
 
-<asp:Content ID="mainContent" ContentPlaceHolderID="mainPlaceHolder" runat="server">
-  
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title></title>
+    <link href="StyleSheets/Courses.css" rel="stylesheet" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet" />
+    <script src="Scripts/jquery-1.9.1.min.js"></script>
+    <script src="Scripts/bootstrap.min.js"></script>
+</head>
+<body>
+    <div class="container-fluid">
+        <div class="alert-info">
+            <asp:Label ID="lblUserMessage" runat="server" ></asp:Label>
+        </div>
+        <main>
+            <form id="form1" runat="server">
+                <nav class="navbar navbar-inverse">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+            </div>
+            <div class="collapse navbar-collapse" id="myNavbar">
+                <ul class="nav navbar-nav">
+                    <li>
+                        <asp:HyperLink ID="HomeHyperLink" runat="server" NavigateUrl="~/Home"><span class="glyphicon glyphicon-home"></span>Home</asp:HyperLink></li>
+                    <li>
+                        <asp:HyperLink ID="StudentHyperLink" runat="server" NavigateUrl="~/MultiviewTest">Student</asp:HyperLink></li>
+                    <li>
+                        <asp:HyperLink ID="CoursesHyperLink" runat="server" NavigateUrl="~/Courses">Courses</asp:HyperLink></li>
+                    <li>
+                        <asp:HyperLink ID="PaymentHyperLink" runat="server" NavigateUrl="~/Payment">Payment</asp:HyperLink></li>
+                </ul>
+                <ul class="nav navbar-nav navbar-right">
+                    <% if (Session["user"] == null) %>
+                                    <% { %>
+                                    <li>
+                                         <asp:LinkButton id="OpenClose" runat="server" OnClick="OpenClose_Click" AutoPostBack="true">
+                                             <span class="glyphicon glyphicon-log-in" ></span>
+                                     
+                                         <asp:label runat="server" ID="lbllogin" Text="Login"></asp:label>
+
+                                         </asp:LinkButton>
+                                    </li>
+                                    <%--<asp:HyperLink ID="LoginHyperLink" runat="server" NavigateUrl="~/StudentLogin.aspx"><span class="glyphicon glyphicon-log-in"></span> <asp:label runat="server" Text="close"></asp:label></asp:HyperLink>--%>
+                                    <% } else { %>
+                                    <li style="padding:15px; color:white;">
+                                            <label>Hello</label>
+                                            <asp:Label runat="server" ID="lblUserName"></asp:Label>
+                                            <label>!</label>
+                                    </li>
+                                    <li>
+                                        <asp:LinkButton id="LinkButton1" runat="server" OnClick="LogOut_Click" AutoPostBack="true">
+                                             <span class="glyphicon glyphicon-log-in" ></span>
+                                     
+                                         <asp:label runat="server" ID="Label1" Text=" Student LogOut"></asp:label>
+
+                                         </asp:LinkButton>
+                                    </li>
+                                    <% } %>
+                </ul>
+            </div>
+        </div>
+    </nav>
                 <div class="row col-sm-offset-1">
         <h2 class="heading col-sm-offset-3">Mechanical Engineering</h2>
         <h3 class="subHeading">Introduction</h3>
@@ -81,4 +137,9 @@
         <p class="paragraph">ME 550 Thesis I</p>
         <p class="paragraph">ME 551 Thesis II</p>
     </div>
-</asp:Content>
+            </form>
+        </main>
+    </div>
+
+</body>
+</html>

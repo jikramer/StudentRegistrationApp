@@ -39,12 +39,32 @@
                         <asp:HyperLink ID="PaymentHyperLink" runat="server" NavigateUrl="~/Payment">Payment</asp:HyperLink></li>
                 </ul>
                 <ul class="nav navbar-nav navbar-right">
-                    <li>
-                       <asp:LinkButton id="OpenClose" runat="server" PostBackUrl="~/StudentLogin" AutoPostBack="true"><span class="glyphicon glyphicon-log-in"></span><asp:label runat="server" Text=" Login"></asp:label></asp:LinkButton>
+                    <% if (Session["user"] == null) %>
+                                    <% { %>
+                                    <li>
+                                         <asp:LinkButton id="OpenClose" runat="server" OnClick="OpenClose_Click" AutoPostBack="true">
+                                             <span class="glyphicon glyphicon-log-in" ></span>
+                                     
+                                         <asp:label runat="server" ID="lbllogin" Text="Login"></asp:label>
 
-                        <%--<asp:HyperLink ID="LoginHyperLink" runat="server" NavigateUrl="~/StudentLogin.aspx"><span class="glyphicon glyphicon-log-in"></span> <asp:label runat="server" Text="close"></asp:label></asp:HyperLink>--%>
+                                         </asp:LinkButton>
+                                    </li>
+                                    <%--<asp:HyperLink ID="LoginHyperLink" runat="server" NavigateUrl="~/StudentLogin.aspx"><span class="glyphicon glyphicon-log-in"></span> <asp:label runat="server" Text="close"></asp:label></asp:HyperLink>--%>
+                                    <% } else { %>
+                                    <li style="padding:15px; color:white;">
+                                            <label>Hello</label>
+                                            <asp:Label runat="server" ID="lblUserName"></asp:Label>
+                                            <label>!</label>
+                                    </li>
+                                    <li>
+                                        <asp:LinkButton id="LinkButton1" runat="server" OnClick="LogOut_Click" AutoPostBack="true">
+                                             <span class="glyphicon glyphicon-log-in" ></span>
+                                     
+                                         <asp:label runat="server" ID="Label1" Text=" Student LogOut"></asp:label>
 
-                    </li>
+                                         </asp:LinkButton>
+                                    </li>
+                                    <% } %>
                 </ul>
             </div>
         </div>

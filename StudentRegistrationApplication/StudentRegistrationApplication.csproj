@@ -140,6 +140,7 @@
     <Content Include="Site.Master" />
     <Content Include="ClaimAccount.aspx" />
     <Content Include="AdminView.Master" />
+    <Content Include="SoftwareEngineering.aspx" />
     <Content Include="StudentHistory.aspx" />
     <Content Include="PaymentHistory.aspx" />
     <Content Include="UpdateResultSheet.aspx" />
@@ -157,7 +158,6 @@
     <Content Include="Scripts\jquery-3.1.1.min.js" />
     <Content Include="Scripts\jquery-3.1.1.slim.js" />
     <Content Include="Scripts\jquery-3.1.1.slim.min.js" />
-    <Content Include="SoftwareEngineering.aspx" />
     <Content Include="StudentDetails.aspx" />
     <Content Include="StyleSheets\Courses.css" />
     <Content Include="StyleSheets\LoginStyle.css" />
@@ -194,6 +194,27 @@
       <DependentUpon>AdmnStudentDetails.aspx</DependentUpon>
     </Compile>
     <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="ElectricalEngineering.aspx.cs">
+      <DependentUpon>ElectricalEngineering.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ElectricalEngineering.aspx.designer.cs">
+      <DependentUpon>ElectricalEngineering.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Management.aspx.cs">
+      <DependentUpon>Management.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Management.aspx.designer.cs">
+      <DependentUpon>Management.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="MechanicalEngineering.aspx.cs">
+      <DependentUpon>MechanicalEngineering.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MechanicalEngineering.aspx.designer.cs">
+      <DependentUpon>MechanicalEngineering.aspx</DependentUpon>
+    </Compile>
     <Compile Include="MyUrlResolver.cs" />
     <Compile Include="Courses.aspx.cs">
       <DependentUpon>Courses.aspx</DependentUpon>
@@ -203,13 +224,6 @@
       <DependentUpon>Courses.aspx</DependentUpon>
     </Compile>
     <Compile Include="DatabaseClasses\StudentInfoDBClass.cs" />
-    <Compile Include="ElectricalEngineering.aspx.cs">
-      <DependentUpon>ElectricalEngineering.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="ElectricalEngineering.aspx.designer.cs">
-      <DependentUpon>ElectricalEngineering.aspx</DependentUpon>
-    </Compile>
     <Compile Include="EngineeringCourses.aspx.cs">
       <DependentUpon>EngineeringCourses.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -226,20 +240,6 @@
     </Compile>
     <Compile Include="Home.aspx.designer.cs">
       <DependentUpon>Home.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="Management.aspx.cs">
-      <DependentUpon>Management.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Management.aspx.designer.cs">
-      <DependentUpon>Management.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="MechanicalEngineering.aspx.cs">
-      <DependentUpon>MechanicalEngineering.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="MechanicalEngineering.aspx.designer.cs">
-      <DependentUpon>MechanicalEngineering.aspx</DependentUpon>
     </Compile>
     <Compile Include="Nursing.aspx.cs">
       <DependentUpon>Nursing.aspx</DependentUpon>

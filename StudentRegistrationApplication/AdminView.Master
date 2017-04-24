@@ -61,6 +61,10 @@
                 </ul>
                 <ul class="nav navbar-nav navbar-right">
                     <li>
+                        <label style="color:white; padding:15px;">Welcome back Admin!</label>                        
+                                            
+                    </li>
+                    <li>
                         <asp:LinkButton id="OpenClose" runat="server" OnClick="OpenClose_Click" AutoPostBack="true"><span class="glyphicon glyphicon-log-out"></span><asp:label runat="server" ID="lbllogin" Text=" Admin Logut"></asp:label></asp:LinkButton>
 
                         <%--<asp:HyperLink ID="LoginHyperLink" runat="server" NavigateUrl="~/StudentLogin "><span class="glyphicon glyphicon-log-in"></span> <asp:label runat="server" Text="close"></asp:label></asp:HyperLink>--%>

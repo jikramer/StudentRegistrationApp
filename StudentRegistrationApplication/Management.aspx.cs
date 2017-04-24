@@ -12,7 +12,7 @@ using System.Drawing;
 
 namespace StudentRegistrationApplication
 {
-    public partial class Management1 : System.Web.UI.Page
+    public partial class Management : System.Web.UI.Page
     {
         private string username;
         protected void Page_Load(object sender, EventArgs e)

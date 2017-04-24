@@ -10,7 +10,7 @@
 namespace StudentRegistrationApplication {
     
     
-    public partial class Management1 {
+    public partial class Management {
         
         /// <summary>
         /// lblUserMessage control.

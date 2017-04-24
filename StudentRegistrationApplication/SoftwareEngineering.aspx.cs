@@ -17,13 +17,6 @@ namespace StudentRegistrationApplication
         private string username;
         protected void Page_Load(object sender, EventArgs e)
         {
-
-        }
-        protected void OpenClose_Click(object sender, EventArgs e)
-        {
-
-            Response.Redirect("StudentLogin.aspx");
-
             string CS = ConfigurationManager.ConnectionStrings["UserInfoConnectionString"].ConnectionString;
             using (SqlConnection con = new SqlConnection(CS))
             {
@@ -39,6 +32,13 @@ namespace StudentRegistrationApplication
                     lblUserName.Text = dr[0].ToString();
                 }
             }
+        }
+        protected void OpenClose_Click(object sender, EventArgs e)
+        {
+
+            Response.Redirect("StudentLogin.aspx");
+
+            
         }
         protected void LogOut_Click(object sender, EventArgs e)
         {

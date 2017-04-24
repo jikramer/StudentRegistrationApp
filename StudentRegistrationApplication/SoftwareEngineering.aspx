@@ -53,7 +53,7 @@
                                     <% } else { %>
                                     <li style="padding:15px; color:white;">
                                             <label>Hello</label>
-                                            <asp:Label runat="server" ID="lblUserName"></asp:Label>
+                                            <asp:Label runat="server" Font-Bold="true" ID="lblUserName"></asp:Label>
                                             <label>!</label>
                                     </li>
                                     <li>

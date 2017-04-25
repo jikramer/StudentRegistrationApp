@@ -5,15 +5,12 @@
     <div class="container">
         <div class="well well-sm">
             <h2>Student Details</h2>
-        </div>
-        <p><asp:ValidationSummary ID="ValidationSummary1" runat="server" 
-                        HeaderText="Please correct the following errors:" 
-                        CssClass="text-danger col-sm-offset-1" ForeColor="Red" /></p>
+        </div>        
         <div class="col-sm-12 table-responsive">
-            <asp:GridView ID="grdStudentDetails" runat="server" AutoGenerateColumns="false" 
+            <asp:GridView ID="grdStudentDetails" runat="server" AutoGenerateColumns="False" 
                 DataKeyNames="Student_UserID" DataSourceID="SqlDataSource1" 
                 CssClass="table table-hover table-condensed table-bordered" 
-                PageSize="5" AllowPaging="true"
+                PageSize="5" AllowPaging="True"
                 OnPreRender="grdStudentDetails_PreRender" 
                 OnRowDeleted="grdStudentDetails_RowDeleted" 
                 OnRowUpdated="grdStudentDetails_RowUpdated">
@@ -26,7 +23,7 @@
                         <EditItemTemplate>
                         <div class="col-xs-11 col-edit">
                             <asp:TextBox ID="txtgrdFirstName" runat="server" 
-                                MaxLength="15" CssClass="form-control" 
+                                 CssClass="form-control" 
                                 Text='<%# Bind("Student_FirstName") %>'>
                             </asp:TextBox>
                         </div>
@@ -37,7 +34,7 @@
                         </EditItemTemplate>
                         <ItemTemplate>
                             <asp:Label ID="lblgrdFirstName" runat="server" 
-                                Text='<%# Bind("Student_FirstName") %>'></asp:Label>
+                                Text='<%# Eval("Student_FirstName") %>'></asp:Label>
                         </ItemTemplate>
                         <ItemStyle CssClass="col-sm-2" />
                     </asp:TemplateField>
@@ -45,7 +42,7 @@
                         <EditItemTemplate>
                         <div class="col-xs-11 col-edit">
                             <asp:TextBox ID="txtgrdLastName" runat="server" 
-                                MaxLength="15" CssClass="form-control" 
+                                 CssClass="form-control" 
                                 Text='<%# Bind("Student_LastName") %>'>
                             </asp:TextBox>
                         </div>
@@ -56,7 +53,7 @@
                         </EditItemTemplate>
                         <ItemTemplate>
                             <asp:Label ID="lblgrdLastName" runat="server" 
-                                Text='<%# Bind("Student_LastName") %>'></asp:Label>
+                                Text='<%# Eval("Student_LastName") %>'></asp:Label>
                         </ItemTemplate>
                         <ItemStyle CssClass="col-sm-2" />
                     </asp:TemplateField>
@@ -79,15 +76,15 @@
                         </EditItemTemplate>
                         <ItemTemplate>
                         <asp:Label ID="lblgrdContactNo" runat="server" 
-                            Text='<%# Bind("Student_ContactNo") %>'></asp:Label>
+                            Text='<%# Eval("Student_ContactNo") %>'></asp:Label>
                         </ItemTemplate>
-                        <ItemStyle CssClass="col-sm-3" />
+                        <ItemStyle CssClass="col-sm-2" />
                     </asp:TemplateField>
                     <asp:TemplateField HeaderText="Email ID">
                         <EditItemTemplate>
                         <div class="col-xs-11 col-edit">
                             <asp:TextBox ID="txtgrdemail" runat="server" 
-                                MaxLength="15" CssClass="form-control" 
+                                 CssClass="form-control" 
                                 Text='<%# Bind("Student_email") %>'>
                             </asp:TextBox>
                         </div>
@@ -102,7 +99,7 @@
                         </EditItemTemplate>
                         <ItemTemplate>
                         <asp:Label ID="lblgrdemail" runat="server" 
-                            Text='<%# Bind("Student_email") %>'></asp:Label>
+                            Text='<%# Eval("Student_email") %>'></asp:Label>
                         </ItemTemplate>
                         <ItemStyle CssClass="col-sm-2" />
                     </asp:TemplateField>
@@ -110,7 +107,7 @@
                         <EditItemTemplate>
                         <div class="col-xs-11 col-edit">
                             <asp:TextBox ID="txtgrdDOB" runat="server" TextMode="Date" 
-                                MaxLength="15" CssClass="form-control" 
+                                 CssClass="form-control" 
                                 Text='<%# Bind("Student_DOB") %>'>
                             </asp:TextBox>
                         </div>
@@ -118,14 +115,11 @@
                             runat="server" CssClass="text-danger" Text="*" 
                             ControlToValidate="txtgrdDOB" ValidationGroup="Edit" 
                             ErrorMessage="Date of Birth is a required field" Display="Dynamic" ForeColor="Red"></asp:RequiredFieldValidator>
-                        <asp:RegularExpressionValidator ID="revDOB" runat="server"
-                            ErrorMessage="Date of birth" CssClass="text-danger"
-                            Display="Dynamic" ValidationExpression="[01]?\d\/[0-3]\d/\d{4}"
-                            ControlToValidate="txtgrdDOB" ForeColor="Red">Use this format: mm/dd/yyyy</asp:RegularExpressionValidator>
+                        
                         </EditItemTemplate>
                         <ItemTemplate>
                         <asp:Label ID="lblgrdDOB" runat="server" 
-                            Text='<%# Bind("Student_DOB") %>'></asp:Label>
+                            Text='<%# Eval("Student_DOB") %>'></asp:Label>
                         </ItemTemplate>
                         <ItemStyle CssClass="col-sm-1" />
                     </asp:TemplateField>
@@ -134,6 +128,10 @@
                         <ItemStyle CssClass="col-sm-1" />
                     </asp:BoundField>
                     <asp:CommandField CausesValidation="true" ShowEditButton="true" 
+                        ValidationGroup="Edit" >
+                        <ItemStyle CssClass="col-sm-1" />
+                    </asp:CommandField>
+                    <asp:CommandField CausesValidation="true" ShowDeleteButton="true" 
                         ValidationGroup="Edit" >
                         <ItemStyle CssClass="col-sm-1" />
                     </asp:CommandField>
@@ -153,96 +151,48 @@
             </asp:GridView>
             <asp:SqlDataSource ID="SqlDataSource1" runat="server" 
                 ConnectionString="<%$ ConnectionStrings:UserInfoConnectionString %>"
-                ConflictDetection="CompareAllValues"
                 OldValuesParameterFormatString="original_{0}" 
-                DeleteCommand="DELETE FROM [StudentData] 
-                WHERE [Student_Id] = @original_Student_Id
-                AND [Student_FirstName] = @original_Student_FirstName
-                AND [Student_LastName] = @original_Student_LastName
-                AND [Student_ContactNo] = @original_Student_ContactNo
-                AND [Student_email] = @original_Student_email
-                AND [Student_DOB] = @original_Student_DOB
-                AND [Student_StAddress] = @original_Student_StAddress
-                AND [Student_City] = @original_Student_City
-                AND [Student_State] = @original_Student_State
-                AND [Student_Zipcode] = @original_Student_Zipcode
-                AND [Student_Type] = @original_Student_Type
-                AND [Student_UserID] = @original_Student_UserID
-                AND [Student_Password] = @original_Student_Password
-                AND [Course1] = @original_Course1
-                AND [Course2] = @original_Course2
-                AND [Course3] = @original_Course3
-                AND [StudentUniqueID] = @original_StudentUniqueID
-                AND [PaymentMethod] = @original_PaymentMethod
-                AND [NameOnCard] = @original_NameOnCard
-                AND [CardNumber] = @original_CardNumber
-                AND [ExpiryDate] = @original_ExpiryDate
-                AND [CVV] = @original_CVV
-                AND [Amount] = @original_Amount
-                AND [PaymentDate] = @original_PaymentDate" 
-                InsertCommand="INSERT INTO [StudentData] ([Student_FirstName], [Student_LastName], [Student_ContactNo], [Student_DOB], [Student_email], [Student_UserID], [Amount]) VALUES (@Student_FirstName, @Student_LastName, @Student_ContactNo, @Student_DOB, @Student_email, @Student_UserID, @Amount)" 
-                SelectCommand="SELECT [Student_FirstName], [Student_LastName], [Student_ContactNo], [Student_DOB], [Student_email], [Student_UserID], [Amount], [Student_Id] FROM [StudentData]" 
+                DeleteCommand="DELETE FROM [StudentData] WHERE [Student_UserID] = @original_Student_UserID" 
+                InsertCommand="INSERT INTO [StudentData] ([Student_FirstName], [Student_LastName], [Student_ContactNo], [Student_email], [Student_DOB], [Student_UserID], [Amount]) VALUES (@Student_FirstName, @Student_LastName, @Student_ContactNo, @Student_email, @Student_DOB, @Student_UserID, @Amount)" 
+                SelectCommand="SELECT [Student_FirstName], [Student_LastName], [Student_ContactNo], [Student_email], [Student_DOB], [Student_UserID], [Amount] FROM [StudentData]" 
                 UpdateCommand="UPDATE [StudentData] 
-                SET [Student_FirstName] = @Student_FirstName, [Student_LastName] = @Student_LastName, [Student_ContactNo] = @Student_ContactNo, [Student_DOB] = @Student_DOB, [Student_email] = @Student_email 
-                WHERE [Student_Id] = @Student_Id
-                AND [Student_FirstName] = @original_Student_FirstName
-                AND [Student_LastName] = @original_Student_LastName
-                AND [Student_ContactNo] = @original_Student_ContactNo
-                AND [Student_email] = @original_Student_email
-                AND [Student_DOB] = @original_Student_DOB">
+                SET [Student_FirstName] = @Student_FirstName, 
+                [Student_LastName] = @Student_LastName, 
+                [Student_ContactNo] = @Student_ContactNo, 
+                [Student_email] = @Student_email, 
+                [Student_DOB] = @Student_DOB, 
+                [Amount] = @Amount 
+                WHERE [Student_UserID] = @original_Student_UserID">
                 <DeleteParameters>
-                    <asp:Parameter Name="original_Student_Id" Type="Int32" />
-                    <asp:Parameter Name="original_Student_FirstName" Type="String" />
-                    <asp:Parameter Name="original_Student_LastName" Type="String" />
-                    <asp:Parameter Name="original_Student_ContactNo" Type="String" />
-                    <asp:Parameter Name="original_Student_DOB" DbType="Date" />
-                    <asp:Parameter Name="original_Student_email" Type="String" />
-                    <asp:Parameter Name="original_Student_StAddress" Type="String" />
-                    <asp:Parameter Name="original_Student_City" Type="String" />
-                    <asp:Parameter Name="original_Student_State" Type="String" />
-                    <asp:Parameter Name="original_Student_Zipcode" Type="Int32" />
-                    <asp:Parameter Name="original_Student_Type" Type="String" />
                     <asp:Parameter Name="original_Student_UserID" Type="String" />
-                    <asp:Parameter Name="original_Student_Password" Type="String" />
-                    <asp:Parameter Name="original_Course1" Type="String" />
-                    <asp:Parameter Name="original_Course2" Type="String" />
-                    <asp:Parameter Name="original_Course3" Type="String" />
-                    <asp:Parameter Name="original_StudentUniqueID" Type="String" />
-                    <asp:Parameter Name="original_PaymentMethod" Type="String" />
-                    <asp:Parameter Name="original_NameOnCard" Type="String" />
-                    <asp:Parameter Name="original_CardNumber" Type="String" />
-                    <asp:Parameter Name="original_ExpiryDate" Type="String" />
-                    <asp:Parameter Name="original_CVV" Type="String" />
-                    <asp:Parameter Name="original_Amount" Type="Int32" />
-                    <asp:Parameter Name="original_PaymentDate" Type="String" />                    
                 </DeleteParameters>
                 <InsertParameters>
                     <asp:Parameter Name="Student_FirstName" Type="String" />
                     <asp:Parameter Name="Student_LastName" Type="String" />
                     <asp:Parameter Name="Student_ContactNo" Type="String" />
-                    <asp:Parameter DbType="Date" Name="Student_DOB" />
                     <asp:Parameter Name="Student_email" Type="String" />
+                    <asp:Parameter Name="Student_DOB" DbType="Date" />
                     <asp:Parameter Name="Student_UserID" Type="String" />
                     <asp:Parameter Name="Amount" Type="Int32" />
                 </InsertParameters>
                 <UpdateParameters>
-                    <asp:Parameter Name="Student_UserID" Type="String" />
-                    <asp:Parameter Name="Amount" Type="Int32" />
-                    <asp:Parameter Name="Student_Id" Type="Int32" />
                     <asp:Parameter Name="Student_FirstName" Type="String" />
                     <asp:Parameter Name="Student_LastName" Type="String" />
                     <asp:Parameter Name="Student_ContactNo" Type="String" />
-                    <asp:Parameter DbType="Date" Name="Student_DOB" />
-                    <asp:Parameter Name="Student_email" Type="String" />                    
-                    <asp:Parameter Name="original_Student_FirstName" Type="String" />
-                    <asp:Parameter Name="original_Student_LastName" Type="String" />
-                    <asp:Parameter Name="original_Student_ContactNo" Type="String" />
-                    <asp:Parameter Name="original_Student_DOB" DbType="Date" />
-                    <asp:Parameter Name="original_Student_email" Type="String" />
+                    <asp:Parameter Name="Student_email" Type="String" />
+                    <asp:Parameter Name="Student_DOB" DbType="Date" />
+                    <asp:Parameter Name="Amount" Type="Int32" />
+                    <asp:Parameter Name="original_Student_UserID" Type="String" /> 
                 </UpdateParameters>
             </asp:SqlDataSource>
-        </div>
-        <h3 style="color:white"><asp:Label ID="lblError" runat="server" EnableViewState="false" 
+
+            <p><asp:ValidationSummary ID="ValidationSummary1" runat="server" 
+                        HeaderText="Please correct the following errors:" 
+                        CssClass="text-danger col-sm-offset-1" ForeColor="Red" />
+
+            <h3><asp:Label ID="lblError" runat="server" EnableViewState="false" 
             CssClass="text-danger"></asp:Label></h3>
+        </div>
+        
     </div>
 </asp:Content>

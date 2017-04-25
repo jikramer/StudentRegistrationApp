@@ -23,8 +23,13 @@ namespace StudentRegistrationApplication
             }
             else if (e.AffectedRows == 0)
             {
-                lblError.Text = ConcurrencyErrorMessage();
+                lblError.Text = ConcurrencyErrorMessage();                                                
             }
+            else
+            {
+                grdStudentDetails.DataBind();
+            }
+
         }
         protected void grdStudentDetails_RowDeleted(object sender, GridViewDeletedEventArgs e)
         {

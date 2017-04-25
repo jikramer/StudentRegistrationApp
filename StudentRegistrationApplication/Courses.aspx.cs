@@ -486,6 +486,16 @@ namespace StudentRegistrationApplication
             }
         }
 
+        protected void PrintHp_Click(object sender, EventArgs e)
+        {
+            Page.RegisterStartupScript("PrintPage", "<script language='javascript'>window.print()</script>");
+        }
+
+        protected void DownloadHp_Click(object sender, EventArgs e)
+        {
+            Page.RegisterStartupScript("PrintPage", "<script language='javascript'>window.print()</script>");
+        }
+
         protected void ClearBtn_Click(object sender, EventArgs e)
         {
             RegCourseList.Items.Clear();

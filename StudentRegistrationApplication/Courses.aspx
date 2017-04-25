@@ -305,6 +305,14 @@
                             <h2>Transcripts</h2>
                         </div>
                         <div class="form-horizontal">
+                             <div class="form-group text-right">
+                                <div class="col-sm-3">
+                    
+                                   <asp:LinkButton ID="PrintHp" runat="server" OnClick="PrintHp_Click"><span class="glyphicon glyphicon-print"></span>Print</asp:LinkButton>
+                                   <asp:LinkButton ID="DownloadHp" runat="server" OnClick="DownloadHp_Click"><span class="glyphicon glyphicon-download"></span>Download</asp:LinkButton>
+        
+                                </div>
+                            </div>
                              <div class="form-group">
                                 <div class="col-sm-offset-2 col-sm-10">
                                     <asp:GridView ID="TranscriptGridView" runat="server" BackColor="White" BorderColor="#DEDFDE" BorderStyle="None" BorderWidth="1px" CellPadding="4" ForeColor="Black" GridLines="Vertical" Height="254px" Width="624px">
@@ -320,7 +328,7 @@
                                         <SortedDescendingHeaderStyle BackColor="#575357" />
                                     </asp:GridView>
                                 </div>
-                            </div>
+                             </div>
                             <div class="form-group">
                                 <label class="control-label col-sm-3">Total Grade Points:</label>
                                 <div class="col-sm-5">

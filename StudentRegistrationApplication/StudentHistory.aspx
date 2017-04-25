@@ -103,24 +103,8 @@
              <asp:TextBox ID="TxtStudentType" runat="server" CssClass="form-control"></asp:TextBox>
         </div>
     </div>
-    <div class="form-group">
-        <label class="control-label col-sm-3">Major:</label>
-        <div class="col-sm-5">
-            <asp:TextBox ID="TxtMajor" runat="server" CssClass="form-control"></asp:TextBox>
-        </div>
-    </div>
-    <div class="form-group">
-        <label class="control-label col-sm-3">Start Date:</label>
-        <div class="col-sm-5">
-            <asp:TextBox ID="TxtStartDate" runat="server" CssClass="form-control"></asp:TextBox>
-        </div>
-    </div>
-    <div class="form-group">
-        <label class="control-label col-sm-3">Graduation Date:</label>
-        <div class="col-sm-5">
-            <asp:TextBox ID="TxtGraduatedIn" runat="server" CssClass="form-control"></asp:TextBox>
-        </div>
-    </div>
+   
+   
      <div class="form-group text-center">
         <label class="control-label col-sm-3">GPA:</label>
         <div class="col-sm-5">

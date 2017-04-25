@@ -166,33 +166,6 @@ namespace StudentRegistrationApplication {
         protected global::System.Web.UI.WebControls.TextBox TxtStudentType;
         
         /// <summary>
-        /// TxtMajor control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox TxtMajor;
-        
-        /// <summary>
-        /// TxtStartDate control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox TxtStartDate;
-        
-        /// <summary>
-        /// TxtGraduatedIn control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox TxtGraduatedIn;
-        
-        /// <summary>
         /// TxtGPA control.
         /// </summary>
         /// <remarks>

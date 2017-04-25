@@ -45,7 +45,7 @@
             <div class="col-sm-offset-2 col-sm-10">
                 <p>
                     Forgot Password?
-                    <asp:HyperLink ID="ForgotPasswordHyperLink" runat="server">Click Here</asp:HyperLink>
+                    <asp:HyperLink ID="ForgotPasswordHyperLink" runat="server" NavigateUrl="~/ForgotPassword.aspx">Click Here</asp:HyperLink>
                 </p>
             </div>
         </div>

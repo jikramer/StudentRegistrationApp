@@ -111,6 +111,7 @@
     <Content Include="Courses.aspx" />
     <Content Include="ElectricalEngineering.aspx" />
     <Content Include="EngineeringCourses.aspx" />
+    <Content Include="ForgotPassword.aspx" />
     <Content Include="Global.asax" />
     <Content Include="Home.aspx" />
     <Content Include="Images\543230-460x321.jpg" />
@@ -200,6 +201,13 @@
     </Compile>
     <Compile Include="ElectricalEngineering.aspx.designer.cs">
       <DependentUpon>ElectricalEngineering.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ForgotPassword.aspx.cs">
+      <DependentUpon>ForgotPassword.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ForgotPassword.aspx.designer.cs">
+      <DependentUpon>ForgotPassword.aspx</DependentUpon>
     </Compile>
     <Compile Include="Management.aspx.cs">
       <DependentUpon>Management.aspx</DependentUpon>

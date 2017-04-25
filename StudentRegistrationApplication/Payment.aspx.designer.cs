@@ -679,13 +679,13 @@ namespace StudentRegistrationApplication {
         protected global::System.Web.UI.WebControls.TextBox txtCreditMakePaymentEditFirstName;
         
         /// <summary>
-        /// RequiredFieldValidator15 control.
+        /// rfvCreditMakePaymentEditFirstName control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.RequiredFieldValidator RequiredFieldValidator15;
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator rfvCreditMakePaymentEditFirstName;
         
         /// <summary>
         /// txtCreditMakePaymentEditLastName control.
@@ -697,13 +697,13 @@ namespace StudentRegistrationApplication {
         protected global::System.Web.UI.WebControls.TextBox txtCreditMakePaymentEditLastName;
         
         /// <summary>
-        /// rfvLastName control.
+        /// rfvCreditMakePaymentEditLastName control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.RequiredFieldValidator rfvLastName;
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator rfvCreditMakePaymentEditLastName;
         
         /// <summary>
         /// txtCreditMakePaymentEditPhoneNumber control.
@@ -715,22 +715,22 @@ namespace StudentRegistrationApplication {
         protected global::System.Web.UI.WebControls.TextBox txtCreditMakePaymentEditPhoneNumber;
         
         /// <summary>
-        /// rfvPhoneNumber control.
+        /// rfvCreditMakePaymentEditPhoneNumber control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.RequiredFieldValidator rfvPhoneNumber;
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator rfvCreditMakePaymentEditPhoneNumber;
         
         /// <summary>
-        /// RegularExpressionValidator3 control.
+        /// regCreditMakePaymentEditPhoneNumber control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.RegularExpressionValidator RegularExpressionValidator3;
+        protected global::System.Web.UI.WebControls.RegularExpressionValidator regCreditMakePaymentEditPhoneNumber;
         
         /// <summary>
         /// txtCreditMakePaymentEditEmail control.
@@ -742,22 +742,22 @@ namespace StudentRegistrationApplication {
         protected global::System.Web.UI.WebControls.TextBox txtCreditMakePaymentEditEmail;
         
         /// <summary>
-        /// rfvEmail control.
+        /// rfvCreditMakePaymentEditEmail control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.RequiredFieldValidator rfvEmail;
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator rfvCreditMakePaymentEditEmail;
         
         /// <summary>
-        /// EmailRegularExpressionValidator control.
+        /// regCreditMakePaymentEditEmail control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.RegularExpressionValidator EmailRegularExpressionValidator;
+        protected global::System.Web.UI.WebControls.RegularExpressionValidator regCreditMakePaymentEditEmail;
         
         /// <summary>
         /// txtCreditMakePaymentEditDOB control.
@@ -769,13 +769,13 @@ namespace StudentRegistrationApplication {
         protected global::System.Web.UI.WebControls.TextBox txtCreditMakePaymentEditDOB;
         
         /// <summary>
-        /// revDOB control.
+        /// regCreditMakePaymentEditDOB control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.RegularExpressionValidator revDOB;
+        protected global::System.Web.UI.WebControls.RegularExpressionValidator regCreditMakePaymentEditDOB;
         
         /// <summary>
         /// txtCreditMakePaymentEditAddress control.
@@ -787,13 +787,13 @@ namespace StudentRegistrationApplication {
         protected global::System.Web.UI.WebControls.TextBox txtCreditMakePaymentEditAddress;
         
         /// <summary>
-        /// rfvStreetAddress control.
+        /// rfvCreditMakePaymentEditAddress control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.RequiredFieldValidator rfvStreetAddress;
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator rfvCreditMakePaymentEditAddress;
         
         /// <summary>
         /// txtCreditMakePaymentEditCity control.
@@ -805,13 +805,13 @@ namespace StudentRegistrationApplication {
         protected global::System.Web.UI.WebControls.TextBox txtCreditMakePaymentEditCity;
         
         /// <summary>
-        /// rfvCity control.
+        /// rfvCreditMakePaymentEditCity control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.RequiredFieldValidator rfvCity;
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator rfvCreditMakePaymentEditCity;
         
         /// <summary>
         /// ddlCreditMakePaymentEditState control.
@@ -841,22 +841,22 @@ namespace StudentRegistrationApplication {
         protected global::System.Web.UI.WebControls.TextBox txtCreditMakePaymentEditZip;
         
         /// <summary>
-        /// rfvZip control.
+        /// rfvCreditMakePaymentEditZip control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.RequiredFieldValidator rfvZip;
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator rfvCreditMakePaymentEditZip;
         
         /// <summary>
-        /// ZipCodeRegularExpressionValidator control.
+        /// regCreditMakePaymentEditZip control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.RegularExpressionValidator ZipCodeRegularExpressionValidator;
+        protected global::System.Web.UI.WebControls.RegularExpressionValidator regCreditMakePaymentEditZip;
         
         /// <summary>
         /// ddlCreditMakePaymentEditStudentType control.
@@ -868,13 +868,13 @@ namespace StudentRegistrationApplication {
         protected global::System.Web.UI.WebControls.DropDownList ddlCreditMakePaymentEditStudentType;
         
         /// <summary>
-        /// RfvStudentType control.
+        /// RfvCreditMakePaymentEditStudentType control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.RequiredFieldValidator RfvStudentType;
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator RfvCreditMakePaymentEditStudentType;
         
         /// <summary>
         /// txtCreditMakePaymentEditNameOnCard control.
@@ -886,13 +886,13 @@ namespace StudentRegistrationApplication {
         protected global::System.Web.UI.WebControls.TextBox txtCreditMakePaymentEditNameOnCard;
         
         /// <summary>
-        /// RequiredFieldValidator14 control.
+        /// revCreditMakePaymentEditNameOnCard control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.RequiredFieldValidator RequiredFieldValidator14;
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator revCreditMakePaymentEditNameOnCard;
         
         /// <summary>
         /// txtCreditMakePaymentEditCardNumber control.
@@ -904,22 +904,22 @@ namespace StudentRegistrationApplication {
         protected global::System.Web.UI.WebControls.TextBox txtCreditMakePaymentEditCardNumber;
         
         /// <summary>
-        /// RequiredFieldValidator16 control.
+        /// revCreditMakePaymentEditCardNumber control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.RequiredFieldValidator RequiredFieldValidator16;
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator revCreditMakePaymentEditCardNumber;
         
         /// <summary>
-        /// RegularExpressionValidator4 control.
+        /// regCreditMakePaymentEditCardNumber control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.RegularExpressionValidator RegularExpressionValidator4;
+        protected global::System.Web.UI.WebControls.RegularExpressionValidator regCreditMakePaymentEditCardNumber;
         
         /// <summary>
         /// txtCreditMakePaymentEditExpiryDate control.
@@ -931,13 +931,13 @@ namespace StudentRegistrationApplication {
         protected global::System.Web.UI.WebControls.TextBox txtCreditMakePaymentEditExpiryDate;
         
         /// <summary>
-        /// RequiredFieldValidator17 control.
+        /// revCreditMakePaymentEditExpiryDate control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.RequiredFieldValidator RequiredFieldValidator17;
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator revCreditMakePaymentEditExpiryDate;
         
         /// <summary>
         /// txtCreditMakePaymentEditCVV control.
@@ -949,22 +949,31 @@ namespace StudentRegistrationApplication {
         protected global::System.Web.UI.WebControls.TextBox txtCreditMakePaymentEditCVV;
         
         /// <summary>
-        /// RequiredFieldValidator18 control.
+        /// revCreditMakePaymentEditCVV control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.RequiredFieldValidator RequiredFieldValidator18;
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator revCreditMakePaymentEditCVV;
         
         /// <summary>
-        /// RangeValidator2 control.
+        /// reguCreditMakePaymentEditCVV control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.RangeValidator RangeValidator2;
+        protected global::System.Web.UI.WebControls.RegularExpressionValidator reguCreditMakePaymentEditCVV;
+        
+        /// <summary>
+        /// regCreditMakePaymentEditCVV control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RangeValidator regCreditMakePaymentEditCVV;
         
         /// <summary>
         /// txtCreditMakePaymentEditAmount control.
@@ -983,6 +992,15 @@ namespace StudentRegistrationApplication {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.RequiredFieldValidator RequiredFieldValidator19;
+        
+        /// <summary>
+        /// lblCreditMakePaymentEditWarning control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lblCreditMakePaymentEditWarning;
         
         /// <summary>
         /// MakePaymentDebitMultiView control.
@@ -1165,13 +1183,13 @@ namespace StudentRegistrationApplication {
         protected global::System.Web.UI.WebControls.TextBox txtDebitMakePaymentEditFirstName;
         
         /// <summary>
-        /// RequiredFieldValidator20 control.
+        /// revDebitMakePaymentEditFirstName control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.RequiredFieldValidator RequiredFieldValidator20;
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator revDebitMakePaymentEditFirstName;
         
         /// <summary>
         /// txtDebitMakePaymentEditLastName control.
@@ -1183,13 +1201,13 @@ namespace StudentRegistrationApplication {
         protected global::System.Web.UI.WebControls.TextBox txtDebitMakePaymentEditLastName;
         
         /// <summary>
-        /// RequiredFieldValidator21 control.
+        /// revDebitMakePaymentEditLastName control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.RequiredFieldValidator RequiredFieldValidator21;
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator revDebitMakePaymentEditLastName;
         
         /// <summary>
         /// txtDebitMakePaymentEditPhoneNumber control.
@@ -1201,22 +1219,22 @@ namespace StudentRegistrationApplication {
         protected global::System.Web.UI.WebControls.TextBox txtDebitMakePaymentEditPhoneNumber;
         
         /// <summary>
-        /// RequiredFieldValidator22 control.
+        /// revDebitMakePaymentEditPhoneNumber control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.RequiredFieldValidator RequiredFieldValidator22;
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator revDebitMakePaymentEditPhoneNumber;
         
         /// <summary>
-        /// RegularExpressionValidator5 control.
+        /// regDebitMakePaymentEditPhoneNumber control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.RegularExpressionValidator RegularExpressionValidator5;
+        protected global::System.Web.UI.WebControls.RegularExpressionValidator regDebitMakePaymentEditPhoneNumber;
         
         /// <summary>
         /// txtDebitMakePaymentEditEmail control.
@@ -1228,22 +1246,22 @@ namespace StudentRegistrationApplication {
         protected global::System.Web.UI.WebControls.TextBox txtDebitMakePaymentEditEmail;
         
         /// <summary>
-        /// RequiredFieldValidator23 control.
+        /// revDebitMakePaymentEditEmail control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.RequiredFieldValidator RequiredFieldValidator23;
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator revDebitMakePaymentEditEmail;
         
         /// <summary>
-        /// RegularExpressionValidator6 control.
+        /// regDebitMakePaymentEditEmail control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.RegularExpressionValidator RegularExpressionValidator6;
+        protected global::System.Web.UI.WebControls.RegularExpressionValidator regDebitMakePaymentEditEmail;
         
         /// <summary>
         /// txtDebitMakePaymentEditDOB control.
@@ -1255,13 +1273,13 @@ namespace StudentRegistrationApplication {
         protected global::System.Web.UI.WebControls.TextBox txtDebitMakePaymentEditDOB;
         
         /// <summary>
-        /// RegularExpressionValidator7 control.
+        /// revDebitMakePaymentEditDOB control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.RegularExpressionValidator RegularExpressionValidator7;
+        protected global::System.Web.UI.WebControls.RegularExpressionValidator revDebitMakePaymentEditDOB;
         
         /// <summary>
         /// txtDebitMakePaymentEditAddress control.
@@ -1273,13 +1291,13 @@ namespace StudentRegistrationApplication {
         protected global::System.Web.UI.WebControls.TextBox txtDebitMakePaymentEditAddress;
         
         /// <summary>
-        /// RequiredFieldValidator24 control.
+        /// revDebitMakePaymentEditAddress control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.RequiredFieldValidator RequiredFieldValidator24;
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator revDebitMakePaymentEditAddress;
         
         /// <summary>
         /// txtDebitMakePaymentEditCity control.
@@ -1291,13 +1309,13 @@ namespace StudentRegistrationApplication {
         protected global::System.Web.UI.WebControls.TextBox txtDebitMakePaymentEditCity;
         
         /// <summary>
-        /// RequiredFieldValidator25 control.
+        /// revDebitMakePaymentEditCity control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.RequiredFieldValidator RequiredFieldValidator25;
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator revDebitMakePaymentEditCity;
         
         /// <summary>
         /// ddlDebitMakePaymentEditState control.
@@ -1327,22 +1345,22 @@ namespace StudentRegistrationApplication {
         protected global::System.Web.UI.WebControls.TextBox txtDebitMakePaymentEditZip;
         
         /// <summary>
-        /// RequiredFieldValidator26 control.
+        /// revDebitMakePaymentEditZip control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.RequiredFieldValidator RequiredFieldValidator26;
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator revDebitMakePaymentEditZip;
         
         /// <summary>
-        /// RegularExpressionValidator8 control.
+        /// regDebitMakePaymentEditZip control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.RegularExpressionValidator RegularExpressionValidator8;
+        protected global::System.Web.UI.WebControls.RegularExpressionValidator regDebitMakePaymentEditZip;
         
         /// <summary>
         /// ddltDebitMakePaymentEditStudentType control.
@@ -1372,13 +1390,13 @@ namespace StudentRegistrationApplication {
         protected global::System.Web.UI.WebControls.TextBox txtDebitMakePaymentEditNameOnCard;
         
         /// <summary>
-        /// RequiredFieldValidator28 control.
+        /// revDebitMakePaymentEditNameOnCard control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.RequiredFieldValidator RequiredFieldValidator28;
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator revDebitMakePaymentEditNameOnCard;
         
         /// <summary>
         /// txtDebitMakePaymentEditCardNumber control.
@@ -1390,22 +1408,22 @@ namespace StudentRegistrationApplication {
         protected global::System.Web.UI.WebControls.TextBox txtDebitMakePaymentEditCardNumber;
         
         /// <summary>
-        /// RequiredFieldValidator29 control.
+        /// revDebitMakePaymentEditCardNumber control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.RequiredFieldValidator RequiredFieldValidator29;
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator revDebitMakePaymentEditCardNumber;
         
         /// <summary>
-        /// RegularExpressionValidator9 control.
+        /// regDebitMakePaymentEditCardNumber control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.RegularExpressionValidator RegularExpressionValidator9;
+        protected global::System.Web.UI.WebControls.RegularExpressionValidator regDebitMakePaymentEditCardNumber;
         
         /// <summary>
         /// txtDebitMakePaymentEditExpiryDate control.
@@ -1417,13 +1435,13 @@ namespace StudentRegistrationApplication {
         protected global::System.Web.UI.WebControls.TextBox txtDebitMakePaymentEditExpiryDate;
         
         /// <summary>
-        /// RequiredFieldValidator30 control.
+        /// revDebitMakePaymentEditExpiryDate control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.RequiredFieldValidator RequiredFieldValidator30;
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator revDebitMakePaymentEditExpiryDate;
         
         /// <summary>
         /// txtDebitMakePaymentEditCVV control.
@@ -1435,22 +1453,31 @@ namespace StudentRegistrationApplication {
         protected global::System.Web.UI.WebControls.TextBox txtDebitMakePaymentEditCVV;
         
         /// <summary>
-        /// RequiredFieldValidator31 control.
+        /// revDebitMakePaymentEditCVV control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.RequiredFieldValidator RequiredFieldValidator31;
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator revDebitMakePaymentEditCVV;
         
         /// <summary>
-        /// RangeValidator3 control.
+        /// reguDebitMakePaymentEditCVV control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.RangeValidator RangeValidator3;
+        protected global::System.Web.UI.WebControls.RegularExpressionValidator reguDebitMakePaymentEditCVV;
+        
+        /// <summary>
+        /// regfDebitMakePaymentEditCVV control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RangeValidator regfDebitMakePaymentEditCVV;
         
         /// <summary>
         /// txtDebitMakePaymentEditAmount control.
@@ -1469,6 +1496,15 @@ namespace StudentRegistrationApplication {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.RequiredFieldValidator RequiredFieldValidator32;
+        
+        /// <summary>
+        /// lblDebitMakePaymentEditWarning control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lblDebitMakePaymentEditWarning;
         
         /// <summary>
         /// MakePaymentCashMultiView control.
@@ -1633,13 +1669,13 @@ namespace StudentRegistrationApplication {
         protected global::System.Web.UI.WebControls.TextBox txtCashMakePaymentEditFirstName;
         
         /// <summary>
-        /// RequiredFieldValidator33 control.
+        /// revCashMakePaymentEditFirstName control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.RequiredFieldValidator RequiredFieldValidator33;
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator revCashMakePaymentEditFirstName;
         
         /// <summary>
         /// txtCashMakePaymentEditLastName control.
@@ -1651,13 +1687,13 @@ namespace StudentRegistrationApplication {
         protected global::System.Web.UI.WebControls.TextBox txtCashMakePaymentEditLastName;
         
         /// <summary>
-        /// RequiredFieldValidator34 control.
+        /// revCashMakePaymentEditLastName control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.RequiredFieldValidator RequiredFieldValidator34;
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator revCashMakePaymentEditLastName;
         
         /// <summary>
         /// txtCashMakePaymentEditPhoneNumber control.
@@ -1669,22 +1705,22 @@ namespace StudentRegistrationApplication {
         protected global::System.Web.UI.WebControls.TextBox txtCashMakePaymentEditPhoneNumber;
         
         /// <summary>
-        /// RequiredFieldValidator35 control.
+        /// revCashMakePaymentEditPhoneNumber control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.RequiredFieldValidator RequiredFieldValidator35;
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator revCashMakePaymentEditPhoneNumber;
         
         /// <summary>
-        /// RegularExpressionValidator10 control.
+        /// regCashMakePaymentEditPhoneNumber control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.RegularExpressionValidator RegularExpressionValidator10;
+        protected global::System.Web.UI.WebControls.RegularExpressionValidator regCashMakePaymentEditPhoneNumber;
         
         /// <summary>
         /// txtCashMakePaymentEditEmail control.
@@ -1696,22 +1732,22 @@ namespace StudentRegistrationApplication {
         protected global::System.Web.UI.WebControls.TextBox txtCashMakePaymentEditEmail;
         
         /// <summary>
-        /// RequiredFieldValidator36 control.
+        /// revCashMakePaymentEditEmail control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.RequiredFieldValidator RequiredFieldValidator36;
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator revCashMakePaymentEditEmail;
         
         /// <summary>
-        /// RegularExpressionValidator11 control.
+        /// regCashMakePaymentEditEmail control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.RegularExpressionValidator RegularExpressionValidator11;
+        protected global::System.Web.UI.WebControls.RegularExpressionValidator regCashMakePaymentEditEmail;
         
         /// <summary>
         /// txtCashMakePaymentEditDOB control.
@@ -1723,13 +1759,13 @@ namespace StudentRegistrationApplication {
         protected global::System.Web.UI.WebControls.TextBox txtCashMakePaymentEditDOB;
         
         /// <summary>
-        /// RegularExpressionValidator12 control.
+        /// revCashMakePaymentEditDOB control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.RegularExpressionValidator RegularExpressionValidator12;
+        protected global::System.Web.UI.WebControls.RegularExpressionValidator revCashMakePaymentEditDOB;
         
         /// <summary>
         /// txtCashMakePaymentEditAddress control.
@@ -1741,13 +1777,13 @@ namespace StudentRegistrationApplication {
         protected global::System.Web.UI.WebControls.TextBox txtCashMakePaymentEditAddress;
         
         /// <summary>
-        /// RequiredFieldValidator37 control.
+        /// revCashMakePaymentEditAddress control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.RequiredFieldValidator RequiredFieldValidator37;
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator revCashMakePaymentEditAddress;
         
         /// <summary>
         /// txtCashMakePaymentEditCity control.
@@ -1759,13 +1795,13 @@ namespace StudentRegistrationApplication {
         protected global::System.Web.UI.WebControls.TextBox txtCashMakePaymentEditCity;
         
         /// <summary>
-        /// RequiredFieldValidator38 control.
+        /// revCashMakePaymentEditCity control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.RequiredFieldValidator RequiredFieldValidator38;
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator revCashMakePaymentEditCity;
         
         /// <summary>
         /// ddlCashMakePaymentEditState control.
@@ -1795,22 +1831,22 @@ namespace StudentRegistrationApplication {
         protected global::System.Web.UI.WebControls.TextBox txtCashMakePaymentEditZip;
         
         /// <summary>
-        /// RequiredFieldValidator39 control.
+        /// revCashMakePaymentEditZip control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.RequiredFieldValidator RequiredFieldValidator39;
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator revCashMakePaymentEditZip;
         
         /// <summary>
-        /// RegularExpressionValidator13 control.
+        /// regCashMakePaymentEditZip control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.RegularExpressionValidator RegularExpressionValidator13;
+        protected global::System.Web.UI.WebControls.RegularExpressionValidator regCashMakePaymentEditZip;
         
         /// <summary>
         /// ddlCashMakePaymentEditStudentType control.
@@ -1849,13 +1885,13 @@ namespace StudentRegistrationApplication {
         protected global::System.Web.UI.WebControls.TextBox txtCashMakePaymentEditPaymentDate;
         
         /// <summary>
-        /// RegularExpressionValidator14 control.
+        /// revCashMakePaymentEditPaymentDate control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.RegularExpressionValidator RegularExpressionValidator14;
+        protected global::System.Web.UI.WebControls.RegularExpressionValidator revCashMakePaymentEditPaymentDate;
         
         /// <summary>
         /// txtCashMakePaymentEditAmount control.
@@ -1874,6 +1910,15 @@ namespace StudentRegistrationApplication {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.RequiredFieldValidator RequiredFieldValidator41;
+        
+        /// <summary>
+        /// lblCashMakePaymentEditWarning control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lblCashMakePaymentEditWarning;
         
         /// <summary>
         /// PaymentHistoryView control.

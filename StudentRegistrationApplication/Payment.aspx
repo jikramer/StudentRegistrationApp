@@ -416,15 +416,18 @@
                                     <asp:Label ID="lblCreditPaymentSucessful" runat="server" Font-Size="Large"></asp:Label>
                                 </div>
                             </div>
+                            <asp:Button runat="server" CssClass="btn btn-primary" Text="Edit" OnClick="btnEditCreditPaymentDetails_Click" />
+                            <asp:Button runat="server" CssClass="btn btn-primary" Text="Confirm" OnClick="btnConfirmCreditPaymentDetails_Click" />
                             </asp:View>
                                 <asp:View runat="server" ID="MakePaymentMultiViewEditDetails">
+                                    <div>                                        
                                     <div class="form-group">
                                         <label class="control-label col-sm-3">First Name:</label>
                                         <div class="col-sm-5">
                                             <asp:TextBox ID="txtCreditMakePaymentEditFirstName" runat="server" CssClass="form-control text-left"></asp:TextBox>
                                         </div>
                                         <div class="col-sm-3">
-                                            <asp:RequiredFieldValidator ID="RequiredFieldValidator15" runat="server"
+                                            <asp:RequiredFieldValidator ID="rfvCreditMakePaymentEditFirstName" runat="server"
                                                 ErrorMessage="First name is required" CssClass="text-danger"
                                                 Display="Dynamic" ControlToValidate="txtCreditMakePaymentEditFirstName" ForeColor="Red"></asp:RequiredFieldValidator>
                                         </div>
@@ -435,9 +438,9 @@
                                             <asp:TextBox ID="txtCreditMakePaymentEditLastName" runat="server" CssClass="form-control"></asp:TextBox>
                                         </div>
                                         <div class="col-sm-4">
-                                            <asp:RequiredFieldValidator ID="rfvLastName" runat="server"
+                                            <asp:RequiredFieldValidator ID="rfvCreditMakePaymentEditLastName" runat="server"
                                                 ErrorMessage="Last name is required" CssClass="text-danger"
-                                                Display="Dynamic" ControlToValidate="txtCreditMakePaymentEditLastName" ForeColor="Red"></asp:RequiredFieldValidator>
+                                                Display="Dynamic" ControlToValidate="txtCreditMakePaymentEditLastName" ForeColor="Red"></asp:RequiredFieldValidator> 
                                         </div>
                                     </div>
                                     <div class="form-group">
@@ -446,13 +449,13 @@
                                             <asp:TextBox ID="txtCreditMakePaymentEditPhoneNumber" runat="server" CssClass="form-control" TextMode="Phone"></asp:TextBox>
                                         </div>
                                         <div class="col-sm-4">
-                                            <asp:RequiredFieldValidator ID="rfvPhoneNumber" runat="server"
+                                            <asp:RequiredFieldValidator ID="rfvCreditMakePaymentEditPhoneNumber" runat="server"
                                                 ErrorMessage="Phone number is required." CssClass="text-danger"
                                                 Display="Dynamic" ControlToValidate="txtCreditMakePaymentEditPhoneNumber" ForeColor="Red"></asp:RequiredFieldValidator>
-                                            <asp:RegularExpressionValidator ID="RegularExpressionValidator3" runat="server"
+                                            <asp:RegularExpressionValidator ID="regCreditMakePaymentEditPhoneNumber" runat="server"
                                                 ControlToValidate="txtCreditMakePaymentEditPhoneNumber" ErrorMessage="Use this format: 999-999-9999"
                                                 ValidationExpression="((\(\d{3}\) ?)|(\d{3}-))?\d{3}-\d{4}" CssClass="text-danger"
-                                                Display="Dynamic" ForeColor="Red"></asp:RegularExpressionValidator>
+                                                Display="Dynamic" ForeColor="Red"></asp:RegularExpressionValidator> 
                                         </div>
                                     </div>
                                     <div class="form-group">
@@ -461,13 +464,13 @@
                                             <asp:TextBox ID="txtCreditMakePaymentEditEmail" runat="server" CssClass="form-control" TextMode="Email"></asp:TextBox>
                                         </div>
                                         <div class="col-sm-4">
-                                            <asp:RequiredFieldValidator ID="rfvEmail" runat="server"
+                                            <asp:RequiredFieldValidator ID="rfvCreditMakePaymentEditEmail" runat="server"
                                                 ErrorMessage="Email is required" CssClass="text-danger"
                                                 Display="Dynamic" ControlToValidate="txtCreditMakePaymentEditEmail" ForeColor="Red"></asp:RequiredFieldValidator>
-                                            <asp:RegularExpressionValidator ID="EmailRegularExpressionValidator" runat="server"
+                                            <asp:RegularExpressionValidator ID="regCreditMakePaymentEditEmail" runat="server"
                                                 ControlToValidate="txtCreditMakePaymentEditEmail" ErrorMessage="Must be a valid email address"
                                                 ValidationExpression="\w+([-+.']\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*" CssClass="text-danger"
-                                                Display="Dynamic" ForeColor="Red"></asp:RegularExpressionValidator>
+                                                Display="Dynamic" ForeColor="Red"></asp:RegularExpressionValidator> 
                                         </div>
                                     </div>
                                     <div class="form-group">
@@ -476,10 +479,10 @@
                                             <asp:TextBox ID="txtCreditMakePaymentEditDOB" runat="server" CssClass="form-control">mm/dd/yyyy</asp:TextBox>
                                         </div>
                                         <div class="col-sm-4">
-                                            <asp:RegularExpressionValidator ID="revDOB" runat="server"
+                                            <asp:RegularExpressionValidator ID="regCreditMakePaymentEditDOB" runat="server"
                                                 ErrorMessage="Date of birth" CssClass="text-danger"
                                                 Display="Dynamic" ValidationExpression="[01]?\d\/[0-3]\d/\d{4}"
-                                                ControlToValidate="txtCreditMakePaymentEditDOB" ForeColor="Red">Use this format: mm/dd/yyyy</asp:RegularExpressionValidator>
+                                                ControlToValidate="txtCreditMakePaymentEditDOB" ForeColor="Red">Use this format: mm/dd/yyyy</asp:RegularExpressionValidator> 
                                         </div>
                                     </div>
                                     <div class="form-group">
@@ -488,9 +491,9 @@
                                             <asp:TextBox ID="txtCreditMakePaymentEditAddress" runat="server" CssClass="form-control"></asp:TextBox>
                                         </div>
                                         <div class="col-sm-4">
-                                            <asp:RequiredFieldValidator ID="rfvStreetAddress" runat="server"
+                                            <asp:RequiredFieldValidator ID="rfvCreditMakePaymentEditAddress" runat="server"
                                                 ErrorMessage="Street Address is required" CssClass="text-danger"
-                                                Display="Dynamic" ControlToValidate="txtCreditMakePaymentEditAddress" ForeColor="Red"></asp:RequiredFieldValidator>
+                                                Display="Dynamic" ControlToValidate="txtCreditMakePaymentEditAddress" ForeColor="Red"></asp:RequiredFieldValidator> 
                                         </div>
                                     </div>
                                     <div class="form-group">
@@ -499,9 +502,9 @@
                                             <asp:TextBox ID="txtCreditMakePaymentEditCity" runat="server" CssClass="form-control"></asp:TextBox>
                                         </div>
                                         <div class="col-sm-4">
-                                            <asp:RequiredFieldValidator ID="rfvCity" runat="server"
+                                            <asp:RequiredFieldValidator ID="rfvCreditMakePaymentEditCity" runat="server"
                                                 ErrorMessage="City is required" CssClass="text-danger"
-                                                Display="Dynamic" ControlToValidate="txtCreditMakePaymentEditCity" ForeColor="Red"></asp:RequiredFieldValidator>
+                                                Display="Dynamic" ControlToValidate="txtCreditMakePaymentEditCity" ForeColor="Red"></asp:RequiredFieldValidator> 
                                         </div>
                                     </div>
                                     <div class="form-group">
@@ -519,12 +522,12 @@
                                             <asp:TextBox ID="txtCreditMakePaymentEditZip" runat="server" CssClass="form-control"></asp:TextBox>
                                         </div>
                                         <div class="col-sm-4">
-                                            <asp:RequiredFieldValidator ID="rfvZip" runat="server"
+                                           <asp:RequiredFieldValidator ID="rfvCreditMakePaymentEditZip" runat="server"
                                                 ErrorMessage="Zip is required" CssClass="text-danger"
                                                 Display="Dynamic" ControlToValidate="txtCreditMakePaymentEditZip" ForeColor="Red"></asp:RequiredFieldValidator>
-                                            <asp:RegularExpressionValidator ID="ZipCodeRegularExpressionValidator" runat="server"
-                                                ErrorMessage="Use this format: 00000-0000" CssClass="text-danger"
-                                                Display="Dynamic" ControlToValidate="txtCreditMakePaymentEditZip" ValidationExpression="\d{5}(-\d{4})?" ForeColor="Red"></asp:RegularExpressionValidator>
+                                            <asp:RegularExpressionValidator ID="regCreditMakePaymentEditZip" runat="server"
+                                                ErrorMessage="Use this format: 00000" CssClass="text-danger"
+                                                Display="Dynamic" ControlToValidate="txtCreditMakePaymentEditZip" ValidationExpression="\d{5}" ForeColor="Red"></asp:RegularExpressionValidator>
                                         </div>
                                     </div>
                                     <div class="form-group">
@@ -536,9 +539,9 @@
                                             </asp:DropDownList>
                                         </div>
                                         <div class="col-sm-4">
-                                            <asp:RequiredFieldValidator ID="RfvStudentType" runat="server"
+                                           <!-- <asp:RequiredFieldValidator ID="RfvCreditMakePaymentEditStudentType" runat="server"
                                                 ErrorMessage="Student type is required" CssClass="text-danger"
-                                                Display="Dynamic" ControlToValidate="ddlCreditMakePaymentEditStudentType" ForeColor="Red"></asp:RequiredFieldValidator>
+                                                Display="Dynamic" ControlToValidate="ddlCreditMakePaymentEditStudentType" ForeColor="Red"></asp:RequiredFieldValidator> -->
                                         </div>
                                     </div>
                                     <div class="form-group">
@@ -547,9 +550,9 @@
                                                 <asp:TextBox ID="txtCreditMakePaymentEditNameOnCard" runat="server" CssClass="form-control"></asp:TextBox>
                                            </div>
                                            <div class="col-sm-3">
-                                                <asp:RequiredFieldValidator ID="RequiredFieldValidator14" runat="server"
+                                                <asp:RequiredFieldValidator ID="revCreditMakePaymentEditNameOnCard" runat="server"
                                                     ErrorMessage="Name on the Card is required" CssClass="text-danger"
-                                                    Display="Dynamic" ControlToValidate="txtCreditMakePaymentEditNameOnCard" ForeColor="Red"></asp:RequiredFieldValidator>
+                                                    Display="Dynamic" ControlToValidate="txtCreditMakePaymentEditNameOnCard" ForeColor="Red"></asp:RequiredFieldValidator> 
                                             </div>
                                      </div>
                                      <div class="form-group">
@@ -558,15 +561,15 @@
                                             <asp:TextBox ID="txtCreditMakePaymentEditCardNumber" runat="server" CssClass="form-control"></asp:TextBox>
                                         </div>                                                            
                                         <div class="col-sm-3">
-                                            <asp:RequiredFieldValidator ID="RequiredFieldValidator16" runat="server"
+                                            <asp:RequiredFieldValidator ID="revCreditMakePaymentEditCardNumber" runat="server"
                                                 ErrorMessage="Card Number is required" CssClass="text-danger"
                                                 Display="Dynamic" ControlToValidate="txtCreditMakePaymentEditCardNumber" ForeColor="Red">
                                             </asp:RequiredFieldValidator>
-                                            <asp:RegularExpressionValidator ID="RegularExpressionValidator4" runat="server" 
+                                            <asp:RegularExpressionValidator ID="regCreditMakePaymentEditCardNumber" runat="server" 
                                                 ControlToValidate="txtCreditMakePaymentEditCardNumber" ErrorMessage="Use this format: xxxx-xxxx-xxxx-xxxx" 
                                                 ValidationExpression="\d{4}-\d{4}-\d{4}-\d{4}" CssClass="text-danger" 
                                                 Display="Dynamic" ForeColor="Red">
-                                            </asp:RegularExpressionValidator>
+                                            </asp:RegularExpressionValidator> 
                                         </div>
                                      </div>
                                      <div class="form-group">
@@ -575,10 +578,10 @@
                                             <asp:TextBox ID="txtCreditMakePaymentEditExpiryDate" runat="server" CssClass="form-control" TextMode="Date" ></asp:TextBox>
                                         </div>
                                         <div class="col-sm-2">
-                                            <asp:RequiredFieldValidator ID="RequiredFieldValidator17" runat="server"
+                                            <asp:RequiredFieldValidator ID="revCreditMakePaymentEditExpiryDate" runat="server"
                                                 ErrorMessage="Expiry Date is required" CssClass="text-danger"
                                                 Display="Dynamic" ControlToValidate="txtCreditMakePaymentEditExpiryDate" ForeColor="Red">
-                                            </asp:RequiredFieldValidator>
+                                            </asp:RequiredFieldValidator> 
                                         </div>          
                                      </div>
                                      <div class="form-group">
@@ -587,16 +590,19 @@
                                             <asp:TextBox ID="txtCreditMakePaymentEditCVV" runat="server" CssClass="form-control" MaxLength="3"></asp:TextBox>
                                         </div>
                                         <div class="col-sm-2">
-                                            <asp:RequiredFieldValidator ID="RequiredFieldValidator18" runat="server"
+                                            <asp:RequiredFieldValidator ID="revCreditMakePaymentEditCVV" runat="server"
                                                 ErrorMessage="CVV is required" CssClass="text-danger"
                                                 Display="Dynamic" ControlToValidate="txtCreditMakePaymentEditCVV" ForeColor="Red">
                                             </asp:RequiredFieldValidator>
-                                            <asp:RangeValidator ID="RangeValidator2" runat="server" 
+                                            <asp:RegularExpressionValidator ID="reguCreditMakePaymentEditCVV" runat="server"
+                                                ErrorMessage="Use this format: 000" CssClass="text-danger"
+                                                Display="Dynamic" ControlToValidate="txtCreditMakePaymentEditCVV" ValidationExpression="\d{3}" ForeColor="Red"></asp:RegularExpressionValidator>
+                                         <!--   <asp:RangeValidator ID="regCreditMakePaymentEditCVV" runat="server" 
                                                 ControlToValidate="txtCreditMakePaymentEditCVV" Display="Dynamic" MaximumValue="999" 
-                                                MinimumValue="111" ErrorMessage="Should be of type xxx"></asp:RangeValidator>
+                                                MinimumValue="111" ErrorMessage="Should be of type xxx"></asp:RangeValidator> -->
                                         </div>
                                      </div>
-                                    <div class="form-group">
+                                  <!--  <div class="form-group">
                                         <label class="control-label col-sm-3">Amount:</label>
                                         <div class="col-sm-4">
                                             <asp:TextBox ID="txtCreditMakePaymentEditAmount" runat="server" CssClass="form-control" TextMode="Number"></asp:TextBox>
@@ -607,7 +613,17 @@
                                                 Display="Dynamic" ControlToValidate="txtCreditMakePaymentEditAmount" ForeColor="Red">
                                             </asp:RequiredFieldValidator>
                                         </div>
-                                    </div>                                    
+                                    </div> -->
+                                    <div class="form-group text-center">
+                                        <asp:Label runat="server" ID="lblCreditMakePaymentEditWarning" ForeColor="Red" Font-Bold="true" Font-Size="Large" Text=""></asp:Label>
+                                    </div>
+                                    <div class="form-group">
+                                        <div class="col-sm-6 col-sm-offset-4">
+                                            <asp:Button runat="server" CssClass="btn btn-primary" Text="Update" OnClick="btnUpdateCreditPaymentDetails_Click" />
+                                            <asp:Button runat="server" CssClass="btn btn-primary" Text="Clear" OnClick="btnClearCreditPaymentDetails_Click" />                                   
+                                        </div>                                        
+                                    </div>
+                                  </div>                           
                                 </asp:View>
                             </asp:MultiView>
                         <br /><br />                        
@@ -711,6 +727,8 @@
                                     <asp:Label ID="lblDebitPaymentSucessful" runat="server" Font-Size="Large"></asp:Label>
                                 </div>
                             </div>
+                            <asp:Button runat="server" CssClass="btn btn-primary" Text="Edit" OnClick="btnEditDebitPaymentDetails_Click" />
+                            <asp:Button runat="server" CssClass="btn btn-primary" Text="Confirm" OnClick="btnConfirmDebitPaymentDetails_Click" />
                             </asp:View>
                             <asp:View ID="MakePaymentDebitMultiViewEdit" runat="server">
                                 <div class="form-group">
@@ -719,7 +737,7 @@
                                             <asp:TextBox ID="txtDebitMakePaymentEditFirstName" runat="server" CssClass="form-control text-left"></asp:TextBox>
                                         </div>
                                         <div class="col-sm-3">
-                                            <asp:RequiredFieldValidator ID="RequiredFieldValidator20" runat="server"
+                                            <asp:RequiredFieldValidator ID="revDebitMakePaymentEditFirstName" runat="server"
                                                 ErrorMessage="First name is required" CssClass="text-danger"
                                                 Display="Dynamic" ControlToValidate="txtDebitMakePaymentEditFirstName" ForeColor="Red"></asp:RequiredFieldValidator>
                                         </div>
@@ -730,7 +748,7 @@
                                             <asp:TextBox ID="txtDebitMakePaymentEditLastName" runat="server" CssClass="form-control"></asp:TextBox>
                                         </div>
                                         <div class="col-sm-4">
-                                            <asp:RequiredFieldValidator ID="RequiredFieldValidator21" runat="server"
+                                            <asp:RequiredFieldValidator ID="revDebitMakePaymentEditLastName" runat="server"
                                                 ErrorMessage="Last name is required" CssClass="text-danger"
                                                 Display="Dynamic" ControlToValidate="txtDebitMakePaymentEditLastName" ForeColor="Red"></asp:RequiredFieldValidator>
                                         </div>
@@ -741,10 +759,10 @@
                                             <asp:TextBox ID="txtDebitMakePaymentEditPhoneNumber" runat="server" CssClass="form-control" TextMode="Phone"></asp:TextBox>
                                         </div>
                                         <div class="col-sm-4">
-                                            <asp:RequiredFieldValidator ID="RequiredFieldValidator22" runat="server"
+                                            <asp:RequiredFieldValidator ID="revDebitMakePaymentEditPhoneNumber" runat="server"
                                                 ErrorMessage="Phone number is required." CssClass="text-danger"
                                                 Display="Dynamic" ControlToValidate="txtDebitMakePaymentEditPhoneNumber" ForeColor="Red"></asp:RequiredFieldValidator>
-                                            <asp:RegularExpressionValidator ID="RegularExpressionValidator5" runat="server"
+                                            <asp:RegularExpressionValidator ID="regDebitMakePaymentEditPhoneNumber" runat="server"
                                                 ControlToValidate="txtCreditMakePaymentEditPhoneNumber" ErrorMessage="Use this format: 999-999-9999"
                                                 ValidationExpression="((\(\d{3}\) ?)|(\d{3}-))?\d{3}-\d{4}" CssClass="text-danger"
                                                 Display="Dynamic" ForeColor="Red"></asp:RegularExpressionValidator>
@@ -756,10 +774,10 @@
                                             <asp:TextBox ID="txtDebitMakePaymentEditEmail" runat="server" CssClass="form-control" TextMode="Email"></asp:TextBox>
                                         </div>
                                         <div class="col-sm-4">
-                                            <asp:RequiredFieldValidator ID="RequiredFieldValidator23" runat="server"
+                                            <asp:RequiredFieldValidator ID="revDebitMakePaymentEditEmail" runat="server"
                                                 ErrorMessage="Email is required" CssClass="text-danger"
                                                 Display="Dynamic" ControlToValidate="txtDebitMakePaymentEditEmail" ForeColor="Red"></asp:RequiredFieldValidator>
-                                            <asp:RegularExpressionValidator ID="RegularExpressionValidator6" runat="server"
+                                            <asp:RegularExpressionValidator ID="regDebitMakePaymentEditEmail" runat="server"
                                                 ControlToValidate="txtDebitMakePaymentEditEmail" ErrorMessage="Must be a valid email address"
                                                 ValidationExpression="\w+([-+.']\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*" CssClass="text-danger"
                                                 Display="Dynamic" ForeColor="Red"></asp:RegularExpressionValidator>
@@ -771,7 +789,7 @@
                                             <asp:TextBox ID="txtDebitMakePaymentEditDOB" runat="server" CssClass="form-control">mm/dd/yyyy</asp:TextBox>
                                         </div>
                                         <div class="col-sm-4">
-                                            <asp:RegularExpressionValidator ID="RegularExpressionValidator7" runat="server"
+                                            <asp:RegularExpressionValidator ID="revDebitMakePaymentEditDOB" runat="server"
                                                 ErrorMessage="Date of birth" CssClass="text-danger"
                                                 Display="Dynamic" ValidationExpression="[01]?\d\/[0-3]\d/\d{4}"
                                                 ControlToValidate="txtDebitMakePaymentEditDOB" ForeColor="Red">Use this format: mm/dd/yyyy</asp:RegularExpressionValidator>
@@ -783,7 +801,7 @@
                                             <asp:TextBox ID="txtDebitMakePaymentEditAddress" runat="server" CssClass="form-control"></asp:TextBox>
                                         </div>
                                         <div class="col-sm-4">
-                                            <asp:RequiredFieldValidator ID="RequiredFieldValidator24" runat="server"
+                                            <asp:RequiredFieldValidator ID="revDebitMakePaymentEditAddress" runat="server"
                                                 ErrorMessage="Street Address is required" CssClass="text-danger"
                                                 Display="Dynamic" ControlToValidate="txtDebitMakePaymentEditAddress" ForeColor="Red"></asp:RequiredFieldValidator>
                                         </div>
@@ -794,7 +812,7 @@
                                             <asp:TextBox ID="txtDebitMakePaymentEditCity" runat="server" CssClass="form-control"></asp:TextBox>
                                         </div>
                                         <div class="col-sm-4">
-                                            <asp:RequiredFieldValidator ID="RequiredFieldValidator25" runat="server"
+                                            <asp:RequiredFieldValidator ID="revDebitMakePaymentEditCity" runat="server"
                                                 ErrorMessage="City is required" CssClass="text-danger"
                                                 Display="Dynamic" ControlToValidate="txtDebitMakePaymentEditCity" ForeColor="Red"></asp:RequiredFieldValidator>
                                         </div>
@@ -814,12 +832,12 @@
                                             <asp:TextBox ID="txtDebitMakePaymentEditZip" runat="server" CssClass="form-control"></asp:TextBox>
                                         </div>
                                         <div class="col-sm-4">
-                                            <asp:RequiredFieldValidator ID="RequiredFieldValidator26" runat="server"
+                                            <asp:RequiredFieldValidator ID="revDebitMakePaymentEditZip" runat="server"
                                                 ErrorMessage="Zip is required" CssClass="text-danger"
                                                 Display="Dynamic" ControlToValidate="txtDebitMakePaymentEditZip" ForeColor="Red"></asp:RequiredFieldValidator>
-                                            <asp:RegularExpressionValidator ID="RegularExpressionValidator8" runat="server"
-                                                ErrorMessage="Use this format: 00000-0000" CssClass="text-danger"
-                                                Display="Dynamic" ControlToValidate="txtDebitMakePaymentEditZip" ValidationExpression="\d{5}(-\d{4})?" ForeColor="Red"></asp:RegularExpressionValidator>
+                                            <asp:RegularExpressionValidator ID="regDebitMakePaymentEditZip" runat="server"
+                                                ErrorMessage="Use this format: 00000" CssClass="text-danger"
+                                                Display="Dynamic" ControlToValidate="txtDebitMakePaymentEditZip" ValidationExpression="\d{5}" ForeColor="Red"></asp:RegularExpressionValidator>
                                         </div>
                                     </div>
                                     <div class="form-group">
@@ -831,9 +849,9 @@
                                             </asp:DropDownList>
                                         </div>
                                         <div class="col-sm-4">
-                                            <asp:RequiredFieldValidator ID="RequiredFieldValidator27" runat="server"
+                                         <!--   <asp:RequiredFieldValidator ID="RequiredFieldValidator27" runat="server"
                                                 ErrorMessage="Student type is required" CssClass="text-danger"
-                                                Display="Dynamic" ControlToValidate="ddltDebitMakePaymentEditStudentType" ForeColor="Red"></asp:RequiredFieldValidator>
+                                                Display="Dynamic" ControlToValidate="ddltDebitMakePaymentEditStudentType" ForeColor="Red"></asp:RequiredFieldValidator> -->
                                         </div>
                                     </div>
                                     <div class="form-group">
@@ -842,7 +860,7 @@
                                                 <asp:TextBox ID="txtDebitMakePaymentEditNameOnCard" runat="server" CssClass="form-control"></asp:TextBox>
                                            </div>
                                            <div class="col-sm-3">
-                                                <asp:RequiredFieldValidator ID="RequiredFieldValidator28" runat="server"
+                                                <asp:RequiredFieldValidator ID="revDebitMakePaymentEditNameOnCard" runat="server"
                                                     ErrorMessage="Name on the Card is required" CssClass="text-danger"
                                                     Display="Dynamic" ControlToValidate="txtDebitMakePaymentEditNameOnCard" ForeColor="Red"></asp:RequiredFieldValidator>
                                             </div>
@@ -853,11 +871,11 @@
                                             <asp:TextBox ID="txtDebitMakePaymentEditCardNumber" runat="server" CssClass="form-control"></asp:TextBox>
                                         </div>                                                            
                                         <div class="col-sm-3">
-                                            <asp:RequiredFieldValidator ID="RequiredFieldValidator29" runat="server"
+                                            <asp:RequiredFieldValidator ID="revDebitMakePaymentEditCardNumber" runat="server"
                                                 ErrorMessage="Card Number is required" CssClass="text-danger"
                                                 Display="Dynamic" ControlToValidate="txtDebitMakePaymentEditCardNumber" ForeColor="Red">
                                             </asp:RequiredFieldValidator>
-                                            <asp:RegularExpressionValidator ID="RegularExpressionValidator9" runat="server" 
+                                            <asp:RegularExpressionValidator ID="regDebitMakePaymentEditCardNumber" runat="server" 
                                                 ControlToValidate="txtDebitMakePaymentEditCardNumber" ErrorMessage="Use this format: xxxx-xxxx-xxxx-xxxx" 
                                                 ValidationExpression="\d{4}-\d{4}-\d{4}-\d{4}" CssClass="text-danger" 
                                                 Display="Dynamic" ForeColor="Red">
@@ -870,7 +888,7 @@
                                             <asp:TextBox ID="txtDebitMakePaymentEditExpiryDate" runat="server" CssClass="form-control" TextMode="Date" ></asp:TextBox>
                                         </div>
                                         <div class="col-sm-2">
-                                            <asp:RequiredFieldValidator ID="RequiredFieldValidator30" runat="server"
+                                            <asp:RequiredFieldValidator ID="revDebitMakePaymentEditExpiryDate" runat="server"
                                                 ErrorMessage="Expiry Date is required" CssClass="text-danger"
                                                 Display="Dynamic" ControlToValidate="txtDebitMakePaymentEditExpiryDate" ForeColor="Red">
                                             </asp:RequiredFieldValidator>
@@ -882,16 +900,19 @@
                                             <asp:TextBox ID="txtDebitMakePaymentEditCVV" runat="server" CssClass="form-control" MaxLength="3"></asp:TextBox>
                                         </div>
                                         <div class="col-sm-2">
-                                            <asp:RequiredFieldValidator ID="RequiredFieldValidator31" runat="server"
+                                            <asp:RequiredFieldValidator ID="revDebitMakePaymentEditCVV" runat="server"
                                                 ErrorMessage="CVV is required" CssClass="text-danger"
                                                 Display="Dynamic" ControlToValidate="txtDebitMakePaymentEditCVV" ForeColor="Red">
                                             </asp:RequiredFieldValidator>
-                                            <asp:RangeValidator ID="RangeValidator3" runat="server" 
+                                            <asp:RegularExpressionValidator ID="reguDebitMakePaymentEditCVV" runat="server"
+                                                ErrorMessage="Use this format: 000" CssClass="text-danger"
+                                                Display="Dynamic" ControlToValidate="txtDebitMakePaymentEditCVV" ValidationExpression="\d{3}" ForeColor="Red"></asp:RegularExpressionValidator>
+                                      <!--      <asp:RangeValidator ID="regfDebitMakePaymentEditCVV" runat="server" 
                                                 ControlToValidate="txtDebitMakePaymentEditCVV" Display="Dynamic" MaximumValue="999" 
-                                                MinimumValue="111" ErrorMessage="Should be of type xxx"></asp:RangeValidator>
+                                                MinimumValue="111" ErrorMessage="Should be of type xxx"></asp:RangeValidator> -->
                                         </div>
                                      </div>
-                                    <div class="form-group">
+                                 <!--   <div class="form-group">
                                         <label class="control-label col-sm-3">Amount:</label>
                                         <div class="col-sm-4">
                                             <asp:TextBox ID="txtDebitMakePaymentEditAmount" runat="server" CssClass="form-control" TextMode="Number"></asp:TextBox>
@@ -902,7 +923,12 @@
                                                 Display="Dynamic" ControlToValidate="txtDebitMakePaymentEditAmount" ForeColor="Red">
                                             </asp:RequiredFieldValidator>
                                         </div>
-                                    </div>
+                                    </div> -->
+                                <div class="form-group text-center">
+                                    <asp:Label runat="server" ID="lblDebitMakePaymentEditWarning" ForeColor="Red" Font-Bold="true" Font-Size="Large"></asp:Label>
+                                </div>
+                                <asp:Button runat="server" CssClass="btn btn-primary" Text="Update" OnClick="btnUpdateDebitPaymentDetails_Click" />
+                                <asp:Button runat="server" CssClass="btn btn-primary" Text="Clear" OnClick="btnClearDebitPaymentDetails_Click" />
                             </asp:View>
                         </asp:MultiView>
                     <%} else{ %>
@@ -999,6 +1025,8 @@
                                     <asp:Label ID="lblCashPaymentSucessful" Font-Size="Large" runat="server"></asp:Label>
                                 </div>
                             </div>
+                            <asp:Button runat="server" CssClass="btn btn-primary" Text="Edit" OnClick="btnEditCashPaymentDetails_Click" />
+                            <asp:Button runat="server" CssClass="btn btn-primary" Text="Confirm" OnClick="btnConfirmCashPaymentDetails_Click" />
                             </asp:View>
                             <asp:View ID="MakePaymentCashMultiViewEdit" runat="server">
                                 <div class="form-group">
@@ -1007,7 +1035,7 @@
                                             <asp:TextBox ID="txtCashMakePaymentEditFirstName" runat="server" CssClass="form-control text-left"></asp:TextBox>
                                         </div>
                                         <div class="col-sm-3">
-                                            <asp:RequiredFieldValidator ID="RequiredFieldValidator33" runat="server"
+                                            <asp:RequiredFieldValidator ID="revCashMakePaymentEditFirstName" runat="server"
                                                 ErrorMessage="First name is required" CssClass="text-danger"
                                                 Display="Dynamic" ControlToValidate="txtCashMakePaymentEditFirstName" ForeColor="Red"></asp:RequiredFieldValidator>
                                         </div>
@@ -1018,7 +1046,7 @@
                                             <asp:TextBox ID="txtCashMakePaymentEditLastName" runat="server" CssClass="form-control"></asp:TextBox>
                                         </div>
                                         <div class="col-sm-4">
-                                            <asp:RequiredFieldValidator ID="RequiredFieldValidator34" runat="server"
+                                            <asp:RequiredFieldValidator ID="revCashMakePaymentEditLastName" runat="server"
                                                 ErrorMessage="Last name is required" CssClass="text-danger"
                                                 Display="Dynamic" ControlToValidate="txtCashMakePaymentEditLastName" ForeColor="Red"></asp:RequiredFieldValidator>
                                         </div>
@@ -1029,10 +1057,10 @@
                                             <asp:TextBox ID="txtCashMakePaymentEditPhoneNumber" runat="server" CssClass="form-control" TextMode="Phone"></asp:TextBox>
                                         </div>
                                         <div class="col-sm-4">
-                                            <asp:RequiredFieldValidator ID="RequiredFieldValidator35" runat="server"
+                                            <asp:RequiredFieldValidator ID="revCashMakePaymentEditPhoneNumber" runat="server"
                                                 ErrorMessage="Phone number is required." CssClass="text-danger"
                                                 Display="Dynamic" ControlToValidate="txtCashMakePaymentEditPhoneNumber" ForeColor="Red"></asp:RequiredFieldValidator>
-                                            <asp:RegularExpressionValidator ID="RegularExpressionValidator10" runat="server"
+                                            <asp:RegularExpressionValidator ID="regCashMakePaymentEditPhoneNumber" runat="server"
                                                 ControlToValidate="txtCashMakePaymentEditPhoneNumber" ErrorMessage="Use this format: 999-999-9999"
                                                 ValidationExpression="((\(\d{3}\) ?)|(\d{3}-))?\d{3}-\d{4}" CssClass="text-danger"
                                                 Display="Dynamic" ForeColor="Red"></asp:RegularExpressionValidator>
@@ -1044,10 +1072,10 @@
                                             <asp:TextBox ID="txtCashMakePaymentEditEmail" runat="server" CssClass="form-control" TextMode="Email"></asp:TextBox>
                                         </div>
                                         <div class="col-sm-4">
-                                            <asp:RequiredFieldValidator ID="RequiredFieldValidator36" runat="server"
+                                            <asp:RequiredFieldValidator ID="revCashMakePaymentEditEmail" runat="server"
                                                 ErrorMessage="Email is required" CssClass="text-danger"
                                                 Display="Dynamic" ControlToValidate="txtCashMakePaymentEditEmail" ForeColor="Red"></asp:RequiredFieldValidator>
-                                            <asp:RegularExpressionValidator ID="RegularExpressionValidator11" runat="server"
+                                            <asp:RegularExpressionValidator ID="regCashMakePaymentEditEmail" runat="server"
                                                 ControlToValidate="txtCashMakePaymentEditEmail" ErrorMessage="Must be a valid email address"
                                                 ValidationExpression="\w+([-+.']\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*" CssClass="text-danger"
                                                 Display="Dynamic" ForeColor="Red"></asp:RegularExpressionValidator>
@@ -1059,7 +1087,7 @@
                                             <asp:TextBox ID="txtCashMakePaymentEditDOB" runat="server" CssClass="form-control">mm/dd/yyyy</asp:TextBox>
                                         </div>
                                         <div class="col-sm-4">
-                                            <asp:RegularExpressionValidator ID="RegularExpressionValidator12" runat="server"
+                                            <asp:RegularExpressionValidator ID="revCashMakePaymentEditDOB" runat="server"
                                                 ErrorMessage="Date of birth" CssClass="text-danger"
                                                 Display="Dynamic" ValidationExpression="[01]?\d\/[0-3]\d/\d{4}"
                                                 ControlToValidate="txtCashMakePaymentEditDOB" ForeColor="Red">Use this format: mm/dd/yyyy</asp:RegularExpressionValidator>
@@ -1071,7 +1099,7 @@
                                             <asp:TextBox ID="txtCashMakePaymentEditAddress" runat="server" CssClass="form-control"></asp:TextBox>
                                         </div>
                                         <div class="col-sm-4">
-                                            <asp:RequiredFieldValidator ID="RequiredFieldValidator37" runat="server"
+                                            <asp:RequiredFieldValidator ID="revCashMakePaymentEditAddress" runat="server"
                                                 ErrorMessage="Street Address is required" CssClass="text-danger"
                                                 Display="Dynamic" ControlToValidate="txtCashMakePaymentEditAddress" ForeColor="Red"></asp:RequiredFieldValidator>
                                         </div>
@@ -1082,7 +1110,7 @@
                                             <asp:TextBox ID="txtCashMakePaymentEditCity" runat="server" CssClass="form-control"></asp:TextBox>
                                         </div>
                                         <div class="col-sm-4">
-                                            <asp:RequiredFieldValidator ID="RequiredFieldValidator38" runat="server"
+                                            <asp:RequiredFieldValidator ID="revCashMakePaymentEditCity" runat="server"
                                                 ErrorMessage="City is required" CssClass="text-danger"
                                                 Display="Dynamic" ControlToValidate="txtCashMakePaymentEditCity" ForeColor="Red"></asp:RequiredFieldValidator>
                                         </div>
@@ -1102,12 +1130,12 @@
                                             <asp:TextBox ID="txtCashMakePaymentEditZip" runat="server" CssClass="form-control"></asp:TextBox>
                                         </div>
                                         <div class="col-sm-4">
-                                            <asp:RequiredFieldValidator ID="RequiredFieldValidator39" runat="server"
+                                            <asp:RequiredFieldValidator ID="revCashMakePaymentEditZip" runat="server"
                                                 ErrorMessage="Zip is required" CssClass="text-danger"
                                                 Display="Dynamic" ControlToValidate="txtCashMakePaymentEditZip" ForeColor="Red"></asp:RequiredFieldValidator>
-                                            <asp:RegularExpressionValidator ID="RegularExpressionValidator13" runat="server"
-                                                ErrorMessage="Use this format: 00000-0000" CssClass="text-danger"
-                                                Display="Dynamic" ControlToValidate="txtCashMakePaymentEditZip" ValidationExpression="\d{5}(-\d{4})?" ForeColor="Red"></asp:RegularExpressionValidator>
+                                            <asp:RegularExpressionValidator ID="regCashMakePaymentEditZip" runat="server"
+                                                ErrorMessage="Use this format: 00000" CssClass="text-danger"
+                                                Display="Dynamic" ControlToValidate="txtCashMakePaymentEditZip" ValidationExpression="\d{5}?" ForeColor="Red"></asp:RegularExpressionValidator>
                                         </div>
                                     </div>
                                     <div class="form-group">
@@ -1118,10 +1146,10 @@
                                                 <asp:ListItem>Graduate</asp:ListItem>
                                             </asp:DropDownList>
                                         </div>
-                                        <div class="col-sm-4">
-                                            <asp:RequiredFieldValidator ID="RequiredFieldValidator40" runat="server"
+                                      <div class="col-sm-4">
+                                           <!-- <asp:RequiredFieldValidator ID="RequiredFieldValidator40" runat="server"
                                                 ErrorMessage="Student type is required" CssClass="text-danger"
-                                                Display="Dynamic" ControlToValidate="ddlCashMakePaymentEditStudentType" ForeColor="Red"></asp:RequiredFieldValidator>
+                                                Display="Dynamic" ControlToValidate="ddlCashMakePaymentEditStudentType" ForeColor="Red"></asp:RequiredFieldValidator> -->
                                         </div>
                                     </div>
                                     <div class="form-group">
@@ -1141,16 +1169,16 @@
                                     <div class="form-group">
                                         <label class="control-label col-sm-3">Payment Date:</label>
                                         <div class="col-sm-5">
-                                            <asp:TextBox ID="txtCashMakePaymentEditPaymentDate" runat="server" CssClass="form-control">mm/dd/yyyy</asp:TextBox>
+                                            <asp:TextBox ID="txtCashMakePaymentEditPaymentDate" runat="server" CssClass="form-control" TextMode="Date">mm/dd/yyyy</asp:TextBox>
                                         </div>
                                         <div class="col-sm-4">
-                                            <asp:RegularExpressionValidator ID="RegularExpressionValidator14" runat="server"
+                                            <asp:RegularExpressionValidator ID="revCashMakePaymentEditPaymentDate" runat="server"
                                                 ErrorMessage="Date of birth" CssClass="text-danger"
                                                 Display="Dynamic" ValidationExpression="[01]?\d\/[0-3]\d/\d{4}"
                                                 ControlToValidate="txtCashMakePaymentEditPaymentDate" ForeColor="Red">Use this format: mm/dd/yyyy</asp:RegularExpressionValidator>
                                         </div>
                                     </div>
-                                    <div class="form-group">
+                                 <!--   <div class="form-group">
                                         <label class="control-label col-sm-3">Amount:</label>
                                         <div class="col-sm-4">
                                             <asp:TextBox ID="txtCashMakePaymentEditAmount" runat="server" CssClass="form-control" TextMode="Number"></asp:TextBox>
@@ -1161,30 +1189,15 @@
                                                 Display="Dynamic" ControlToValidate="txtCashMakePaymentEditAmount" ForeColor="Red">
                                             </asp:RequiredFieldValidator>
                                         </div>
-                                    </div>
+                                    </div> -->
+                                <div class="form-group text-center">
+                                    <asp:Label runat="server" ID="lblCashMakePaymentEditWarning" ForeColor="Red" Font-Bold="true" Font-Size="Large"></asp:Label>
+                                </div>
+                                <asp:Button runat="server" CssClass="btn btn-primary" Text="Update" OnClick="btnUpdateCashPaymentDetails_Click" />
+                                <asp:Button runat="server" CssClass="btn btn-primary" Text="Clear" OnClick="btnClearCashPaymentDetails_Click" />
                             </asp:View>
                         </asp:MultiView>
-                    <% } %>
-                        <div class="col-sm-offset-4">
-                            <% if (MakePaymentCreditMultiView.ActiveViewIndex == 0) { %>
-                                <asp:Button runat="server" CssClass="btn btn-primary" Text="Edit" OnClick="btnEditPaymentDetails_Click" />
-                            <% } else if (MakePaymentDebitMultiView.ActiveViewIndex == 0) { %>
-                                <asp:Button runat="server" CssClass="btn btn-primary" Text="Edit" OnClick="btnEditPaymentDetails_Click" />
-                            <% } else if(MakePaymentCashMultiView.ActiveViewIndex == 0) { %>
-                                <asp:Button runat="server" CssClass="btn btn-primary" Text="Edit" OnClick="btnEditPaymentDetails_Click" />
-                            <% } else { %>
-                                <asp:Button runat="server" CssClass="btn btn-primary" Text="Update" OnClick="btnUpdatePaymentDetails_Click" />
-                                <asp:Button runat="server" CssClass="btn btn-primary" Text="Clear" OnClick="btnClearPaymentDetails_Click" />
-                            <% } %>
-
-                            <% if (MakePaymentCreditMultiView.ActiveViewIndex == 0) { %>
-                                <asp:Button runat="server" CssClass="btn btn-primary" Text="Confirm" OnClick="btnConfirmPaymentDetails_Click" />
-                            <% } else if (MakePaymentDebitMultiView.ActiveViewIndex == 0) { %>
-                                <asp:Button runat="server" CssClass="btn btn-primary" Text="Confirm" OnClick="btnConfirmPaymentDetails_Click" />
-                            <% } else if(MakePaymentCashMultiView.ActiveViewIndex == 0) { %>
-                                <asp:Button runat="server" CssClass="btn btn-primary" Text="Confirm" OnClick="btnConfirmPaymentDetails_Click" />
-                            <% } %>                            
-                        </div>
+                    <% } %>                    
                     </div>                                                         
                 </asp:View>
                 <asp:View ID="PaymentHistoryView" runat="server">

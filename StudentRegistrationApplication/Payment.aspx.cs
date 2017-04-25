@@ -275,12 +275,9 @@ namespace StudentRegistrationApplication
                 }
             }
         }
-
-        protected void btnEditPaymentDetails_Click(object sender, EventArgs e)
+        protected void btnEditCreditPaymentDetails_Click(object sender, EventArgs e)
         {
             MakePaymentCreditMultiView.ActiveViewIndex = 1;
-            MakePaymentDebitMultiView.ActiveViewIndex = 1;
-            MakePaymentCashMultiView.ActiveViewIndex = 1;
 
             string CS = ConfigurationManager.ConnectionStrings["UserInfoConnectionString"].ConnectionString;
             using (SqlConnection con = new SqlConnection(CS))
@@ -306,8 +303,25 @@ namespace StudentRegistrationApplication
                     txtCreditMakePaymentEditCardNumber.Text = dr[12].ToString();
                     txtCreditMakePaymentEditExpiryDate.Text = dr[13].ToString();
                     txtCreditMakePaymentEditCVV.Text = dr[14].ToString();
+                }
+            }
+        }
+        protected void btnEditDebitPaymentDetails_Click(object sender, EventArgs e)
+        {
+            MakePaymentDebitMultiView.ActiveViewIndex = 1;
 
+            string CS = ConfigurationManager.ConnectionStrings["UserInfoConnectionString"].ConnectionString;
+            using (SqlConnection con = new SqlConnection(CS))
+            {
+                SqlCommand cmd = new SqlCommand();
+                cmd.CommandText = "Select PaymentMethod, Student_FirstName, Student_LastName, Student_ContactNo, Student_email, Student_DOB, Student_StAddress, Student_City, Student_State, Student_Zipcode, Student_Type, NameOnCard, CardNumber, ExpiryDate, CVV from StudentData where Student_UserID='" + username + "'";
 
+                cmd.Connection = con;
+                con.Open();
+                SqlDataReader dr = cmd.ExecuteReader();
+
+                if (dr.Read())
+                {
                     txtDebitMakePaymentEditFirstName.Text = dr[1].ToString();
                     txtDebitMakePaymentEditLastName.Text = dr[2].ToString();
                     txtDebitMakePaymentEditPhoneNumber.Text = dr[3].ToString();
@@ -320,8 +334,25 @@ namespace StudentRegistrationApplication
                     txtDebitMakePaymentEditCardNumber.Text = dr[12].ToString();
                     txtDebitMakePaymentEditExpiryDate.Text = dr[13].ToString();
                     txtDebitMakePaymentEditCVV.Text = dr[14].ToString();
+                }
+            }
+        }
+        protected void btnEditCashPaymentDetails_Click(object sender, EventArgs e)
+        {
+            MakePaymentCashMultiView.ActiveViewIndex = 1;
 
+            string CS = ConfigurationManager.ConnectionStrings["UserInfoConnectionString"].ConnectionString;
+            using (SqlConnection con = new SqlConnection(CS))
+            {
+                SqlCommand cmd = new SqlCommand();
+                cmd.CommandText = "Select PaymentMethod, Student_FirstName, Student_LastName, Student_ContactNo, Student_email, Student_DOB, Student_StAddress, Student_City, Student_State, Student_Zipcode, Student_Type, NameOnCard, CardNumber, ExpiryDate, CVV from StudentData where Student_UserID='" + username + "'";
 
+                cmd.Connection = con;
+                con.Open();
+                SqlDataReader dr = cmd.ExecuteReader();
+
+                if (dr.Read())
+                {
                     txtCashMakePaymentEditFirstName.Text = dr[1].ToString();
                     txtCashMakePaymentEditLastName.Text = dr[2].ToString();
                     txtCashMakePaymentEditPhoneNumber.Text = dr[3].ToString();
@@ -333,335 +364,395 @@ namespace StudentRegistrationApplication
                 }
             }
         }
-        protected void btnUpdatePaymentDetails_Click(object sender, EventArgs e)
+        protected void btnUpdateCreditPaymentDetails_Click(object sender, EventArgs e)
         {
-            if (IsValid)
-            {
-                if (MakePaymentCreditMultiView.ActiveViewIndex == 1)
-                {
-
-                    string CS = ConfigurationManager.ConnectionStrings["UserInfoConnectionString"].ConnectionString;
-                    using (SqlConnection con = new SqlConnection(CS))
-                    {
-                        SqlCommand cmd = new SqlCommand();
-                        cmd.CommandText = "UPDATE StudentData SET Student_FirstName = @fname, Student_LastName = @lname, Student_ContactNo = @phone, Student_email = @email, Student_DOB = @dob, Student_StAddress = @addr, Student_City = @city, Student_State = @state, Student_Zipcode = @zip, Student_Type = @type, NameOnCard = @NameOnCard, CardNumber = @CardNumber, ExpiryDate = @ExpiryDate, CVV = @CVV where Student_UserID = '" + username + "'";
-                        cmd.Parameters.AddWithValue("@fname", txtCreditMakePaymentEditFirstName.Text);
-                        cmd.Parameters.AddWithValue("@lname", txtCreditMakePaymentEditLastName.Text);
-                        cmd.Parameters.AddWithValue("@phone", txtCreditMakePaymentEditPhoneNumber.Text);
-                        cmd.Parameters.AddWithValue("@email", txtCreditMakePaymentEditEmail.Text);
-                        cmd.Parameters.AddWithValue("@dob", txtCreditMakePaymentEditDOB.Text);
-                        cmd.Parameters.AddWithValue("@addr", txtCreditMakePaymentEditAddress.Text);
-                        cmd.Parameters.AddWithValue("@city", txtCreditMakePaymentEditCity.Text);
-                        cmd.Parameters.AddWithValue("@state", ddlCreditMakePaymentEditState.SelectedValue);
-                        cmd.Parameters.AddWithValue("@zip", txtCreditMakePaymentEditZip.Text);
-                        cmd.Parameters.AddWithValue("@type", ddlCreditMakePaymentEditStudentType.SelectedValue);
-                        cmd.Parameters.AddWithValue("@NameOnCard", txtCreditMakePaymentEditNameOnCard.Text);
-                        cmd.Parameters.AddWithValue("@CardNumber", txtCreditMakePaymentEditCardNumber.Text);
-                        cmd.Parameters.AddWithValue("@ExpiryDate", txtCreditMakePaymentEditExpiryDate.Text);
-                        cmd.Parameters.AddWithValue("@CVV", txtCreditMakePaymentEditCVV.Text);
-
-                        cmd.Connection = con;
-                        con.Open();
-                        cmd.ExecuteNonQuery();
-                    }
-                }
-                else if (MakePaymentDebitMultiView.ActiveViewIndex == 1)
-                {
-                    string CS = ConfigurationManager.ConnectionStrings["UserInfoConnectionString"].ConnectionString;
-                    using (SqlConnection con = new SqlConnection(CS))
-                    {
-                        SqlCommand cmd = new SqlCommand();
-                        cmd.CommandText = "UPDATE StudentData SET Student_FirstName = @fname, Student_LastName = @lname, Student_ContactNo = @phone, Student_email = @email, Student_DOB = @dob, Student_StAddress = @addr, Student_City = @city, Student_State = @state, Student_Zipcode = @zip, Student_Type = @type, NameOnCard = @NameOnCard, CardNumber = @CardNumber, ExpiryDate = @ExpiryDate, CVV = @CVV, Amount = @DebitAmount where Student_UserID = '" + username + "'";
-                        cmd.Parameters.AddWithValue("@fname", txtDebitMakePaymentEditFirstName.Text);
-                        cmd.Parameters.AddWithValue("@lname", txtDebitMakePaymentEditLastName.Text);
-                        cmd.Parameters.AddWithValue("@phone", txtDebitMakePaymentEditPhoneNumber.Text);
-                        cmd.Parameters.AddWithValue("@email", txtDebitMakePaymentEditEmail.Text);
-                        cmd.Parameters.AddWithValue("@dob", txtDebitMakePaymentEditDOB.Text);
-                        cmd.Parameters.AddWithValue("@addr", txtDebitMakePaymentEditAddress.Text);
-                        cmd.Parameters.AddWithValue("@city", txtDebitMakePaymentEditCity.Text);
-                        cmd.Parameters.AddWithValue("@state", ddlDebitMakePaymentEditState.SelectedValue);
-                        cmd.Parameters.AddWithValue("@zip", txtDebitMakePaymentEditZip.Text);
-                        cmd.Parameters.AddWithValue("@type", ddltDebitMakePaymentEditStudentType.SelectedValue);
-                        cmd.Parameters.AddWithValue("@NameOnCard", txtDebitMakePaymentEditNameOnCard.Text);
-                        cmd.Parameters.AddWithValue("@CardNumber", txtDebitMakePaymentEditCardNumber.Text);
-                        cmd.Parameters.AddWithValue("@ExpiryDate", txtDebitMakePaymentEditExpiryDate.Text);
-                        cmd.Parameters.AddWithValue("@CVV", txtDebitMakePaymentEditCVV.Text);
-                        cmd.Parameters.AddWithValue("@DebitAmount", txtDebitMakePaymentEditAmount.Text);
-                        cmd.Connection = con;
-                        con.Open();
-                        cmd.ExecuteNonQuery();
-                    }
-
-                }
-                else if (MakePaymentCashMultiView.ActiveViewIndex == 1)
-                {
-                    string CS = ConfigurationManager.ConnectionStrings["UserInfoConnectionString"].ConnectionString;
-                    using (SqlConnection con = new SqlConnection(CS))
-                    {
-                        SqlCommand cmd = new SqlCommand();
-                        cmd.CommandText = "UPDATE StudentData SET Student_FirstName = @fname, Student_LastName = @lname, Student_ContactNo = @phone, Student_email = @email, Student_DOB = @dob, Student_StAddress = @addr, Student_City = @city, Student_State = @state, Student_Zipcode = @zip, Student_Type = @type, PaymentDate = @paymentDate where Student_UserID = '" + username + "'";
-                        cmd.Parameters.AddWithValue("@fname", txtCashMakePaymentEditFirstName.Text);
-                        cmd.Parameters.AddWithValue("@lname", txtCashMakePaymentEditLastName.Text);
-                        cmd.Parameters.AddWithValue("@phone", txtCashMakePaymentEditPhoneNumber.Text);
-                        cmd.Parameters.AddWithValue("@email", txtCashMakePaymentEditEmail.Text);
-                        cmd.Parameters.AddWithValue("@dob", txtCashMakePaymentEditDOB.Text);
-                        cmd.Parameters.AddWithValue("@addr", txtCashMakePaymentEditAddress.Text);
-                        cmd.Parameters.AddWithValue("@city", txtCashMakePaymentCity.Text);
-                        cmd.Parameters.AddWithValue("@state", ddlCashMakePaymentEditState.SelectedValue);
-                        cmd.Parameters.AddWithValue("@zip", txtCashMakePaymentEditZip.Text);
-                        cmd.Parameters.AddWithValue("@type", ddlCashMakePaymentEditStudentType.SelectedValue);
-                        cmd.Parameters.AddWithValue("@paymentDate", txtCashMakePaymentEditPaymentDate.Text);
-                        cmd.Connection = con;
-                        con.Open();
-                        cmd.ExecuteNonQuery();
-                    }
-                }
-                MakePaymentCreditMultiView.ActiveViewIndex = 0;
-                MakePaymentDebitMultiView.ActiveViewIndex = 0;
-                MakePaymentCashMultiView.ActiveViewIndex = 0;
-            }
-        }
-
-
-        protected void btnClearPaymentDetails_Click(object sender, EventArgs e)
-        {
-            if (MakePaymentCreditMultiView.ActiveViewIndex == 1)
-            {
-                txtCreditMakePaymentEditAddress.Text = string.Empty;
-                txtCreditMakePaymentEditAmount.Text = string.Empty;
-                txtCreditMakePaymentEditCardNumber.Text = string.Empty;
-                txtCreditMakePaymentEditCity.Text = string.Empty;
-                txtCreditMakePaymentEditCVV.Text = string.Empty;
-                txtCreditMakePaymentEditDOB.Text = string.Empty;
-                txtCreditMakePaymentEditEmail.Text = string.Empty;
-                txtCreditMakePaymentEditExpiryDate.Text = string.Empty;
-                txtCreditMakePaymentEditFirstName.Text = string.Empty;
-                txtCreditMakePaymentEditLastName.Text = string.Empty;
-                txtCreditMakePaymentEditNameOnCard.Text = string.Empty;
-                txtCreditMakePaymentEditPhoneNumber.Text = string.Empty;
-                txtCreditMakePaymentEditZip.Text = string.Empty;
-            }
-            else if (MakePaymentDebitMultiView.ActiveViewIndex == 1)
-            {
-                txtDebitMakePaymentEditAddress.Text = string.Empty;
-                txtDebitMakePaymentEditAmount.Text = string.Empty;
-                txtDebitMakePaymentEditCardNumber.Text = string.Empty;
-                txtDebitMakePaymentEditCity.Text = string.Empty;
-                txtDebitMakePaymentEditCVV.Text = string.Empty;
-                txtDebitMakePaymentEditDOB.Text = string.Empty;
-                txtDebitMakePaymentEditEmail.Text = string.Empty;
-                txtDebitMakePaymentEditExpiryDate.Text = string.Empty;
-                txtDebitMakePaymentEditFirstName.Text = string.Empty;
-                txtDebitMakePaymentEditLastName.Text = string.Empty;
-                txtDebitMakePaymentEditNameOnCard.Text = string.Empty;
-                txtDebitMakePaymentEditPhoneNumber.Text = string.Empty;
-                txtDebitMakePaymentEditZip.Text = string.Empty;
-            }
-            else if (MakePaymentCashMultiView.ActiveViewIndex == 1)
-            {
-                txtCashMakePaymentEditAddress.Text = string.Empty;
-                txtCashMakePaymentEditAmount.Text = string.Empty;
-                txtCashMakePaymentEditCity.Text = string.Empty;
-                txtCashMakePaymentEditDOB.Text = string.Empty;
-                txtCashMakePaymentEditEmail.Text = string.Empty;
-                txtCashMakePaymentEditFirstName.Text = string.Empty;
-                txtCashMakePaymentEditLastName.Text = string.Empty;
-                txtCashMakePaymentEditPaymentDate.Text = string.Empty;
-                txtCashMakePaymentEditPhoneNumber.Text = string.Empty;
-                txtCashMakePaymentEditZip.Text = string.Empty;
-            }
-        }
-
-        protected void btnConfirmPaymentDetails_Click(object sender, EventArgs e)
-        {
-            string PaymentMethod = Convert.ToString(lblPaymentMethod.Text);
-            if (PaymentMethod == "Credit Card")
+            if((rfvCreditMakePaymentEditFirstName.IsValid == true) && 
+                (rfvCreditMakePaymentEditLastName.IsValid == true) && 
+                (rfvCreditMakePaymentEditPhoneNumber.IsValid == true) && 
+                (regCreditMakePaymentEditPhoneNumber.IsValid == true) && 
+                (rfvCreditMakePaymentEditEmail.IsValid == true) && 
+                (regCreditMakePaymentEditEmail.IsValid == true) && 
+                (regCreditMakePaymentEditDOB.IsValid == true) && 
+                (rfvCreditMakePaymentEditAddress.IsValid == true) && 
+                (rfvCreditMakePaymentEditCity.IsValid == true) && 
+                (rfvCreditMakePaymentEditZip.IsValid == true) && 
+                (regCreditMakePaymentEditZip.IsValid == true) && 
+                (revCreditMakePaymentEditNameOnCard.IsValid == true) && 
+                (revCreditMakePaymentEditCardNumber.IsValid == true) && 
+                (regCreditMakePaymentEditCardNumber.IsValid == true) && 
+                (revCreditMakePaymentEditExpiryDate.IsValid == true) && 
+                (revCreditMakePaymentEditCVV.IsValid == true) && 
+                (reguCreditMakePaymentEditCVV.IsValid == true))
             {
                 string CS = ConfigurationManager.ConnectionStrings["UserInfoConnectionString"].ConnectionString;
                 using (SqlConnection con = new SqlConnection(CS))
                 {
                     SqlCommand cmd = new SqlCommand();
-                    cmd.CommandText = "Select Amount, Student_UserID from StudentData where Student_UserID='" + username + "'";
+                    cmd.CommandText = "UPDATE StudentData SET Student_FirstName = @fname, Student_LastName = @lname, Student_ContactNo = @phone, Student_email = @email, Student_DOB = @dob, Student_StAddress = @addr, Student_City = @city, Student_State = @state, Student_Zipcode = @zip, Student_Type = @type, NameOnCard = @NameOnCard, CardNumber = @CardNumber, ExpiryDate = @ExpiryDate, CVV = @CVV where Student_UserID = '" + username + "'";
+                    cmd.Parameters.AddWithValue("@fname", txtCreditMakePaymentEditFirstName.Text);
+                    cmd.Parameters.AddWithValue("@lname", txtCreditMakePaymentEditLastName.Text);
+                    cmd.Parameters.AddWithValue("@phone", txtCreditMakePaymentEditPhoneNumber.Text);
+                    cmd.Parameters.AddWithValue("@email", txtCreditMakePaymentEditEmail.Text);
+                    cmd.Parameters.AddWithValue("@dob", txtCreditMakePaymentEditDOB.Text);
+                    cmd.Parameters.AddWithValue("@addr", txtCreditMakePaymentEditAddress.Text);
+                    cmd.Parameters.AddWithValue("@city", txtCreditMakePaymentEditCity.Text);
+                    cmd.Parameters.AddWithValue("@state", ddlCreditMakePaymentEditState.SelectedValue);
+                    cmd.Parameters.AddWithValue("@zip", txtCreditMakePaymentEditZip.Text);
+                    cmd.Parameters.AddWithValue("@type", ddlCreditMakePaymentEditStudentType.SelectedValue);
+                    cmd.Parameters.AddWithValue("@NameOnCard", txtCreditMakePaymentEditNameOnCard.Text);
+                    cmd.Parameters.AddWithValue("@CardNumber", txtCreditMakePaymentEditCardNumber.Text);
+                    cmd.Parameters.AddWithValue("@ExpiryDate", txtCreditMakePaymentEditExpiryDate.Text);
+                    cmd.Parameters.AddWithValue("@CVV", txtCreditMakePaymentEditCVV.Text);
 
                     cmd.Connection = con;
                     con.Open();
-                    SqlDataReader dr = cmd.ExecuteReader();
-                    
-                    if(dr.Read())
-                    {
-                        int Amount = Convert.ToInt32(dr[0].ToString());
-                        int AmountPaid = Convert.ToInt32(txtCreditMakePaymentAmount.Text);
-                        int DueAmount = Amount - AmountPaid;
-                        
-                        if(AmountPaid > Amount)
-                        {
-                            int ExtraAmount = AmountPaid - Amount;
-                            string CreditMakePaymentSaved;
-                            CreditMakePaymentSaved = "Your due amount is "+Amount+" and you are trying to pay "+ ExtraAmount + " extra!,";
-                            lblCreditPaymentSucessful.Text = CreditMakePaymentSaved.ToString();
-                            lblCreditPaymentSucessful.ForeColor = Color.Red;
-                        }
-                        else
-                        {
-                            string CS1 = ConfigurationManager.ConnectionStrings["UserInfoConnectionString"].ConnectionString;
-                            using (SqlConnection con1 = new SqlConnection(CS))
-                            {
-                                SqlCommand cmd1 = new SqlCommand();
-                                cmd1.CommandText = "INSERT INTO PaymentHistory (FirstName, LastName, PaymentDate, PaymentMethod, AmountPaid, DueAmount, Student_UserID) Values(@fname, @lname, @PaymentDate, @PaymentMethod, @AmountPaid, @Amount, @Student_UserID)";
-                                cmd1.Parameters.AddWithValue("@fName", txtCreditMakePaymentFirstName.Text);
-                                cmd1.Parameters.AddWithValue("@lname", txtCreditMakePaymentLastName.Text);
-                                cmd1.Parameters.AddWithValue("@PaymentDate", DateTime.Now.ToString());
-                                cmd1.Parameters.AddWithValue("@PaymentMethod", lblPaymentMethod.Text);
-                                cmd1.Parameters.AddWithValue("@AmountPaid", txtCreditMakePaymentAmount.Text);
-                                cmd1.Parameters.AddWithValue("@Amount", DueAmount.ToString());
-                                cmd1.Parameters.AddWithValue("@Student_UserID", dr[1].ToString());
-                                cmd1.Connection = con1;
-                                con1.Open();
-                                cmd1.ExecuteNonQuery();
-
-                                string CreditMakePaymentSaved;
-                                CreditMakePaymentSaved = "Your Payment is Completed Succesfully!";
-                                lblCreditPaymentSucessful.Text = CreditMakePaymentSaved.ToString();
-                            }
-                            string CS2 = ConfigurationManager.ConnectionStrings["UserInfoConnectionString"].ConnectionString;
-                            using (SqlConnection con2 = new SqlConnection(CS2))
-                            {
-                                SqlCommand cmd2 = new SqlCommand();
-                                cmd2.CommandText = "UPDATE StudentData SET Amount = @Amount  where Student_UserID = '" + username + "'";
-                                cmd2.Parameters.AddWithValue("@Amount", DueAmount.ToString());
-                                cmd2.Connection = con2;
-                                con2.Open();
-                                cmd2.ExecuteNonQuery();
-                            }
-                        }
-                    }
-                }                
-            }
-            else if (PaymentMethod == "Debit Card")
-            {
-                string CS = ConfigurationManager.ConnectionStrings["UserInfoConnectionString"].ConnectionString;
-                using (SqlConnection con = new SqlConnection(CS))
-                {
-                    SqlCommand cmd = new SqlCommand();
-                    cmd.CommandText = "Select Amount, Student_UserID from StudentData where Student_UserID='" + username + "'";
-
-                    cmd.Connection = con;
-                    con.Open();
-                    SqlDataReader dr = cmd.ExecuteReader();
-
-                    if (dr.Read())
-                    {
-                        int Amount = Convert.ToInt32(dr[0].ToString());
-                        int AmountPaid = Convert.ToInt32(txtDebitMakePaymentAmount.Text);
-                        int DueAmount = Amount - AmountPaid;
-
-                        if (AmountPaid > Amount)
-                        {
-                            int ExtraAmount = AmountPaid - Amount;
-                            string DebitMakePaymentSaved;
-                            DebitMakePaymentSaved = "Your due amount is " + Amount + " and you are trying to pay " + ExtraAmount + " extra!,";
-                            lblDebitPaymentSucessful.Text = DebitMakePaymentSaved.ToString();
-                            lblDebitPaymentSucessful.ForeColor = Color.Red;
-                        }
-                        else
-                        {
-                            string CS1 = ConfigurationManager.ConnectionStrings["UserInfoConnectionString"].ConnectionString;
-                            using (SqlConnection con1 = new SqlConnection(CS))
-                            {
-                                SqlCommand cmd1 = new SqlCommand();
-                                cmd1.CommandText = "INSERT INTO PaymentHistory (FirstName, LastName, PaymentDate, PaymentMethod, AmountPaid, DueAmount, Student_UserID) Values(@fname, @lname, @PaymentDate, @PaymentMethod, @AmountPaid, @Amount, @Student_UserID)";
-                                cmd1.Parameters.AddWithValue("@fName", txtDebitMakePaymentFirstName.Text);
-                                cmd1.Parameters.AddWithValue("@lname", txtDebitMakePaymentLastName.Text);
-                                cmd1.Parameters.AddWithValue("@PaymentDate", DateTime.Now.ToString());
-                                cmd1.Parameters.AddWithValue("@PaymentMethod", lblPaymentMethod.Text);
-                                cmd1.Parameters.AddWithValue("@AmountPaid", txtDebitMakePaymentAmount.Text);
-                                cmd1.Parameters.AddWithValue("@Amount", DueAmount.ToString());
-                                cmd1.Parameters.AddWithValue("@Student_UserID", dr[1].ToString());
-                                cmd1.Connection = con1;
-                                con1.Open();
-                                cmd1.ExecuteNonQuery();
-
-                                string DebitMakePaymentSaved;
-                                DebitMakePaymentSaved = "Your Payment is Completed Succesfully!";
-                                lblDebitPaymentSucessful.Text = DebitMakePaymentSaved.ToString();
-                            }
-                            string CS2 = ConfigurationManager.ConnectionStrings["UserInfoConnectionString"].ConnectionString;
-                            using (SqlConnection con2 = new SqlConnection(CS2))
-                            {
-                                SqlCommand cmd2 = new SqlCommand();
-                                cmd2.CommandText = "UPDATE StudentData SET Amount = @Amount  where Student_UserID = '" + username + "'";
-                                cmd2.Parameters.AddWithValue("@Amount", DueAmount.ToString());
-                                cmd2.Connection = con2;
-                                con2.Open();
-                                cmd2.ExecuteNonQuery();
-                            }
-                        }
-                    }
-                }  
+                    cmd.ExecuteNonQuery();
+                }
+                lblCreditMakePaymentEditWarning.Visible = true;
+                lblCreditMakePaymentEditWarning.Text = "Your details are updated!";
             }
             else
             {
+                lblCreditMakePaymentEditWarning.Visible = false;
+            }                          
+        }
+        protected void btnUpdateDebitPaymentDetails_Click(object sender, EventArgs e)
+        {
+            if((revDebitMakePaymentEditFirstName.IsValid == true) && 
+                (revDebitMakePaymentEditLastName.IsValid == true) && 
+                (revDebitMakePaymentEditPhoneNumber.IsValid == true) && 
+                (regDebitMakePaymentEditPhoneNumber.IsValid == true) && 
+                (revDebitMakePaymentEditEmail.IsValid == true) &&
+                (regDebitMakePaymentEditEmail.IsValid == true) && 
+                (revDebitMakePaymentEditDOB.IsValid == true) &&
+                (revDebitMakePaymentEditAddress.IsValid == true) &&
+                (revDebitMakePaymentEditCity.IsValid == true) && 
+                (revDebitMakePaymentEditZip.IsValid == true) &&
+                (regDebitMakePaymentEditZip.IsValid == true) &&
+                (revDebitMakePaymentEditNameOnCard.IsValid == true) &&
+                (revDebitMakePaymentEditCardNumber.IsValid == true) &&
+                (regDebitMakePaymentEditCardNumber.IsValid == true) &&
+                (revDebitMakePaymentEditExpiryDate.IsValid == true) &&
+                (revDebitMakePaymentEditCVV.IsValid == true) &&
+                (reguDebitMakePaymentEditCVV.IsValid == true))
+            {
                 string CS = ConfigurationManager.ConnectionStrings["UserInfoConnectionString"].ConnectionString;
                 using (SqlConnection con = new SqlConnection(CS))
                 {
                     SqlCommand cmd = new SqlCommand();
-                    cmd.CommandText = "Select Amount, Student_UserID from StudentData where Student_UserID='" + username + "'";
-
+                    cmd.CommandText = "UPDATE StudentData SET Student_FirstName = @fname, Student_LastName = @lname, Student_ContactNo = @phone, Student_email = @email, Student_DOB = @dob, Student_StAddress = @addr, Student_City = @city, Student_State = @state, Student_Zipcode = @zip, Student_Type = @type, NameOnCard = @NameOnCard, CardNumber = @CardNumber, ExpiryDate = @ExpiryDate, CVV = @CVV where Student_UserID = '" + username + "'";
+                    cmd.Parameters.AddWithValue("@fname", txtDebitMakePaymentEditFirstName.Text);
+                    cmd.Parameters.AddWithValue("@lname", txtDebitMakePaymentEditLastName.Text);
+                    cmd.Parameters.AddWithValue("@phone", txtDebitMakePaymentEditPhoneNumber.Text);
+                    cmd.Parameters.AddWithValue("@email", txtDebitMakePaymentEditEmail.Text);
+                    cmd.Parameters.AddWithValue("@dob", txtDebitMakePaymentEditDOB.Text);
+                    cmd.Parameters.AddWithValue("@addr", txtDebitMakePaymentEditAddress.Text);
+                    cmd.Parameters.AddWithValue("@city", txtDebitMakePaymentEditCity.Text);
+                    cmd.Parameters.AddWithValue("@state", ddlDebitMakePaymentEditState.SelectedValue);
+                    cmd.Parameters.AddWithValue("@zip", txtDebitMakePaymentEditZip.Text);
+                    cmd.Parameters.AddWithValue("@type", ddltDebitMakePaymentEditStudentType.SelectedValue);
+                    cmd.Parameters.AddWithValue("@NameOnCard", txtDebitMakePaymentEditNameOnCard.Text);
+                    cmd.Parameters.AddWithValue("@CardNumber", txtDebitMakePaymentEditCardNumber.Text);
+                    cmd.Parameters.AddWithValue("@ExpiryDate", txtDebitMakePaymentEditExpiryDate.Text);
+                    cmd.Parameters.AddWithValue("@CVV", txtDebitMakePaymentEditCVV.Text);
+                    // cmd.Parameters.AddWithValue("@DebitAmount", txtDebitMakePaymentEditAmount.Text);
                     cmd.Connection = con;
                     con.Open();
-                    SqlDataReader dr = cmd.ExecuteReader();
+                    cmd.ExecuteNonQuery();
+                }
+                lblDebitMakePaymentEditWarning.Visible = true;
+                lblDebitMakePaymentEditWarning.Text = "Your details are updated!";
+            }
+            else
+            {
+                lblDebitMakePaymentEditWarning.Visible = false;
+            }                       
+        }
+        protected void btnUpdateCashPaymentDetails_Click(object sender, EventArgs e)
+        {
+            if((revCashMakePaymentEditFirstName.IsValid == true) && 
+                    (revCashMakePaymentEditLastName.IsValid == true) &&
+                    (revCashMakePaymentEditPhoneNumber.IsValid == true) &&
+                    (regCashMakePaymentEditPhoneNumber.IsValid == true) &&
+                    (revCashMakePaymentEditEmail.IsValid == true) &&
+                    (regCashMakePaymentEditEmail.IsValid == true) &&
+                    (revCashMakePaymentEditDOB.IsValid == true) &&
+                    (revCashMakePaymentEditAddress.IsValid == true) &&
+                    (revCashMakePaymentEditCity.IsValid == true) &&
+                    (revCashMakePaymentEditZip.IsValid == true) &&
+                    (regCashMakePaymentEditZip.IsValid == true) &&
+                    (revCashMakePaymentEditPaymentDate.IsValid ==true))
+            {
+                string CS = ConfigurationManager.ConnectionStrings["UserInfoConnectionString"].ConnectionString;
+                using (SqlConnection con = new SqlConnection(CS))
+                {
+                    SqlCommand cmd = new SqlCommand();
+                    cmd.CommandText = "UPDATE StudentData SET Student_FirstName = @fname, Student_LastName = @lname, Student_ContactNo = @phone, Student_email = @email, Student_DOB = @dob, Student_StAddress = @addr, Student_City = @city, Student_State = @state, Student_Zipcode = @zip, Student_Type = @type, PaymentDate = @paymentDate where Student_UserID = '" + username + "'";
+                    cmd.Parameters.AddWithValue("@fname", txtCashMakePaymentEditFirstName.Text);
+                    cmd.Parameters.AddWithValue("@lname", txtCashMakePaymentEditLastName.Text);
+                    cmd.Parameters.AddWithValue("@phone", txtCashMakePaymentEditPhoneNumber.Text);
+                    cmd.Parameters.AddWithValue("@email", txtCashMakePaymentEditEmail.Text);
+                    cmd.Parameters.AddWithValue("@dob", txtCashMakePaymentEditDOB.Text);
+                    cmd.Parameters.AddWithValue("@addr", txtCashMakePaymentEditAddress.Text);
+                    cmd.Parameters.AddWithValue("@city", txtCashMakePaymentCity.Text);
+                    cmd.Parameters.AddWithValue("@state", ddlCashMakePaymentEditState.SelectedValue);
+                    cmd.Parameters.AddWithValue("@zip", txtCashMakePaymentEditZip.Text);
+                    cmd.Parameters.AddWithValue("@type", ddlCashMakePaymentEditStudentType.SelectedValue);
+                    cmd.Parameters.AddWithValue("@paymentDate", txtCashMakePaymentEditPaymentDate.Text);
+                    cmd.Connection = con;
+                    con.Open();
+                    cmd.ExecuteNonQuery();
+                }
+                lblCashMakePaymentEditWarning.Visible = true;
+                lblCashMakePaymentEditWarning.Text = "Your details are updated!";
+            }
+            else
+            {
+                lblCashMakePaymentEditWarning.Visible = false;
+            }          
+        }
+        protected void btnClearCreditPaymentDetails_Click(object sender, EventArgs e)
+        {
+            txtCreditMakePaymentEditAddress.Text = string.Empty;
+            // txtCreditMakePaymentEditAmount.Text = string.Empty;
+            txtCreditMakePaymentEditCardNumber.Text = string.Empty;
+            txtCreditMakePaymentEditCity.Text = string.Empty;
+            txtCreditMakePaymentEditCVV.Text = string.Empty;
+            txtCreditMakePaymentEditDOB.Text = string.Empty;
+            txtCreditMakePaymentEditEmail.Text = string.Empty;
+            txtCreditMakePaymentEditExpiryDate.Text = string.Empty;
+            txtCreditMakePaymentEditFirstName.Text = string.Empty;
+            txtCreditMakePaymentEditLastName.Text = string.Empty;
+            txtCreditMakePaymentEditNameOnCard.Text = string.Empty;
+            txtCreditMakePaymentEditPhoneNumber.Text = string.Empty;
+            txtCreditMakePaymentEditZip.Text = string.Empty;
+        }
+        protected void btnClearDebitPaymentDetails_Click(object sender, EventArgs e)
+        {
+            txtDebitMakePaymentEditAddress.Text = string.Empty;
+            // txtDebitMakePaymentEditAmount.Text = string.Empty;
+            txtDebitMakePaymentEditCardNumber.Text = string.Empty;
+            txtDebitMakePaymentEditCity.Text = string.Empty;
+            txtDebitMakePaymentEditCVV.Text = string.Empty;
+            txtDebitMakePaymentEditDOB.Text = string.Empty;
+            txtDebitMakePaymentEditEmail.Text = string.Empty;
+            txtDebitMakePaymentEditExpiryDate.Text = string.Empty;
+            txtDebitMakePaymentEditFirstName.Text = string.Empty;
+            txtDebitMakePaymentEditLastName.Text = string.Empty;
+            txtDebitMakePaymentEditNameOnCard.Text = string.Empty;
+            txtDebitMakePaymentEditPhoneNumber.Text = string.Empty;
+            txtDebitMakePaymentEditZip.Text = string.Empty;
+        }
+        protected void btnClearCashPaymentDetails_Click(object sender, EventArgs e)
+        {
+            txtCashMakePaymentEditAddress.Text = string.Empty;
+            // txtCashMakePaymentEditAmount.Text = string.Empty;
+            txtCashMakePaymentEditCity.Text = string.Empty;
+            txtCashMakePaymentEditDOB.Text = string.Empty;
+            txtCashMakePaymentEditEmail.Text = string.Empty;
+            txtCashMakePaymentEditFirstName.Text = string.Empty;
+            txtCashMakePaymentEditLastName.Text = string.Empty;
+            txtCashMakePaymentEditPaymentDate.Text = string.Empty;
+            txtCashMakePaymentEditPhoneNumber.Text = string.Empty;
+            txtCashMakePaymentEditZip.Text = string.Empty;
+        }
+        protected void btnConfirmCreditPaymentDetails_Click(object sender, EventArgs e)
+        {
+            string CS = ConfigurationManager.ConnectionStrings["UserInfoConnectionString"].ConnectionString;
+            using (SqlConnection con = new SqlConnection(CS))
+            {
+                SqlCommand cmd = new SqlCommand();
+                cmd.CommandText = "Select Amount, Student_UserID from StudentData where Student_UserID='" + username + "'";
 
-                    if (dr.Read())
+                cmd.Connection = con;
+                con.Open();
+                SqlDataReader dr = cmd.ExecuteReader();
+
+                if (dr.Read())
+                {
+                    int Amount = Convert.ToInt32(dr[0].ToString());
+                    int AmountPaid = Convert.ToInt32(txtCreditMakePaymentAmount.Text);
+                    int DueAmount = Amount - AmountPaid;
+
+                    if (AmountPaid > Amount)
                     {
-                        int Amount = Convert.ToInt32(dr[0].ToString());
-                        int AmountPaid = Convert.ToInt32(txtCashMakePaymentAmount.Text);
-                        int DueAmount = Amount - AmountPaid;
-
-                        if (AmountPaid > Amount)
+                        int ExtraAmount = AmountPaid - Amount;
+                        string CreditMakePaymentSaved;
+                        CreditMakePaymentSaved = "Your due amount is " + Amount + " and you are trying to pay " + ExtraAmount + " extra!,";
+                        lblCreditPaymentSucessful.Text = CreditMakePaymentSaved.ToString();
+                        lblCreditPaymentSucessful.ForeColor = Color.Red;
+                    }
+                    else
+                    {
+                        string CS1 = ConfigurationManager.ConnectionStrings["UserInfoConnectionString"].ConnectionString;
+                        using (SqlConnection con1 = new SqlConnection(CS))
                         {
-                            int ExtraAmount = AmountPaid - Amount;
-                            string CashMakePaymentSaved;
-                            CashMakePaymentSaved = "Your due amount is " + Amount + " and you are trying to pay " + ExtraAmount + " extra!,";
-                            lblCashPaymentSucessful.Text = CashMakePaymentSaved.ToString();
-                            lblCashPaymentSucessful.ForeColor = Color.Red;
+                            SqlCommand cmd1 = new SqlCommand();
+                            cmd1.CommandText = "INSERT INTO PaymentHistory (FirstName, LastName, PaymentDate, PaymentMethod, AmountPaid, DueAmount, Student_UserID) Values(@fname, @lname, @PaymentDate, @PaymentMethod, @AmountPaid, @Amount, @Student_UserID)";
+                            cmd1.Parameters.AddWithValue("@fName", txtCreditMakePaymentFirstName.Text);
+                            cmd1.Parameters.AddWithValue("@lname", txtCreditMakePaymentLastName.Text);
+                            cmd1.Parameters.AddWithValue("@PaymentDate", DateTime.Now.ToString());
+                            cmd1.Parameters.AddWithValue("@PaymentMethod", lblPaymentMethod.Text);
+                            cmd1.Parameters.AddWithValue("@AmountPaid", txtCreditMakePaymentAmount.Text);
+                            cmd1.Parameters.AddWithValue("@Amount", DueAmount.ToString());
+                            cmd1.Parameters.AddWithValue("@Student_UserID", dr[1].ToString());
+                            cmd1.Connection = con1;
+                            con1.Open();
+                            cmd1.ExecuteNonQuery();
+
+                            string CreditMakePaymentSaved;
+                            CreditMakePaymentSaved = "Your Payment is Completed Succesfully!";
+                            lblCreditPaymentSucessful.Text = CreditMakePaymentSaved.ToString();
                         }
-                        else
+                        string CS2 = ConfigurationManager.ConnectionStrings["UserInfoConnectionString"].ConnectionString;
+                        using (SqlConnection con2 = new SqlConnection(CS2))
                         {
-                            string CS1 = ConfigurationManager.ConnectionStrings["UserInfoConnectionString"].ConnectionString;
-                            using (SqlConnection con1 = new SqlConnection(CS))
-                            {
-                                SqlCommand cmd1 = new SqlCommand();
-                                cmd1.CommandText = "INSERT INTO PaymentHistory (FirstName, LastName, PaymentDate, PaymentMethod, AmountPaid, DueAmount, Student_UserID) Values(@fname, @lname, @PaymentDate, @PaymentMethod, @AmountPaid, @Amount, @Student_UserID)";
-                                cmd1.Parameters.AddWithValue("@fName", txtCashMakePaymentFirstName.Text);
-                                cmd1.Parameters.AddWithValue("@lname", txtCashMakePaymentLastName.Text);
-                                cmd1.Parameters.AddWithValue("@PaymentDate", DateTime.Now.ToString());
-                                cmd1.Parameters.AddWithValue("@PaymentMethod", lblPaymentMethod.Text);
-                                cmd1.Parameters.AddWithValue("@AmountPaid", txtCashMakePaymentAmount.Text);
-                                cmd1.Parameters.AddWithValue("@Amount", DueAmount.ToString());
-                                cmd1.Parameters.AddWithValue("@Student_UserID", dr[1].ToString());
-                                cmd1.Connection = con1;
-                                con1.Open();
-                                cmd1.ExecuteNonQuery();
-
-                                string CashMakePaymentSaved;
-                                CashMakePaymentSaved = "Your Payment is Completed Succesfully!";
-                                lblCashPaymentSucessful.Text = CashMakePaymentSaved.ToString();
-                            }
-                            string CS2 = ConfigurationManager.ConnectionStrings["UserInfoConnectionString"].ConnectionString;
-                            using (SqlConnection con2 = new SqlConnection(CS2))
-                            {
-                                SqlCommand cmd2 = new SqlCommand();
-                                cmd2.CommandText = "UPDATE StudentData SET Amount = @Amount  where Student_UserID = '" + username + "'";
-                                cmd2.Parameters.AddWithValue("@Amount", DueAmount.ToString());
-                                cmd2.Connection = con2;
-                                con2.Open();
-                                cmd2.ExecuteNonQuery();
-                            }
+                            SqlCommand cmd2 = new SqlCommand();
+                            cmd2.CommandText = "UPDATE StudentData SET Amount = @Amount  where Student_UserID = '" + username + "'";
+                            cmd2.Parameters.AddWithValue("@Amount", DueAmount.ToString());
+                            cmd2.Connection = con2;
+                            con2.Open();
+                            cmd2.ExecuteNonQuery();
                         }
                     }
                 }
             }
         }
+        protected void btnConfirmDebitPaymentDetails_Click(object sender, EventArgs e)
+        {
+            string CS = ConfigurationManager.ConnectionStrings["UserInfoConnectionString"].ConnectionString;
+            using (SqlConnection con = new SqlConnection(CS))
+            {
+                SqlCommand cmd = new SqlCommand();
+                cmd.CommandText = "Select Amount, Student_UserID from StudentData where Student_UserID='" + username + "'";
+
+                cmd.Connection = con;
+                con.Open();
+                SqlDataReader dr = cmd.ExecuteReader();
+
+                if (dr.Read())
+                {
+                    int Amount = Convert.ToInt32(dr[0].ToString());
+                    int AmountPaid = Convert.ToInt32(txtDebitMakePaymentAmount.Text);
+                    int DueAmount = Amount - AmountPaid;
+
+                    if (AmountPaid > Amount)
+                    {
+                        int ExtraAmount = AmountPaid - Amount;
+                        string DebitMakePaymentSaved;
+                        DebitMakePaymentSaved = "Your due amount is " + Amount + " and you are trying to pay " + ExtraAmount + " extra!,";
+                        lblDebitPaymentSucessful.Text = DebitMakePaymentSaved.ToString();
+                        lblDebitPaymentSucessful.ForeColor = Color.Red;
+                    }
+                    else
+                    {
+                        string CS1 = ConfigurationManager.ConnectionStrings["UserInfoConnectionString"].ConnectionString;
+                        using (SqlConnection con1 = new SqlConnection(CS))
+                        {
+                            SqlCommand cmd1 = new SqlCommand();
+                            cmd1.CommandText = "INSERT INTO PaymentHistory (FirstName, LastName, PaymentDate, PaymentMethod, AmountPaid, DueAmount, Student_UserID) Values(@fname, @lname, @PaymentDate, @PaymentMethod, @AmountPaid, @Amount, @Student_UserID)";
+                            cmd1.Parameters.AddWithValue("@fName", txtDebitMakePaymentFirstName.Text);
+                            cmd1.Parameters.AddWithValue("@lname", txtDebitMakePaymentLastName.Text);
+                            cmd1.Parameters.AddWithValue("@PaymentDate", DateTime.Now.ToString());
+                            cmd1.Parameters.AddWithValue("@PaymentMethod", lblPaymentMethod.Text);
+                            cmd1.Parameters.AddWithValue("@AmountPaid", txtDebitMakePaymentAmount.Text);
+                            cmd1.Parameters.AddWithValue("@Amount", DueAmount.ToString());
+                            cmd1.Parameters.AddWithValue("@Student_UserID", dr[1].ToString());
+                            cmd1.Connection = con1;
+                            con1.Open();
+                            cmd1.ExecuteNonQuery();
+
+                            string DebitMakePaymentSaved;
+                            DebitMakePaymentSaved = "Your Payment is Completed Succesfully!";
+                            lblDebitPaymentSucessful.Text = DebitMakePaymentSaved.ToString();
+                        }
+                        string CS2 = ConfigurationManager.ConnectionStrings["UserInfoConnectionString"].ConnectionString;
+                        using (SqlConnection con2 = new SqlConnection(CS2))
+                        {
+                            SqlCommand cmd2 = new SqlCommand();
+                            cmd2.CommandText = "UPDATE StudentData SET Amount = @Amount  where Student_UserID = '" + username + "'";
+                            cmd2.Parameters.AddWithValue("@Amount", DueAmount.ToString());
+                            cmd2.Connection = con2;
+                            con2.Open();
+                            cmd2.ExecuteNonQuery();
+                        }
+                    }
+                }
+            }
+        }
+        protected void btnConfirmCashPaymentDetails_Click(object sender, EventArgs e)
+        {
+            string CS = ConfigurationManager.ConnectionStrings["UserInfoConnectionString"].ConnectionString;
+            using (SqlConnection con = new SqlConnection(CS))
+            {
+                SqlCommand cmd = new SqlCommand();
+                cmd.CommandText = "Select Amount, Student_UserID from StudentData where Student_UserID='" + username + "'";
+
+                cmd.Connection = con;
+                con.Open();
+                SqlDataReader dr = cmd.ExecuteReader();
+
+                if (dr.Read())
+                {
+                    int Amount = Convert.ToInt32(dr[0].ToString());
+                    int AmountPaid = Convert.ToInt32(txtCashMakePaymentAmount.Text);
+                    int DueAmount = Amount - AmountPaid;
+
+                    if (AmountPaid > Amount)
+                    {
+                        int ExtraAmount = AmountPaid - Amount;
+                        string CashMakePaymentSaved;
+                        CashMakePaymentSaved = "Your due amount is " + Amount + " and you are trying to pay " + ExtraAmount + " extra!,";
+                        lblCashPaymentSucessful.Text = CashMakePaymentSaved.ToString();
+                        lblCashPaymentSucessful.ForeColor = Color.Red;
+                    }
+                    else
+                    {
+                        string CS1 = ConfigurationManager.ConnectionStrings["UserInfoConnectionString"].ConnectionString;
+                        using (SqlConnection con1 = new SqlConnection(CS))
+                        {
+                            SqlCommand cmd1 = new SqlCommand();
+                            cmd1.CommandText = "INSERT INTO PaymentHistory (FirstName, LastName, PaymentDate, PaymentMethod, AmountPaid, DueAmount, Student_UserID) Values(@fname, @lname, @PaymentDate, @PaymentMethod, @AmountPaid, @Amount, @Student_UserID)";
+                            cmd1.Parameters.AddWithValue("@fName", txtCashMakePaymentFirstName.Text);
+                            cmd1.Parameters.AddWithValue("@lname", txtCashMakePaymentLastName.Text);
+                            cmd1.Parameters.AddWithValue("@PaymentDate", DateTime.Now.ToString());
+                            cmd1.Parameters.AddWithValue("@PaymentMethod", lblPaymentMethod.Text);
+                            cmd1.Parameters.AddWithValue("@AmountPaid", txtCashMakePaymentAmount.Text);
+                            cmd1.Parameters.AddWithValue("@Amount", DueAmount.ToString());
+                            cmd1.Parameters.AddWithValue("@Student_UserID", dr[1].ToString());
+                            cmd1.Connection = con1;
+                            con1.Open();
+                            cmd1.ExecuteNonQuery();
+
+                            string CashMakePaymentSaved;
+                            CashMakePaymentSaved = "Your Payment is Completed Succesfully!";
+                            lblCashPaymentSucessful.Text = CashMakePaymentSaved.ToString();
+                        }
+                        string CS2 = ConfigurationManager.ConnectionStrings["UserInfoConnectionString"].ConnectionString;
+                        using (SqlConnection con2 = new SqlConnection(CS2))
+                        {
+                            SqlCommand cmd2 = new SqlCommand();
+                            cmd2.CommandText = "UPDATE StudentData SET Amount = @Amount  where Student_UserID = '" + username + "'";
+                            cmd2.Parameters.AddWithValue("@Amount", DueAmount.ToString());
+                            cmd2.Connection = con2;
+                            con2.Open();
+                            cmd2.ExecuteNonQuery();
+                        }
+                    }
+                }
+            }
+        }
+
+
+
+
+
+
+
+
+
+
+        
         protected int DueAmount(int Amount, int AmountPaid)
         {
             int dueAmount = Amount - AmountPaid;
@@ -694,8 +785,6 @@ namespace StudentRegistrationApplication
             grdPaymentHistory.HeaderRow.TableSection = TableRowSection.TableHeader;
         }
 
-
-
         // private void setMasterLabelMsg(String msg)
         // {
         //  Label masterMsgLabel = (Label)Master.FindControl("lblUserMessage");
@@ -707,9 +796,5 @@ namespace StudentRegistrationApplication
         // else
         //  Response.Write(msg);
         //}
-
-
-
-
     }
 }
